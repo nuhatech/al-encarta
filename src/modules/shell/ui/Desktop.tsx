@@ -4,6 +4,12 @@ import { useWindowManager } from "./window-manager/use-window-manager";
 import { APP_REGISTRY, type AppId } from "./window-manager/types";
 import { DesktopContextMenu } from "./easter-eggs/DesktopContextMenu";
 import { StartMenu } from "./easter-eggs/StartMenu";
+import { RecycleBinDialog } from "./easter-eggs/RecycleBinDialog";
+import {
+  useDesktopIcons,
+  type ShortcutId,
+  type IconPos,
+} from "./use-desktop-icons";
 
 interface DesktopProps {
   onTripleClickWallpaper?: () => void;
@@ -12,13 +18,34 @@ interface DesktopProps {
   onShutdown?: () => void;
 }
 
+interface ShortcutDef {
+  readonly id: ShortcutId;
+  readonly label: string;
+  readonly icon: string;
+  readonly fallbackEmoji?: string;
+  readonly shortcut: boolean;
+  readonly isApp: boolean;
+}
+
+const SHORTCUTS: ReadonlyArray<ShortcutDef> = [
+  { id: "encarta", label: "Encarta 2002", icon: "/encarta-2002-icon.webp", shortcut: true, isApp: true },
+  { id: "kutub", label: "Kutub", icon: "/kutub-logo.png", shortcut: true, isApp: true },
+  { id: "hilalglobe", label: "Hilal Globe", icon: "/hilal-logo.png", shortcut: true, isApp: true },
+  { id: "minesweeper", label: "Démineur — Ormuz", icon: "/minesweeper.png", fallbackEmoji: "💣", shortcut: true, isApp: true },
+  { id: "recyclebin", label: "Corbeille", icon: "", fallbackEmoji: "🗑", shortcut: false, isApp: false },
+];
+
+const SHORTCUT_BY_ID: Record<string, ShortcutDef> = Object.fromEntries(
+  SHORTCUTS.map((s) => [s.id, s]),
+);
+
 /**
- * Desktop with multiple app shortcuts. Double-click an icon to launch the
- * matching app via the WindowManager. The Taskbar shows currently open
- * windows (with click-to-focus / click-to-restore behavior).
+ * XP-style desktop. Icons are draggable and persist their positions to
+ * localStorage; dropping any app icon onto the Corbeille (Recycle Bin)
+ * "deletes" it, which the bin's dialog can restore.
  *
  * Easter eggs:
- *  - right-click on wallpaper → XP context menu → "Propriétés" → onAbout
+ *  - right-click on wallpaper → Properties → onAbout
  *  - triple-click on wallpaper → onTripleClickWallpaper (BSOD)
  *  - Start menu → "Exécuter…" → onRun
  */
@@ -29,16 +56,18 @@ export function Desktop({
   onShutdown,
 }: DesktopProps) {
   const [contextMenu, setContextMenu] = useState<{ x: number; y: number } | null>(null);
+  const [recycleOpen, setRecycleOpen] = useState(false);
   const clickTimes = useRef<number[]>([]);
+  const icons = useDesktopIcons();
 
   const onWallpaperClick = (e: React.MouseEvent) => {
-    // Don't count clicks on interactive elements (icons, taskbar, windows).
     const target = e.target as HTMLElement;
     if (
       target.closest("button") ||
       target.closest("input") ||
       target.closest("[data-start-menu]") ||
-      target.closest(".window")
+      target.closest(".window") ||
+      target.closest("[data-icon]")
     ) {
       return;
     }
@@ -62,41 +91,23 @@ export function Desktop({
       style={{
         position: "fixed",
         inset: 0,
-        paddingTop: 20,
-        paddingLeft: 20,
-        paddingRight: 20,
-        paddingBottom: 50,
+        paddingBottom: 30, // taskbar
       }}
     >
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          gap: 8,
-          alignItems: "flex-start",
-        }}
-      >
-        <DesktopIcon
-          appId="encarta"
-          label="Encarta 2002"
-          icon="/encarta-2002-icon.webp"
-          shortcut
-        />
-        <DesktopIcon appId="kutub" label="Kutub" icon="/kutub-logo.png" shortcut />
-        <DesktopIcon
-          appId="hilalglobe"
-          label="Hilal Globe"
-          icon="/hilal-logo.png"
-          shortcut
-        />
-        <DesktopIcon
-          appId="minesweeper"
-          label="Démineur — Ormuz"
-          icon="/minesweeper.png"
-          fallbackEmoji="💣"
-          shortcut
-        />
-      </div>
+      {SHORTCUTS.map((s) => {
+        if (icons.deleted.has(s.id)) return null;
+        const pos = icons.positions[s.id] ?? { x: 16, y: 16 };
+        return (
+          <DesktopIcon
+            key={s.id}
+            shortcut={s}
+            position={pos}
+            onCommitPosition={(p) => icons.setPosition(s.id, p)}
+            onOpenBin={() => setRecycleOpen(true)}
+            onDropOnBin={() => icons.deleteIcon(s.id)}
+          />
+        );
+      })}
 
       <Taskbar onRun={onRun} onAbout={onAbout} onShutdown={onShutdown} />
 
@@ -111,44 +122,159 @@ export function Desktop({
           }}
         />
       )}
+
+      {recycleOpen && (
+        <RecycleBinDialog
+          deleted={icons.deletedList}
+          resolveLabel={(id) => SHORTCUT_BY_ID[id]?.label ?? id}
+          resolveIcon={(id) =>
+            SHORTCUT_BY_ID[id]?.icon ||
+            // fallback for icons without raster (recyclebin shouldn't be in this list)
+            "/encarta-2002-icon.webp"
+          }
+          onRestore={(id) => icons.restoreIcon(id)}
+          onEmpty={() => icons.emptyTrash()}
+          onClose={() => setRecycleOpen(false)}
+        />
+      )}
     </div>
   );
 }
 
 interface DesktopIconProps {
-  appId: AppId;
-  label: string;
-  icon: string;
-  shortcut?: boolean;
-  fallbackEmoji?: string;
+  shortcut: ShortcutDef;
+  position: IconPos;
+  onCommitPosition: (pos: IconPos) => void;
+  onOpenBin: () => void;
+  onDropOnBin: () => void;
 }
 
-function DesktopIcon({ appId, label, icon, shortcut, fallbackEmoji }: DesktopIconProps) {
+function DesktopIcon({
+  shortcut,
+  position,
+  onCommitPosition,
+  onOpenBin,
+  onDropOnBin,
+}: DesktopIconProps) {
   const wm = useWindowManager();
   const [selected, setSelected] = useState(false);
   const [iconError, setIconError] = useState(false);
+  const [dragPos, setDragPos] = useState<IconPos | null>(null);
+  const dragState = useRef<{
+    pointerId: number;
+    startX: number;
+    startY: number;
+    originX: number;
+    originY: number;
+    moved: boolean;
+  } | null>(null);
+
+  const isBin = shortcut.id === "recyclebin";
 
   // Click anywhere outside to deselect.
   useEffect(() => {
     if (!selected) return;
     const off = () => setSelected(false);
-    const t = setTimeout(() => window.addEventListener("pointerdown", off, { once: true }), 0);
+    const t = setTimeout(
+      () => window.addEventListener("pointerdown", off, { once: true }),
+      0,
+    );
     return () => {
       clearTimeout(t);
       window.removeEventListener("pointerdown", off);
     };
   }, [selected]);
 
+  const handleDoubleClick = () => {
+    if (isBin) {
+      onOpenBin();
+      return;
+    }
+    if (shortcut.isApp) {
+      wm.open(shortcut.id as AppId);
+    }
+  };
+
+  const onPointerDown = (e: React.PointerEvent) => {
+    // Only left button; ignore right-click drags.
+    if (e.button !== 0) return;
+    setSelected(true);
+    dragState.current = {
+      pointerId: e.pointerId,
+      startX: e.clientX,
+      startY: e.clientY,
+      originX: position.x,
+      originY: position.y,
+      moved: false,
+    };
+    (e.target as Element).setPointerCapture?.(e.pointerId);
+  };
+
+  const onPointerMove = (e: React.PointerEvent) => {
+    const ds = dragState.current;
+    if (!ds || ds.pointerId !== e.pointerId) return;
+    const dx = e.clientX - ds.startX;
+    const dy = e.clientY - ds.startY;
+    if (!ds.moved && Math.hypot(dx, dy) < 4) return; // dead zone
+    ds.moved = true;
+    setDragPos({
+      x: clamp(ds.originX + dx, 0, window.innerWidth - 100),
+      y: clamp(ds.originY + dy, 0, window.innerHeight - 110),
+    });
+  };
+
+  const onPointerUp = (e: React.PointerEvent) => {
+    const ds = dragState.current;
+    if (!ds || ds.pointerId !== e.pointerId) return;
+    dragState.current = null;
+    (e.target as Element).releasePointerCapture?.(e.pointerId);
+
+    if (!ds.moved) {
+      // No drag — treat as click selection (already done in pointerdown).
+      setDragPos(null);
+      return;
+    }
+
+    // Detect drop target via geometry: is the cursor over a recycle bin icon?
+    const droppedOnBin = !isBin && isCursorOverRecycleBin(e.clientX, e.clientY);
+
+    if (droppedOnBin) {
+      onDropOnBin();
+      setDragPos(null);
+      return;
+    }
+
+    if (dragPos) {
+      onCommitPosition(dragPos);
+      setDragPos(null);
+    }
+  };
+
+  const display = dragPos ?? position;
+  const isDragging = dragPos !== null;
+
   return (
     <button
       type="button"
-      onDoubleClick={() => wm.open(appId)}
+      data-icon={shortcut.id}
+      data-recyclebin={isBin ? "true" : undefined}
+      onDoubleClick={handleDoubleClick}
       onClick={(e) => {
         e.stopPropagation();
-        setSelected(true);
       }}
-      title={`Double-cliquer pour ouvrir ${label}`}
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerUp}
+      onPointerCancel={onPointerUp}
+      title={
+        isBin
+          ? `Corbeille — double-clic pour l'ouvrir, glissez d'autres icônes dessus pour les supprimer`
+          : `Double-cliquer pour ouvrir ${shortcut.label}`
+      }
       style={{
+        position: "absolute",
+        left: display.x,
+        top: display.y,
         background: selected ? "rgba(49, 106, 197, 0.55)" : "transparent",
         border: selected
           ? "1px dotted rgba(255,255,255,0.85)"
@@ -162,8 +288,11 @@ function DesktopIcon({ appId, label, icon, shortcut, fallbackEmoji }: DesktopIco
         flexDirection: "column",
         alignItems: "center",
         gap: 4,
-        cursor: "pointer",
+        cursor: isDragging ? "grabbing" : "pointer",
         fontFamily: "Tahoma, sans-serif",
+        opacity: isDragging ? 0.65 : 1,
+        zIndex: isDragging ? 1500 : 1,
+        touchAction: "none",
       }}
     >
       <div
@@ -176,31 +305,54 @@ function DesktopIcon({ appId, label, icon, shortcut, fallbackEmoji }: DesktopIco
           justifyContent: "center",
         }}
       >
-        {iconError && fallbackEmoji ? (
+        {(iconError || !shortcut.icon) && shortcut.fallbackEmoji ? (
           <span
             aria-hidden
-            style={{ fontSize: 36, filter: "drop-shadow(1px 1px 2px rgba(0,0,0,0.55))" }}
+            style={{
+              fontSize: 36,
+              filter: "drop-shadow(1px 1px 2px rgba(0,0,0,0.55))",
+            }}
           >
-            {fallbackEmoji}
+            {shortcut.fallbackEmoji}
           </span>
         ) : (
           <img
-            src={icon}
-            alt={label}
+            src={shortcut.icon}
+            alt={shortcut.label}
             onError={() => setIconError(true)}
+            draggable={false}
             style={{
               width: 48,
               height: 48,
               objectFit: "contain",
               filter: "drop-shadow(1px 1px 2px rgba(0,0,0,0.55))",
+              pointerEvents: "none",
             }}
           />
         )}
-        {shortcut && <ShortcutArrow />}
+        {shortcut.shortcut && <ShortcutArrow />}
       </div>
-      <span style={{ lineHeight: 1.2, textAlign: "center" }}>{label}</span>
+      <span style={{ lineHeight: 1.2, textAlign: "center", pointerEvents: "none" }}>
+        {shortcut.label}
+      </span>
     </button>
   );
+}
+
+function isCursorOverRecycleBin(x: number, y: number): boolean {
+  // Geometric overlap check (the dragged icon itself is geometrically on top
+  // of the bin during drag, so document.elementFromPoint would just return
+  // the dragged icon — useless. We compute the bin's rect directly).
+  const binEl = document.querySelector(
+    "[data-recyclebin='true']",
+  ) as HTMLElement | null;
+  if (!binEl) return false;
+  const r = binEl.getBoundingClientRect();
+  return x >= r.left && x <= r.right && y >= r.top && y <= r.bottom;
+}
+
+function clamp(v: number, lo: number, hi: number): number {
+  return Math.max(lo, Math.min(hi, v));
 }
 
 function ShortcutArrow() {
