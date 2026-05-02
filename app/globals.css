@@ -85,13 +85,15 @@ button {
     display: none !important;
   }
   .print-only {
+    /* Inner padding so content breathes even if the user sets browser "Margins: none".
+       Combined with @page margin below, total whitespace is generous on both sides. */
     display: block !important;
-    padding: 0 !important;
+    padding: 2cm 1.6cm !important;
     margin: 0 !important;
     color: #000 !important;
   }
   @page {
-    margin: 1.5cm;
+    margin: 0;
     size: A4;
   }
 }
