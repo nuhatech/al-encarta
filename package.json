@@ -17,7 +17,8 @@
     "generate:personalities": "tsx scripts/generate-personalities.ts",
     "build:manifest": "tsx scripts/build-manifest.ts",
     "bundle:personality-data": "node scripts/bundle-personality-data.mjs",
-    "prebuild": "node scripts/bundle-personality-data.mjs",
+    "build:tracks": "node scripts/build-track-index.mjs",
+    "prebuild": "node scripts/bundle-personality-data.mjs && node scripts/build-track-index.mjs",
     "capture:screenshots": "node scripts/capture-screenshots.mjs"
   },
   "dependencies": {

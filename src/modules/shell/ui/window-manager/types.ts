@@ -47,8 +47,8 @@ export const APP_REGISTRY: Record<AppId, AppMeta> = {
     id: "wmp",
     title: "Windows Media Player",
     icon: "/wmp-icon.webp",
-    defaultW: 720,
-    defaultH: 540,
+    defaultW: 980,
+    defaultH: 680,
     bare: true,
   },
 };
