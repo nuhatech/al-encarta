@@ -392,7 +392,7 @@ function StatusBar({ mode, personalityName }: { mode: Mode; personalityName: str
       : mode === "article"
         ? `Article : ${personalityName}`
         : mode === "timeline"
-          ? "Frise chronologique — 8e–15e siècle"
+          ? "Frise chronologique — 7ᵉ–16ᵉ siècle"
           : `Conversation interactive avec ${personalityName}`;
 
   return (

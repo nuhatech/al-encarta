@@ -24,10 +24,11 @@ interface RawShape {
   biography?: { birthYear?: number; deathYear?: number };
 }
 
-const YEAR_START = 700;
-const YEAR_END = 1500;
-const PX_PER_YEAR = 4.5; // 800 years × 4.5 = 3600px wide
-const TIMELINE_PX = (YEAR_END - YEAR_START) * PX_PER_YEAR;
+const YEAR_START = 650;
+const YEAR_END = 1600;
+const PX_PER_YEAR = 4.5; // 950 years × 4.5 ≈ 4275px wide
+const SIDE_PADDING = 32; // breathing room at the extremities
+const TIMELINE_PX = (YEAR_END - YEAR_START) * PX_PER_YEAR + SIDE_PADDING * 2;
 const ROW_HEIGHT = 64;
 const CARD_GAP = 6;
 
@@ -62,23 +63,57 @@ export function TimelineView({ onPickArticle }: TimelineViewProps) {
         fontFamily: "Tahoma, sans-serif",
       }}
     >
-      <div style={{ padding: "12px 16px 8px", borderBottom: "1px solid #ccc", background: "#fff" }}>
-        <h2
-          style={{
-            margin: 0,
-            fontFamily: "Georgia, serif",
-            fontSize: 18,
-            color: "#000080",
-          }}
-        >
-          Frise chronologique
-        </h2>
-        <div style={{ fontSize: 11, color: "#666", marginTop: 2 }}>
-          {entries.length} figures · 8e–15e siècle · cliquez sur une carte pour ouvrir l&apos;article
+      <div
+        style={{
+          padding: "12px 16px 8px",
+          borderBottom: "1px solid #ccc",
+          background: "#fff",
+          position: "sticky",
+          left: 0,
+          top: 0,
+          zIndex: 5,
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "baseline", gap: 16, marginBottom: 6 }}>
+          <h2
+            style={{
+              margin: 0,
+              fontFamily: "Georgia, serif",
+              fontSize: 18,
+              color: "#000080",
+            }}
+          >
+            Frise chronologique
+          </h2>
+          <div style={{ fontSize: 11, color: "#666" }}>
+            {`${entries.length} figures · 7ᵉ–16ᵉ siècle · cliquez sur une carte pour ouvrir l'article`}
+          </div>
+        </div>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+          {ERAS.map((era, i) => (
+            <span
+              key={i}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: 4,
+                fontSize: 10,
+                fontFamily: "Tahoma, sans-serif",
+                color: era.textColor,
+                background: era.color,
+                border: `1px solid ${era.textColor}`,
+                padding: "2px 6px",
+                borderRadius: 2,
+                fontWeight: 600,
+              }}
+            >
+              {era.label} ({era.start}–{era.end})
+            </span>
+          ))}
         </div>
       </div>
 
-      <div style={{ position: "relative", width: TIMELINE_PX, height: canvasHeight, paddingTop: 36 }}>
+      <div style={{ position: "relative", width: TIMELINE_PX, height: canvasHeight }}>
         {/* Era bands (z-index 0) */}
         {ERAS.map((era, i) => (
           <div
@@ -97,37 +132,18 @@ export function TimelineView({ onPickArticle }: TimelineViewProps) {
           />
         ))}
 
-        {/* Era labels at top */}
-        {ERAS.map((era, i) => (
-          <div
-            key={`label-${i}`}
-            style={{
-              position: "absolute",
-              left: yearToX(era.start) + 4,
-              top: 4 + i * 14,
-              fontSize: 10,
-              fontStyle: "italic",
-              color: era.textColor,
-              fontWeight: 600,
-              zIndex: 1,
-              pointerEvents: "none",
-              textShadow: "0 0 4px rgba(255,255,255,0.7)",
-            }}
-          >
-            {era.label} ({era.start}–{era.end})
-          </div>
-        ))}
+        {/* Era labels rendered as a sticky ribbon header above (see header). */}
 
-        {/* Year ticks (vertical lines + sticky year label at top) */}
+        {/* Year ticks (vertical lines spanning full canvas height + year labels at top) */}
         {yearTicks().map((year) => (
           <div
             key={year}
             style={{
               position: "absolute",
               left: yearToX(year),
-              top: 70,
+              top: 24,
               width: 1,
-              height: canvasHeight - 70,
+              height: canvasHeight - 24,
               background: year % 100 === 0 ? "rgba(80,80,80,0.35)" : "rgba(180,180,180,0.5)",
               zIndex: 2,
               pointerEvents: "none",
@@ -142,11 +158,11 @@ export function TimelineView({ onPickArticle }: TimelineViewProps) {
               style={{
                 position: "absolute",
                 left: yearToX(year) - 18,
-                top: 72,
+                top: 4,
                 fontSize: 11,
                 fontWeight: 700,
                 color: "#333",
-                background: "rgba(255,255,255,0.85)",
+                background: "rgba(255,255,255,0.9)",
                 padding: "1px 4px",
                 border: "1px solid #aaa",
                 borderRadius: 2,
@@ -180,7 +196,7 @@ function PersonalityCard({
 }) {
   const left = yearToX(entry.birthYear);
   const width = Math.max(110, (entry.deathYear - entry.birthYear) * PX_PER_YEAR);
-  const top = 36 + entry.row * ROW_HEIGHT + CARD_GAP;
+  const top = 30 + entry.row * ROW_HEIGHT + CARD_GAP;
   const isStar = entry.tier === 1;
 
   return (
@@ -251,7 +267,7 @@ function PersonalityCard({
 }
 
 function yearToX(year: number): number {
-  return (year - YEAR_START) * PX_PER_YEAR;
+  return SIDE_PADDING + (year - YEAR_START) * PX_PER_YEAR;
 }
 
 function yearTicks(): number[] {
