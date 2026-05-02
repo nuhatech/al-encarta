@@ -5,8 +5,21 @@ import { FakeTranscriptionGateway } from "@/src/modules/conversation/infrastruct
 import type { TranscriptionGateway } from "@/src/modules/conversation/application/ports/transcription-port";
 import { GatewayError, ValidationError } from "@/src/shared/kernel/errors";
 
-function buildHandler() {
-  const apiKey = process.env.MISTRAL_API_KEY;
+async function readSecret(name: string): Promise<string | undefined> {
+  if (process.env[name]) return process.env[name];
+  try {
+    const mod = await import("@opennextjs/cloudflare");
+    const env = mod.getCloudflareContext()?.env as
+      | Record<string, string | undefined>
+      | undefined;
+    return env?.[name];
+  } catch {
+    return undefined;
+  }
+}
+
+async function buildHandler() {
+  const apiKey = await readSecret("MISTRAL_API_KEY");
   const gateway: TranscriptionGateway = apiKey
     ? new VoxtralTranscriptionGateway(apiKey)
     : new FakeTranscriptionGateway();
@@ -30,7 +43,7 @@ export async function POST(req: Request): Promise<Response> {
   const languageHint =
     language === "fr" || language === "en" || language === "ar" ? language : "fr";
 
-  const handler = buildHandler();
+  const handler = await buildHandler();
   try {
     const result = await handler({
       audio,

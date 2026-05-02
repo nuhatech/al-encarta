@@ -11,11 +11,27 @@ import {
 } from "@/src/modules/conversation/application/commands/send-message";
 import type { LlmGateway, StreamChunk } from "@/src/modules/conversation/application/ports/llm-port";
 
+// Read a secret across both runtimes:
+// - Cloudflare Workers (prod): via getCloudflareContext().env (canonical)
+// - Node dev server: via process.env
+async function readSecret(name: string): Promise<string | undefined> {
+  if (process.env[name]) return process.env[name];
+  try {
+    const mod = await import("@opennextjs/cloudflare");
+    const env = mod.getCloudflareContext()?.env as
+      | Record<string, string | undefined>
+      | undefined;
+    return env?.[name];
+  } catch {
+    return undefined;
+  }
+}
+
 // Composition root for the chat endpoint.
 // Provider preference: Anthropic > OpenAI > Fake. Models are pinned per provider.
-function buildHandler() {
-  const anthropicKey = process.env.ANTHROPIC_API_KEY;
-  const openaiKey = process.env.OPENAI_API_KEY;
+async function buildHandler() {
+  const anthropicKey = await readSecret("ANTHROPIC_API_KEY");
+  const openaiKey = await readSecret("OPENAI_API_KEY");
 
   let llm: LlmGateway;
   let models: ModelMapping;
@@ -62,7 +78,7 @@ export async function POST(req: Request): Promise<Response> {
     return NextResponse.json({ error: "userText_required" }, { status: 400 });
   }
 
-  const handler = buildHandler();
+  const handler = await buildHandler();
   let chunkStream: ReadableStream<StreamChunk>;
   try {
     chunkStream = await handler({
