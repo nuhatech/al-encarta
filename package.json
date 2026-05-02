@@ -16,6 +16,8 @@
     "cf:deploy": "opennextjs-cloudflare deploy",
     "generate:personalities": "tsx scripts/generate-personalities.ts",
     "build:manifest": "tsx scripts/build-manifest.ts",
+    "bundle:personality-data": "node scripts/bundle-personality-data.mjs",
+    "prebuild": "node scripts/bundle-personality-data.mjs",
     "capture:screenshots": "node scripts/capture-screenshots.mjs"
   },
   "dependencies": {
