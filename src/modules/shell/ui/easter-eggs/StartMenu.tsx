@@ -178,6 +178,11 @@ function LeftColumn({
       onClick: () => launch("hilalglobe"),
     },
     {
+      icon: <img src={APP_REGISTRY.nuhatech.icon} alt="" style={iconImg} />,
+      label: "NuhaTech",
+      onClick: () => launch("nuhatech"),
+    },
+    {
       icon: <img src={APP_REGISTRY.minesweeper.icon} alt="" style={iconImg} />,
       label: "Démineur — Ormuz",
       onClick: () => launch("minesweeper"),

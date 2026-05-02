@@ -20,9 +20,10 @@ const DEFAULT_POSITIONS: Record<ShortcutId, IconPos> = {
   encarta: { x: 16, y: 16 },
   kutub: { x: 16, y: 110 },
   hilalglobe: { x: 16, y: 204 },
-  minesweeper: { x: 16, y: 298 },
-  wmp: { x: 16, y: 392 },
-  recyclebin: { x: 16, y: 504 },
+  nuhatech: { x: 16, y: 298 },
+  minesweeper: { x: 16, y: 392 },
+  wmp: { x: 16, y: 486 },
+  recyclebin: { x: 16, y: 600 },
 };
 
 interface PersistedState {

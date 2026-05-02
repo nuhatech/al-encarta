@@ -14,6 +14,7 @@ import { WindowsLayer } from "./window-manager/WindowFrame";
 import { EncartaApp } from "@/src/modules/shell/apps/EncartaApp";
 import { KutubApp } from "@/src/modules/shell/apps/KutubApp";
 import { HilalGlobeApp } from "@/src/modules/shell/apps/HilalGlobeApp";
+import { NuhaTechApp } from "@/src/modules/shell/apps/NuhaTechApp";
 import { MinesweeperApp } from "@/src/modules/shell/apps/MinesweeperApp";
 import { WmpApp } from "@/src/modules/shell/apps/WmpApp";
 import { Bsod } from "./easter-eggs/Bsod";
@@ -108,6 +109,7 @@ export function Shell() {
               encarta: <EncartaApp />,
               kutub: <KutubApp />,
               hilalglobe: <HilalGlobeApp />,
+              nuhatech: <NuhaTechApp />,
               minesweeper: <MinesweeperApp />,
               wmp: <WmpApp />,
             }}

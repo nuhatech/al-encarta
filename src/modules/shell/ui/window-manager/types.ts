@@ -1,4 +1,10 @@
-export type AppId = "encarta" | "kutub" | "hilalglobe" | "minesweeper" | "wmp";
+export type AppId =
+  | "encarta"
+  | "kutub"
+  | "hilalglobe"
+  | "nuhatech"
+  | "minesweeper"
+  | "wmp";
 
 export interface AppMeta {
   id: AppId;
@@ -21,7 +27,7 @@ export const APP_REGISTRY: Record<AppId, AppMeta> = {
   },
   kutub: {
     id: "kutub",
-    title: "Kutub — Bibliothèque arabe classique",
+    title: "Internet Explorer — Kutub.io",
     icon: "/kutub-logo.png",
     defaultW: 1000,
     defaultH: 680,
@@ -29,8 +35,16 @@ export const APP_REGISTRY: Record<AppId, AppMeta> = {
   },
   hilalglobe: {
     id: "hilalglobe",
-    title: "Hilal Globe — Carte de visibilité du croissant",
+    title: "Internet Explorer — Hilal Globe",
     icon: "/hilal-logo.png",
+    defaultW: 1000,
+    defaultH: 680,
+    bare: true,
+  },
+  nuhatech: {
+    id: "nuhatech",
+    title: "Internet Explorer — NuhaTech",
+    icon: "/github-icon.svg",
     defaultW: 1000,
     defaultH: 680,
     bare: true,

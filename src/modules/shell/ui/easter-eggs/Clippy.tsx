@@ -36,6 +36,10 @@ const APP_TIPS: Record<AppId, ReadonlyArray<string>> = {
     "Le globe affiche la visibilité du croissant lunaire (méthode Odeh).",
     "Glissez le globe pour l'orienter. Cliquez sur une ville pour voir la prévision locale.",
   ],
+  nuhatech: [
+    "Internet Explorer 6 charge github.com/nuhatech — pendant ce temps, le petit « e » tourne.",
+    "Astuce : la barre Links en haut bascule entre Kutub, Hilal Globe et NuhaTech sans recharger.",
+  ],
   minesweeper: [
     "Démineur — Ormuz : 8 mines sur 12×10. Évitez les angles, c'est piégé.",
     "Astuce : finissez la partie pour débloquer un personnage secret dans Encarta.",
