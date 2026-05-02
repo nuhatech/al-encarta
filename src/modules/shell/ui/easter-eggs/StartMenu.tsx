@@ -64,7 +64,7 @@ export function StartMenu({
       data-start-menu
       onMouseDown={(e) => e.stopPropagation()}
       style={{
-        position: "absolute",
+        position: "fixed",
         left: 0,
         bottom: 30,
         width: 380,
@@ -76,6 +76,7 @@ export function StartMenu({
         boxShadow: "2px -3px 12px rgba(0,0,0,0.45)",
         fontFamily: "Tahoma, 'Segoe UI', sans-serif",
         fontSize: 11,
+        zIndex: 9000,
       }}
     >
       <UserBar />

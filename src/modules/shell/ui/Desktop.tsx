@@ -401,7 +401,7 @@ function Taskbar({
         boxShadow: "inset 0 1px 0 rgba(255,255,255,0.5)",
         background:
           "linear-gradient(180deg, #1f56c4 0%, #2566db 8%, #2c75e8 35%, #2666d8 60%, #1c54bf 88%, #103e7a 100%)",
-        zIndex: 2000,
+        zIndex: 8000,
       }}
     >
       <StartButton onRun={onRun} onAbout={onAbout} onShutdown={onShutdown} />
