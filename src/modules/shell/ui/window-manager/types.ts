@@ -28,7 +28,7 @@ export const APP_REGISTRY: Record<AppId, AppMeta> = {
   kutub: {
     id: "kutub",
     title: "Internet Explorer — Kutub.io",
-    icon: "/kutub-logo.png",
+    icon: "/IE6-icon.webp",
     defaultW: 1000,
     defaultH: 680,
     bare: true,
@@ -36,7 +36,7 @@ export const APP_REGISTRY: Record<AppId, AppMeta> = {
   hilalglobe: {
     id: "hilalglobe",
     title: "Internet Explorer — Hilal Globe",
-    icon: "/hilal-logo.png",
+    icon: "/IE6-icon.webp",
     defaultW: 1000,
     defaultH: 680,
     bare: true,
@@ -44,7 +44,7 @@ export const APP_REGISTRY: Record<AppId, AppMeta> = {
   nuhatech: {
     id: "nuhatech",
     title: "Internet Explorer — NuhaTech",
-    icon: "/github-icon.svg",
+    icon: "/IE6-icon.webp",
     defaultW: 1000,
     defaultH: 680,
     bare: true,

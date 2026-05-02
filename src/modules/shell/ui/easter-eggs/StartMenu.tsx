@@ -164,7 +164,7 @@ function LeftColumn({
       onClick: () => launch("encarta"),
     },
     {
-      icon: <img src={APP_REGISTRY.kutub.icon} alt="" style={iconImg} />,
+      icon: <img src="/kutub-logo.png" alt="" style={iconImg} />,
       label: "Kutub",
       sublabel: "Bibliothèque arabe classique",
       bold: true,
@@ -173,12 +173,12 @@ function LeftColumn({
     },
     { icon: "", label: "", separator: true },
     {
-      icon: <img src={APP_REGISTRY.hilalglobe.icon} alt="" style={iconImg} />,
+      icon: <img src="/hilal-logo.png" alt="" style={iconImg} />,
       label: "Hilal Globe",
       onClick: () => launch("hilalglobe"),
     },
     {
-      icon: <img src={APP_REGISTRY.nuhatech.icon} alt="" style={iconImg} />,
+      icon: <img src="/github-icon.svg" alt="" style={iconImg} />,
       label: "NuhaTech",
       onClick: () => launch("nuhatech"),
     },
