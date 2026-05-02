@@ -17,6 +17,7 @@ export interface WindowManagerApi {
   restore: (appId: AppId) => void;
   focus: (appId: AppId) => void;
   move: (appId: AppId, x: number, y: number) => void;
+  resize: (appId: AppId, w: number, h: number) => void;
   toggleMinimize: (appId: AppId) => void;
 }
 
@@ -120,6 +121,14 @@ export function useWindowManagerState(): WindowManagerApi {
     }));
   }, []);
 
+  const resize = useCallback((appId: AppId, w: number, h: number) => {
+    setState((prev) => ({
+      windows: prev.windows.map((win) =>
+        win.appId === appId ? { ...win, w, h } : win,
+      ),
+    }));
+  }, []);
+
   return {
     windows: state.windows,
     isOpen,
@@ -130,6 +139,7 @@ export function useWindowManagerState(): WindowManagerApi {
     restore,
     focus,
     move,
+    resize,
     toggleMinimize,
   };
 }

@@ -12,20 +12,38 @@ interface WindowFrameProps {
   titleOverride?: string;
 }
 
+type ResizeEdge = "n" | "s" | "e" | "w" | "nw" | "ne" | "sw" | "se";
+
+const MIN_W = 320;
+const MIN_H = 200;
+const HANDLE_THICK = 6;
+
 export function WindowFrame({ win, zIndex, children, titleOverride }: WindowFrameProps) {
   const wm = useWindowManager();
   const meta = APP_REGISTRY[win.appId];
   const dragging = useRef<{ originX: number; originY: number; startX: number; startY: number } | null>(null);
+  const resizing = useRef<{
+    edge: ResizeEdge;
+    originX: number;
+    originY: number;
+    startW: number;
+    startH: number;
+    startX: number;
+    startY: number;
+  } | null>(null);
   const [position, setPosition] = useState({ x: win.x, y: win.y });
+  const [size, setSize] = useState({ w: win.w, h: win.h });
 
-  // Sync external moves (e.g. from focus/snap actions) back into local state.
+  // Sync external moves/resizes back into local state.
   useEffect(() => {
     setPosition({ x: win.x, y: win.y });
   }, [win.x, win.y]);
+  useEffect(() => {
+    setSize({ w: win.w, h: win.h });
+  }, [win.w, win.h]);
 
-  const onMouseDown = useCallback(
+  const onTitleBarMouseDown = useCallback(
     (e: React.MouseEvent) => {
-      // Only the title bar background is draggable, not its buttons.
       if ((e.target as HTMLElement).closest("button")) return;
       e.preventDefault();
       dragging.current = {
@@ -39,25 +57,74 @@ export function WindowFrame({ win, zIndex, children, titleOverride }: WindowFram
     [position.x, position.y, wm, win.appId],
   );
 
+  const onResizeMouseDown = useCallback(
+    (edge: ResizeEdge) => (e: React.MouseEvent) => {
+      e.preventDefault();
+      e.stopPropagation();
+      resizing.current = {
+        edge,
+        originX: e.clientX,
+        originY: e.clientY,
+        startW: size.w,
+        startH: size.h,
+        startX: position.x,
+        startY: position.y,
+      };
+      wm.focus(win.appId);
+    },
+    [size.w, size.h, position.x, position.y, wm, win.appId],
+  );
+
+  // Global pointer listeners — attached once, branch on whichever drag is active.
   useEffect(() => {
     function onMove(e: MouseEvent) {
-      const d = dragging.current;
-      if (!d) return;
-      const dx = e.clientX - d.originX;
-      const dy = e.clientY - d.originY;
-      // Clamp to viewport with a small margin so the title bar is always reachable.
-      const maxX = window.innerWidth - 80;
-      const maxY = window.innerHeight - 60;
-      const x = Math.min(maxX, Math.max(-(win.w - 80), d.startX + dx));
-      const y = Math.min(maxY, Math.max(0, d.startY + dy));
-      setPosition({ x, y });
+      const drag = dragging.current;
+      if (drag) {
+        const dx = e.clientX - drag.originX;
+        const dy = e.clientY - drag.originY;
+        const maxX = window.innerWidth - 80;
+        const maxY = window.innerHeight - 60;
+        const x = Math.min(maxX, Math.max(-(size.w - 80), drag.startX + dx));
+        const y = Math.min(maxY, Math.max(0, drag.startY + dy));
+        setPosition({ x, y });
+        return;
+      }
+      const r = resizing.current;
+      if (r) {
+        const dx = e.clientX - r.originX;
+        const dy = e.clientY - r.originY;
+        let newW = r.startW;
+        let newH = r.startH;
+        let newX = r.startX;
+        let newY = r.startY;
+        if (r.edge.includes("e")) {
+          newW = Math.max(MIN_W, r.startW + dx);
+        }
+        if (r.edge.includes("w")) {
+          newW = Math.max(MIN_W, r.startW - dx);
+          newX = r.startX + (r.startW - newW);
+        }
+        if (r.edge.includes("s")) {
+          newH = Math.max(MIN_H, r.startH + dy);
+        }
+        if (r.edge.includes("n")) {
+          newH = Math.max(MIN_H, r.startH - dy);
+          newY = r.startY + (r.startH - newH);
+        }
+        setSize({ w: newW, h: newH });
+        setPosition({ x: newX, y: newY });
+      }
     }
     function onUp() {
-      const d = dragging.current;
-      if (!d) return;
-      dragging.current = null;
-      // Commit final position to the manager.
-      wm.move(win.appId, position.x, position.y);
+      if (dragging.current) {
+        dragging.current = null;
+        wm.move(win.appId, position.x, position.y);
+      }
+      if (resizing.current) {
+        resizing.current = null;
+        wm.move(win.appId, position.x, position.y);
+        wm.resize(win.appId, size.w, size.h);
+      }
     }
     window.addEventListener("mousemove", onMove);
     window.addEventListener("mouseup", onUp);
@@ -65,11 +132,8 @@ export function WindowFrame({ win, zIndex, children, titleOverride }: WindowFram
       window.removeEventListener("mousemove", onMove);
       window.removeEventListener("mouseup", onUp);
     };
-  }, [position.x, position.y, wm, win.appId, win.w]);
+  }, [position.x, position.y, size.w, size.h, wm, win.appId]);
 
-  // Only focus when the click reaches a non-top window — otherwise every
-  // button click in the active window would trigger a state churn that
-  // re-renders the WindowsLayer mid-click and can swallow underlying onClick.
   const focusIfNeeded = useCallback(() => {
     if (wm.topAppId !== win.appId) wm.focus(win.appId);
   }, [wm, win.appId]);
@@ -84,8 +148,8 @@ export function WindowFrame({ win, zIndex, children, titleOverride }: WindowFram
         position: "fixed",
         left: position.x,
         top: position.y,
-        width: win.w,
-        height: win.h,
+        width: size.w,
+        height: size.h,
         zIndex,
         display: "flex",
         flexDirection: "column",
@@ -94,7 +158,7 @@ export function WindowFrame({ win, zIndex, children, titleOverride }: WindowFram
     >
       <div
         className="title-bar"
-        onMouseDown={onMouseDown}
+        onMouseDown={onTitleBarMouseDown}
         onDoubleClick={() => wm.toggleMinimize(win.appId)}
         style={{ cursor: "grab", userSelect: "none" }}
       >
@@ -122,16 +186,24 @@ export function WindowFrame({ win, zIndex, children, titleOverride }: WindowFram
             aria-label="Maximize"
             onClick={(e) => {
               e.stopPropagation();
-              // Hackathon: toggle maximize = snap to viewport size
+              const targetW = window.innerWidth - 20;
+              const targetH = window.innerHeight - 50;
               const isMax =
-                win.x === 10 &&
-                win.y === 10 &&
-                win.w >= window.innerWidth - 30 &&
-                win.h >= window.innerHeight - 70;
+                position.x === 10 &&
+                position.y === 10 &&
+                size.w >= targetW - 5 &&
+                size.h >= targetH - 5;
               if (isMax) {
-                wm.move(win.appId, position.x, position.y); // no-op
+                // Restore to default size, centered
+                wm.resize(win.appId, meta.defaultW, meta.defaultH);
+                wm.move(
+                  win.appId,
+                  Math.max(20, Math.floor((window.innerWidth - meta.defaultW) / 2)),
+                  Math.max(20, Math.floor((window.innerHeight - meta.defaultH) / 2 - 30)),
+                );
               } else {
                 wm.move(win.appId, 10, 10);
+                wm.resize(win.appId, targetW, targetH);
               }
             }}
           />
@@ -156,8 +228,71 @@ export function WindowFrame({ win, zIndex, children, titleOverride }: WindowFram
       >
         {children}
       </div>
+
+      {/* Resize handles — 4 edges + 4 corners. Corners overlap edges so
+          they take precedence on cursor change. */}
+      <ResizeHandle edge="n" onMouseDown={onResizeMouseDown("n")} />
+      <ResizeHandle edge="s" onMouseDown={onResizeMouseDown("s")} />
+      <ResizeHandle edge="e" onMouseDown={onResizeMouseDown("e")} />
+      <ResizeHandle edge="w" onMouseDown={onResizeMouseDown("w")} />
+      <ResizeHandle edge="nw" onMouseDown={onResizeMouseDown("nw")} />
+      <ResizeHandle edge="ne" onMouseDown={onResizeMouseDown("ne")} />
+      <ResizeHandle edge="sw" onMouseDown={onResizeMouseDown("sw")} />
+      <ResizeHandle edge="se" onMouseDown={onResizeMouseDown("se")} />
     </div>
   );
+}
+
+function ResizeHandle({
+  edge,
+  onMouseDown,
+}: {
+  edge: ResizeEdge;
+  onMouseDown: (e: React.MouseEvent) => void;
+}) {
+  const cursor =
+    edge === "n" || edge === "s"
+      ? "ns-resize"
+      : edge === "e" || edge === "w"
+        ? "ew-resize"
+        : edge === "nw" || edge === "se"
+          ? "nwse-resize"
+          : "nesw-resize";
+
+  const cornerSize = 14;
+  let style: React.CSSProperties = {
+    position: "absolute",
+    background: "transparent",
+    cursor,
+    zIndex: 1,
+  };
+  switch (edge) {
+    case "n":
+      style = { ...style, top: -HANDLE_THICK / 2, left: cornerSize, right: cornerSize, height: HANDLE_THICK };
+      break;
+    case "s":
+      style = { ...style, bottom: -HANDLE_THICK / 2, left: cornerSize, right: cornerSize, height: HANDLE_THICK };
+      break;
+    case "e":
+      style = { ...style, top: cornerSize, bottom: cornerSize, right: -HANDLE_THICK / 2, width: HANDLE_THICK };
+      break;
+    case "w":
+      style = { ...style, top: cornerSize, bottom: cornerSize, left: -HANDLE_THICK / 2, width: HANDLE_THICK };
+      break;
+    case "nw":
+      style = { ...style, top: -HANDLE_THICK / 2, left: -HANDLE_THICK / 2, width: cornerSize, height: cornerSize };
+      break;
+    case "ne":
+      style = { ...style, top: -HANDLE_THICK / 2, right: -HANDLE_THICK / 2, width: cornerSize, height: cornerSize };
+      break;
+    case "sw":
+      style = { ...style, bottom: -HANDLE_THICK / 2, left: -HANDLE_THICK / 2, width: cornerSize, height: cornerSize };
+      break;
+    case "se":
+      style = { ...style, bottom: -HANDLE_THICK / 2, right: -HANDLE_THICK / 2, width: cornerSize, height: cornerSize };
+      break;
+  }
+  return <div onMouseDown={onMouseDown} style={style} aria-hidden />;
 }
 
 interface WindowsLayerProps {
