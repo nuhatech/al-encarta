@@ -75,7 +75,11 @@ export function Shell() {
       // Walk the state machine through to user-select.
       biosDone();
       xpSplashDone();
-      installDone();
+    } else if (skip === "installer") {
+      // Walk through to the installer (post-login).
+      biosDone();
+      xpSplashDone();
+      userSelected();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
