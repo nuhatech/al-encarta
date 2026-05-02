@@ -33,21 +33,32 @@ const USERS: ReadonlyArray<UserAccount> = [
   },
 ];
 
+// Authentic XP welcome screen colors (cf. lucasgmelo/xp reference).
+const COLOR_BLUE_DARK = "#084DA3";
+const COLOR_BLUE_MID = "#508FD9";
+const COLOR_BLUE_LIGHT = "#9CC0E9";
+const COLOR_ORANGE_LINE = "#FF9933";
+const COLOR_YELLOW_BORDER = "#FFCC00";
+const COLOR_POWER_RED = "#E55022";
+const COLOR_POWER_RED_DARK = "#AA2300";
+
 /**
  * Iconic Windows XP "Welcome" / user select screen.
- * Click any avatar tile → boot continues to desktop.
+ * Authentic styling: dark blue header & footer with thin gradient accent
+ * lines, radial blue main, 445px-wide gradient tiles with yellow-bordered
+ * avatars. Click any tile → boot continues to the desktop.
  */
 export function UserSelectScreen({ onUserSelected }: UserSelectScreenProps) {
   const [hovered, setHovered] = useState<string | null>(null);
 
-  // Pre-select the NuhaTech user briefly to draw the eye there.
+  // Pre-highlight NuhaTech briefly to draw the eye there.
   useEffect(() => {
     setHovered("NuhaTech");
     const t = setTimeout(() => setHovered(null), 1400);
     return () => clearTimeout(t);
   }, []);
 
-  const select = (u: UserAccount) => {
+  const select = () => {
     play("click");
     onUserSelected();
   };
@@ -57,156 +68,193 @@ export function UserSelectScreen({ onUserSelected }: UserSelectScreenProps) {
       style={{
         position: "fixed",
         inset: 0,
-        background:
-          "linear-gradient(180deg, #5b8ad0 0%, #3a6cba 50%, #234a96 100%)",
-        color: "#fff",
-        fontFamily: "Tahoma, 'Segoe UI', sans-serif",
         display: "flex",
         flexDirection: "column",
+        fontFamily: "'Source Sans Pro', 'Segoe UI', Tahoma, sans-serif",
         zIndex: 9999,
+        overflow: "hidden",
       }}
     >
-      {/* Top horizontal divider with the welcome strip */}
-      <div
-        style={{
-          height: 90,
-          background:
-            "linear-gradient(180deg, #2a59ad 0%, #214f9c 35%, #f7c34d 36%, #d99a16 38%, #c8800a 100%)",
-          boxShadow: "0 1px 0 rgba(255,255,255,0.25), 0 -1px 0 rgba(0,0,0,0.4)",
-          display: "flex",
-          alignItems: "center",
-          padding: "0 36px",
-          position: "relative",
-        }}
-      >
-        <div
-          style={{
-            fontFamily: "'Trebuchet MS', 'Segoe UI', Tahoma, sans-serif",
-            fontStyle: "italic",
-            fontWeight: 700,
-            fontSize: 28,
-            color: "#fff",
-            textShadow: "1px 1px 1px rgba(0,0,0,0.5)",
-          }}
-        >
-          Welcome
-        </div>
-      </div>
+      <Header />
 
-      {/* Main split */}
-      <div
+      <main
         style={{
           flex: 1,
+          background: `radial-gradient(35% 50% at 18% 30%, ${COLOR_BLUE_LIGHT} 0%, ${COLOR_BLUE_MID} 100%)`,
           display: "grid",
-          gridTemplateColumns: "1fr 1px 1fr",
-          padding: "40px 60px",
-          gap: 0,
+          gridTemplateColumns: "1fr auto 1fr",
           alignItems: "center",
+          padding: "0 60px",
         }}
       >
-        {/* Left side: logo + instruction */}
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-end", paddingRight: 60 }}>
-          <img
-            src="/windows-xp-logo.png"
-            alt="Microsoft Windows XP"
-            style={{
-              width: 200,
-              filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.4))",
-              marginBottom: 18,
-            }}
-          />
-          <div
-            style={{
-              fontSize: 16,
-              color: "#fff",
-              textShadow: "1px 1px 1px rgba(0,0,0,0.4)",
-              textAlign: "right",
-              maxWidth: 280,
-            }}
-          >
-            To begin, click your user name
-          </div>
-          <div
-            style={{
-              fontSize: 11,
-              color: "rgba(255,255,255,0.7)",
-              marginTop: 10,
-              textAlign: "right",
-              maxWidth: 280,
-            }}
-          >
-            (clic n&apos;importe quel utilisateur — la session est commune)
-          </div>
-        </div>
-
-        {/* Vertical divider */}
+        <LeftPanel />
+        <Divider />
         <div
-          aria-hidden
           style={{
-            background:
-              "linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.4) 20%, rgba(255,255,255,0.4) 80%, transparent 100%)",
-            width: 1,
-            height: "70%",
-            justifySelf: "center",
-            alignSelf: "center",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "flex-start",
+            gap: 4,
+            paddingLeft: 42,
           }}
-        />
-
-        {/* Right side: user list */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 14, paddingLeft: 60 }}>
+        >
           {USERS.map((u) => (
             <UserTile
               key={u.username}
               user={u}
               hovered={hovered === u.username}
               onHover={(in_) => setHovered(in_ ? u.username : null)}
-              onClick={() => select(u)}
+              onClick={select}
             />
           ))}
         </div>
-      </div>
+      </main>
 
-      {/* Bottom strip with help links + power button */}
+      <Footer />
+    </div>
+  );
+}
+
+function Header() {
+  return (
+    <header
+      style={{
+        minHeight: 112,
+        background: COLOR_BLUE_DARK,
+        position: "relative",
+        flexShrink: 0,
+      }}
+    >
+      <div
+        aria-hidden
+        style={{
+          position: "absolute",
+          left: 0,
+          right: 0,
+          bottom: 0,
+          height: 7,
+          background: `linear-gradient(270deg, ${COLOR_BLUE_DARK} -33.4%, ${COLOR_BLUE_DARK} 6%, #fff 50%, ${COLOR_BLUE_DARK} 83%, ${COLOR_BLUE_DARK} 121%)`,
+        }}
+      />
+    </header>
+  );
+}
+
+function Footer() {
+  return (
+    <footer
+      style={{
+        minHeight: 92,
+        background: COLOR_BLUE_DARK,
+        position: "relative",
+        flexShrink: 0,
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        padding: "0 50px",
+      }}
+    >
+      <div
+        aria-hidden
+        style={{
+          position: "absolute",
+          left: 0,
+          right: 0,
+          top: 0,
+          height: 7,
+          background: `linear-gradient(270deg, ${COLOR_BLUE_DARK} -33.4%, ${COLOR_BLUE_DARK} 6%, ${COLOR_ORANGE_LINE} 50%, ${COLOR_BLUE_DARK} 83%, ${COLOR_BLUE_DARK} 121%)`,
+        }}
+      />
+      <div style={{ display: "flex", alignItems: "center", gap: 18, paddingTop: 14 }}>
+        <button
+          type="button"
+          aria-label="Arrêter l'ordinateur"
+          style={{
+            width: 40,
+            height: 40,
+            background: COLOR_POWER_RED,
+            border: "1px solid #fff",
+            borderRadius: 4,
+            outline: "none",
+            cursor: "pointer",
+            boxShadow: `inset 4px 2px 8px rgba(255,255,255,0.6), inset -2px -3px 5px ${COLOR_POWER_RED_DARK}`,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            color: "#fff",
+            fontSize: 20,
+          }}
+        >
+          ⏻
+        </button>
+        <span style={{ color: "#fff", fontSize: 16, fontWeight: 400 }}>
+          Arrêter l&apos;ordinateur
+        </span>
+      </div>
       <div
         style={{
-          height: 56,
-          background:
-            "linear-gradient(180deg, #c8800a 0%, #d99a16 2%, #f7c34d 4%, #214f9c 5%, #2a59ad 100%)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          padding: "12px 36px",
-          fontSize: 11,
           color: "#fff",
-          textShadow: "1px 1px 1px rgba(0,0,0,0.5)",
+          fontSize: 13,
+          textAlign: "right",
+          letterSpacing: 0.4,
+          paddingTop: 14,
+          opacity: 0.95,
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-          <span
-            style={{
-              width: 28,
-              height: 28,
-              borderRadius: "50%",
-              background:
-                "radial-gradient(circle at 35% 30%, #ffe9a8 0%, #f6b923 35%, #a06a04 100%)",
-              boxShadow: "inset 1px 1px 2px rgba(255,255,255,0.6), 0 1px 2px rgba(0,0,0,0.4)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontWeight: 700,
-              fontSize: 16,
-              color: "#7a4d00",
-            }}
-          >
-            ⏻
-          </span>
-          <span>Arrêter l&apos;ordinateur</span>
-        </div>
-        <div style={{ opacity: 0.75 }}>
-          Après avoir ouvert une session, vous pouvez la fermer ou la verrouiller.
-        </div>
+        <div>Après avoir ouvert une session, vous pouvez ajouter ou modifier des comptes.</div>
+        <div>Allez dans le Panneau de configuration et cliquez sur Comptes d&apos;utilisateurs.</div>
       </div>
+    </footer>
+  );
+}
+
+function LeftPanel() {
+  return (
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-end",
+        position: "relative",
+        top: -40,
+      }}
+    >
+      <img
+        src="/windows-xp-logo.png"
+        alt="Microsoft Windows XP"
+        style={{
+          width: 220,
+          filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.4))",
+        }}
+      />
+      <h1
+        style={{
+          color: "#fff",
+          fontWeight: 500,
+          fontSize: 22,
+          marginTop: 30,
+          marginRight: 40,
+          letterSpacing: 0.2,
+          textShadow: "1px 1px 1px rgba(0,0,0,0.35)",
+        }}
+      >
+        To begin, click your user name
+      </h1>
     </div>
+  );
+}
+
+function Divider() {
+  return (
+    <div
+      aria-hidden
+      style={{
+        width: 2,
+        height: "80%",
+        margin: "0 42px",
+        background: `linear-gradient(180deg, ${COLOR_BLUE_MID} 0%, #fff 47%, ${COLOR_BLUE_MID} 99%)`,
+      }}
+    />
   );
 }
 
@@ -224,57 +272,66 @@ function UserTile({ user, hovered, onHover, onClick }: UserTileProps) {
       onMouseEnter={() => onHover(true)}
       onMouseLeave={() => onHover(false)}
       style={{
-        background: "transparent",
+        width: 445,
+        minHeight: 112,
+        padding: "15px 20px",
+        background: hovered
+          ? `linear-gradient(90deg, ${COLOR_BLUE_DARK} 0%, ${COLOR_BLUE_MID} 100%)`
+          : "transparent",
         border: "none",
-        padding: "6px 10px",
+        borderRadius: "4px 0 0 4px",
         cursor: "pointer",
         display: "flex",
         alignItems: "center",
-        gap: 14,
-        color: "#fff",
-        textShadow: "1px 1px 1px rgba(0,0,0,0.5)",
+        gap: 20,
         textAlign: "left",
-        borderRadius: 4,
+        color: "#fff",
+        textShadow: "1px 1px 1px rgba(0,0,0,0.35)",
+        transition: "background 100ms ease-out",
       }}
     >
       <div
         style={{
-          width: 56,
-          height: 56,
-          background: "#fff",
-          padding: 2,
-          border: hovered ? "2px solid #fff" : "2px solid rgba(255,255,255,0.55)",
-          boxShadow: hovered
-            ? "0 0 0 3px rgba(255,255,255,0.3), 0 2px 6px rgba(0,0,0,0.35)"
-            : "0 1px 3px rgba(0,0,0,0.35)",
-          transition: "all 120ms ease-out",
+          width: 81,
+          height: 81,
           flexShrink: 0,
+          border: `2px solid ${COLOR_YELLOW_BORDER}`,
+          borderRadius: 4,
+          overflow: "hidden",
+          background: "#fff",
+          boxShadow: hovered
+            ? "0 0 0 1px rgba(255,255,255,0.5), 0 2px 8px rgba(0,0,0,0.5)"
+            : "0 1px 3px rgba(0,0,0,0.3)",
+          transition: "box-shadow 100ms ease-out",
         }}
       >
         <img
           src={user.icon}
           alt={user.username}
-          style={{
-            width: "100%",
-            height: "100%",
-            objectFit: "cover",
-            display: "block",
-          }}
+          style={{ width: "100%", height: "100%", objectFit: "cover", display: "block" }}
         />
       </div>
       <div>
         <div
           style={{
-            fontSize: 18,
+            fontSize: 22,
             fontWeight: 400,
-            color: hovered ? "#ffea7d" : "#fff",
-            transition: "color 120ms ease-out",
+            lineHeight: 1.1,
+            color: "#fff",
           }}
         >
           {user.username}
         </div>
         {user.subtitle && (
-          <div style={{ fontSize: 11, color: "rgba(255,255,255,0.75)" }}>
+          <div
+            style={{
+              fontFamily: "Verdana, sans-serif",
+              fontSize: 12,
+              marginTop: 8,
+              color: "#fff",
+              opacity: 0.9,
+            }}
+          >
             {user.subtitle}
           </div>
         )}
