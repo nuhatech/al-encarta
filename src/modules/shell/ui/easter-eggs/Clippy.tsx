@@ -40,6 +40,11 @@ const APP_TIPS: Record<AppId, ReadonlyArray<string>> = {
     "Démineur — Ormuz : 8 mines sur 12×10. Évitez les angles, c'est piégé.",
     "Astuce : finissez la partie pour débloquer un personnage secret dans Encarta.",
   ],
+  wmp: [
+    "Windows Media Player 8 ! Choisissez une apparence dans l'onglet « Skin Chooser ».",
+    "L'égaliseur 10 bandes en bas de « Now Playing » modifie le son en temps réel.",
+    "Astuce : essayez la visualisation « Rosette polaire » pour un effet hypnotique.",
+  ],
 };
 
 interface ClippyProps {

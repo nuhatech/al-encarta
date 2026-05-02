@@ -182,6 +182,11 @@ function LeftColumn({
       label: "Démineur — Ormuz",
       onClick: () => launch("minesweeper"),
     },
+    {
+      icon: <img src={APP_REGISTRY.wmp.icon} alt="" style={iconImg} />,
+      label: "Windows Media Player",
+      onClick: () => launch("wmp"),
+    },
     { icon: "📝", label: "Notepad", disabled: true },
     {
       icon: "🎓",

@@ -1,4 +1,4 @@
-export type AppId = "encarta" | "kutub" | "hilalglobe" | "minesweeper";
+export type AppId = "encarta" | "kutub" | "hilalglobe" | "minesweeper" | "wmp";
 
 export interface AppMeta {
   id: AppId;
@@ -42,6 +42,14 @@ export const APP_REGISTRY: Record<AppId, AppMeta> = {
     defaultW: 540,
     defaultH: 600,
     bare: false,
+  },
+  wmp: {
+    id: "wmp",
+    title: "Windows Media Player",
+    icon: "/wmp-icon.webp",
+    defaultW: 720,
+    defaultH: 540,
+    bare: true,
   },
 };
 

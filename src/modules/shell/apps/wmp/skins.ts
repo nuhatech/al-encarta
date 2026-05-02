@@ -1,0 +1,61 @@
+import type { Skin } from "./types";
+
+export const SKINS: ReadonlyArray<Skin> = [
+  {
+    id: "atomic",
+    displayName: "Atomic (par défaut)",
+    outerStart: "#3a78c9",
+    outerEnd: "#0f3270",
+    accent: "#7cd2ff",
+    accentSoft: "#5fb1f5",
+    screen: "#0a1226",
+    text: "#ffffff",
+    subtext: "#9fc0e8",
+  },
+  {
+    id: "iconic",
+    displayName: "Iconic (silver)",
+    outerStart: "#dadbe0",
+    outerEnd: "#7e8189",
+    accent: "#5b6269",
+    accentSoft: "#a4abb4",
+    screen: "#1a1d22",
+    text: "#f0f2f5",
+    subtext: "#bcc1c8",
+  },
+  {
+    id: "aura",
+    displayName: "Aura (dark green)",
+    outerStart: "#1a2f1c",
+    outerEnd: "#050b06",
+    accent: "#3eea7b",
+    accentSoft: "#1f9450",
+    screen: "#040806",
+    text: "#cdf5d8",
+    subtext: "#5a8a6a",
+  },
+  {
+    id: "toothy",
+    displayName: "Toothy (sunset)",
+    outerStart: "#ff9c2a",
+    outerEnd: "#7a1f00",
+    accent: "#ffe17d",
+    accentSoft: "#ffaf3f",
+    screen: "#1a0700",
+    text: "#fff7da",
+    subtext: "#ffb070",
+  },
+  {
+    id: "nuhatech",
+    displayName: "NuhaTech (gold/teal)",
+    outerStart: "#0d5e60",
+    outerEnd: "#04282a",
+    accent: "#d4af37",
+    accentSoft: "#f0d275",
+    screen: "#03191a",
+    text: "#fff5d6",
+    subtext: "#a08a52",
+  },
+];
+
+export const DEFAULT_SKIN_ID = "atomic";

@@ -21,7 +21,8 @@ const DEFAULT_POSITIONS: Record<ShortcutId, IconPos> = {
   kutub: { x: 16, y: 110 },
   hilalglobe: { x: 16, y: 204 },
   minesweeper: { x: 16, y: 298 },
-  recyclebin: { x: 16, y: 410 },
+  wmp: { x: 16, y: 392 },
+  recyclebin: { x: 16, y: 504 },
 };
 
 interface PersistedState {

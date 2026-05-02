@@ -32,6 +32,7 @@ const SHORTCUTS: ReadonlyArray<ShortcutDef> = [
   { id: "kutub", label: "Kutub", icon: "/kutub-logo.png", shortcut: true, isApp: true },
   { id: "hilalglobe", label: "Hilal Globe", icon: "/hilal-logo.png", shortcut: true, isApp: true },
   { id: "minesweeper", label: "Démineur — Ormuz", icon: "/minesweeper.png", fallbackEmoji: "💣", shortcut: true, isApp: true },
+  { id: "wmp", label: "Windows Media Player", icon: "/wmp-icon.webp", fallbackEmoji: "🎵", shortcut: true, isApp: true },
   { id: "recyclebin", label: "Corbeille", icon: "/bin-icon.webp", fallbackEmoji: "🗑", shortcut: false, isApp: false },
 ];
 

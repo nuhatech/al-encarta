@@ -15,6 +15,7 @@ import { EncartaApp } from "@/src/modules/shell/apps/EncartaApp";
 import { KutubApp } from "@/src/modules/shell/apps/KutubApp";
 import { HilalGlobeApp } from "@/src/modules/shell/apps/HilalGlobeApp";
 import { MinesweeperApp } from "@/src/modules/shell/apps/MinesweeperApp";
+import { WmpApp } from "@/src/modules/shell/apps/WmpApp";
 import { Bsod } from "./easter-eggs/Bsod";
 import { AboutDialog } from "./easter-eggs/AboutDialog";
 import { RunDialog } from "./easter-eggs/RunDialog";
@@ -104,6 +105,7 @@ export function Shell() {
               kutub: <KutubApp />,
               hilalglobe: <HilalGlobeApp />,
               minesweeper: <MinesweeperApp />,
+              wmp: <WmpApp />,
             }}
           />
           <Clippy onAbout={() => setAboutOpen(true)} />
