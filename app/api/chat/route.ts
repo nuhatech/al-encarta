@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
 import { idOf } from "@/src/shared/kernel/id";
-
-export const runtime = "edge";
 import { StaticPersonalityRepository } from "@/src/modules/catalog/infrastructure/static-personality-repo";
 import { VoiceComposer } from "@/src/modules/catalog/application/services/voice-composer";
 import { FakeLlmGateway } from "@/src/modules/conversation/infrastructure/fake-llm-gateway";

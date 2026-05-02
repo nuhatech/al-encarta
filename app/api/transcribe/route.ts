@@ -1,7 +1,5 @@
 import { NextResponse } from "next/server";
 import { makeTranscribeAudioHandler } from "@/src/modules/conversation/application/commands/transcribe-audio";
-
-export const runtime = "edge";
 import { VoxtralTranscriptionGateway } from "@/src/modules/conversation/infrastructure/voxtral-transcription-gateway";
 import { FakeTranscriptionGateway } from "@/src/modules/conversation/infrastructure/fake-transcription-gateway";
 import type { TranscriptionGateway } from "@/src/modules/conversation/application/ports/transcription-port";
