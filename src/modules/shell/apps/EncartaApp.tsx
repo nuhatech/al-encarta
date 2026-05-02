@@ -6,6 +6,7 @@ import { EncartaHomePanel } from "@/src/modules/catalog/ui/EncartaHomePanel";
 import { ChatTab } from "@/src/modules/conversation/ui/ChatTab";
 import { personalityIndex } from "@/src/modules/catalog/infrastructure/personality-index";
 import { isMuted, play, setMuted } from "@/src/shared/infra/audio/sounds";
+import { PrintDialog } from "@/src/modules/shell/ui/easter-eggs/PrintDialog";
 
 type Mode = "home" | "article" | "chat";
 
@@ -16,6 +17,7 @@ type Mode = "home" | "article" | "chat";
 export function EncartaApp() {
   const [selectedSlug, setSelectedSlug] = useState<string>("al-khawarizmi");
   const [mode, setMode] = useState<Mode>("home");
+  const [printOpen, setPrintOpen] = useState(false);
   const personality =
     personalityIndex.find((p) => p.slug === selectedSlug) ?? personalityIndex[0];
 
@@ -30,7 +32,18 @@ export function EncartaApp() {
           play("click");
           setMode(m);
         }}
+        onPrint={() => {
+          play("click");
+          setPrintOpen(true);
+        }}
       />
+      {printOpen && (
+        <PrintDialog
+          personalitySlug={selectedSlug}
+          personalityName={personality.displayName}
+          onClose={() => setPrintOpen(false)}
+        />
+      )}
 
       <div style={{ display: "flex", flex: 1, minHeight: 0 }}>
         <div style={{ width: 240, flexShrink: 0 }}>
@@ -187,9 +200,11 @@ function searchEncarta(query: string): SearchResult | null {
 function Toolbar({
   mode,
   onMode,
+  onPrint,
 }: {
   mode: Mode;
   onMode: (m: Mode) => void;
+  onPrint: () => void;
 }) {
   const [query, setQuery] = useState("");
   const [searchResult, setSearchResult] = useState<SearchResult | null>(null);
@@ -241,6 +256,16 @@ function Toolbar({
       <Btn id="home" glyph="🏠" label="Accueil" />
       <Btn id="article" glyph="📖" label="Article" />
       <Btn id="chat" glyph="🎙" label="Conversation" />
+      {mode === "chat" && (
+        <button
+          onClick={onPrint}
+          title="Imprimer la conversation"
+          style={{ display: "flex", alignItems: "center", gap: 4 }}
+        >
+          <span>🖨</span>
+          <span>Imprimer</span>
+        </button>
+      )}
       <div style={{ flex: 1 }} />
       <span style={{ color: "#555" }}>encarta.msn.com</span>
 
