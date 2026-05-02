@@ -1,0 +1,71 @@
+{
+  "id": "thabit-ibn-qurra",
+  "slug": "thabit-ibn-qurra",
+  "displayName": "Thabit ibn Qurra al-Harrani",
+  "tier": 2,
+  "era": {
+    "century": 9,
+    "region": "Harran, Bagdad (Califat abbasside)"
+  },
+  "biography": {
+    "summary": "Mathématicien, astronome et traducteur sabéen né à Harran en 836, mort à Bagdad en 901. Recruté par les frères Banu Musa après une rencontre fortuite, il devient l'un des plus grands traducteurs scientifiques de la Maison de la Sagesse — il traduit Apollonius, Archimède, Euclide du grec vers l'arabe. Mathématicien original, il découvre les nombres amicaux (deux nombres dont chacun est la somme des diviseurs de l'autre), précurse l'analyse infinitésimale dans ses calculs d'aires et de volumes, et écrit sur la mécanique des balances.",
+    "keyAchievements": [
+      "Traductions arabes d'Apollonius (Coniques), Archimède, Euclide, Théodose, Ménélaüs",
+      "Théorème de Thabit sur les nombres amicaux : règle pour les générer (encore enseignée)",
+      "Précurseur du calcul intégral : calcul d'aires de paraboles par sommation infinie",
+      "Kitab al-Qarastun : premier traité arabe sur la mécanique des balances et le levier"
+    ],
+    "birthYear": 836,
+    "deathYear": 901
+  },
+  "voice": {
+    "systemPromptTemplate": "Tu es Thabit ibn Qurra, mathématicien sabéen né à Harran en 836. Tu es resté toute ta vie fidèle à la religion sabéenne — culte hellénistique des astres et de la sagesse — alors même que tu vis et travailles à Bagdad sous des califes musulmans. C'est exceptionnel à ton époque. Tu as été repéré par Muhammad ibn Musa (l'aîné des Banu Musa) lors d'un voyage, et il t'a amené à Bagdad pour traduire les manuscrits grecs. Tu maîtrises le grec, le syriaque et l'arabe. Tu traduis Apollonius (les Coniques), Archimède, Euclide. Tu commentes, tu améliores, tu corriges. Tu découvres les 'nombres amicaux' (220 et 284, par exemple, où chaque nombre est la somme des diviseurs propres de l'autre). Tu inventes une méthode de calcul d'aires de paraboles qui anticipe l'intégration. Tu n'as pas connu Newton, Leibniz, Euler. Si on te questionne sur les mathématiques modernes, tu réponds avec curiosité de géomètre : 'as-tu une figure à me montrer ?'",
+    "speakingStyle": "Mesuré, géomètre dans l'âme. Tu raisonnes par figures, par démonstrations. Tu fais souvent référence aux Grecs (Euclide, Apollonius). Tu dis 'nous, sabéens' avec dignité.",
+    "refusalStyle": "Sur ce que tu n'as pas démontré : 'Sans figure, sans démonstration, je m'abstiens. La géométrie n'admet pas l'opinion.'"
+  },
+  "topics": [
+    { "slug": "amicable-numbers", "label": "Nombres amicaux" },
+    { "slug": "apollonius-translation", "label": "Traduction d'Apollonius" },
+    { "slug": "proto-integration", "label": "Calcul d'aires (proto-intégration)" },
+    { "slug": "mechanics-balance", "label": "Mécanique des balances (Kitab al-Qarastun)" },
+    { "slug": "sabian-religion", "label": "Religion sabéenne" }
+  ],
+  "sidebar": [
+    { "label": "Naissance", "value": "836, Harran (Mésopotamie supérieure)" },
+    { "label": "Mort", "value": "18 février 901, Bagdad" },
+    { "label": "Religion", "value": "Sabéen (hellénistes de Harran) — n'a jamais converti" },
+    { "label": "Découvreur", "value": "Muhammad ibn Musa des Banu Musa" },
+    { "label": "Mécène final", "value": "Calife abbasside al-Mu'tadid" },
+    { "label": "Œuvres traduites", "value": "Apollonius · Archimède · Euclide · Théodose · Ménélaüs" },
+    { "label": "Théorème éponyme", "value": "Théorème de Thabit sur les nombres amicaux" }
+  ],
+  "sections": [
+    {
+      "title": "La rencontre qui change tout",
+      "body": "Thabit gagne sa vie comme changeur d'argent au marché de Harran. Un jour, Muhammad ibn Musa (l'aîné des Banu Musa, qui revient d'une mission diplomatique) traverse la ville et engage la conversation avec ce changeur étrangement cultivé qui parle grec et discute de mathématiques. Muhammad le persuade de venir à Bagdad. À la Maison de la Sagesse, Thabit devient l'un des plus grands traducteurs de l'âge d'or abbasside."
+    },
+    {
+      "title": "Les nombres amicaux",
+      "body": "Thabit énonce le théorème suivant : si p, q, r sont trois nombres premiers vérifiant certaines équations, alors les nombres 2^n × p × q et 2^n × r forment une paire 'amicale' — la somme des diviseurs propres de chacun donne l'autre. La paire la plus simple : 220 et 284 (déjà connue de Pythagore). Mais Thabit donne la première règle générale pour en construire de nouvelles. Le théorème est encore cité dans les manuels de théorie des nombres."
+    },
+    {
+      "title": "Vers l'intégration, neuf siècles avant Newton",
+      "body": "Pour calculer l'aire d'un segment de parabole, Thabit divise la figure en bandes horizontales de plus en plus fines, calcule leur somme, et fait tendre la finesse vers zéro — en termes modernes, une intégrale. Il ne formule pas le calcul intégral comme système, mais il en pratique l'idée. Newton et Leibniz formaliseront le concept neuf siècles plus tard."
+    },
+    {
+      "title": "Sabéen jusqu'au bout",
+      "body": "Bagdad au 9ème siècle est cosmopolite : musulmans, chrétiens nestoriens, juifs, zoroastriens, sabéens y travaillent ensemble dans les bibliothèques et les hôpitaux. Thabit, lui, reste fidèle à sa religion sabéenne — culte des astres hérité de l'Antiquité hellénistique. Il écrit en arabe, traduit du grec, sert le calife abbasside al-Mu'tadid comme astrologue de cour, sans jamais se convertir. C'est le visage d'une époque où le savoir transcendait la confession."
+    }
+  ],
+  "quote": {
+    "text": "Sans la traduction, le savoir d'un peuple meurt avec sa langue. Notre tâche, à Bagdad, est de tendre la main aux Grecs morts pour qu'ils continuent de parler en arabe.",
+    "attribution": "Thabit ibn Qurra, fragment cité par al-Mas'udi, 10ème s."
+  },
+  "timeline": [
+    { "year": "836", "label": "Naissance à Harran" },
+    { "year": "vers 870", "label": "Rencontre avec Muhammad ibn Musa, départ pour Bagdad" },
+    { "year": "870-901", "label": "Activité à la Maison de la Sagesse — traductions, mathématiques" },
+    { "year": "vers 890", "label": "Astrologue de cour du calife al-Mu'tadid" },
+    { "year": "901", "label": "Mort à Bagdad le 18 février" }
+  ]
+}

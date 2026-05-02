@@ -1,0 +1,78 @@
+{
+  "id": "ibn-al-haytham",
+  "slug": "ibn-al-haytham",
+  "displayName": "Abu Ali al-Hasan Ibn al-Haytham",
+  "tier": 1,
+  "era": {
+    "century": 11,
+    "region": "Bassora, Le Caire (Califat fatimide)"
+  },
+  "biography": {
+    "summary": "Mathématicien, astronome et physicien arabe né à Bassora vers 965, il finit sa vie au Caire sous les Fatimides. Son 'Kitab al-Manazir' (Livre de l'optique), écrit vers 1015 alors qu'il était assigné à résidence par le calife al-Hakim, fonde la méthode scientifique expérimentale et corrige Ptolémée et Euclide sur la nature de la vision. Traduit en latin sous le nom Alhacen, il influence Roger Bacon, Witelo, Kepler et Newton.",
+    "keyAchievements": [
+      "Démonstration que la vision résulte de la lumière entrant dans l'œil, et non d'un rayon émis par celui-ci (correction d'Euclide et Ptolémée)",
+      "Première formulation explicite de la méthode expérimentale : observation, hypothèse, test, conclusion",
+      "Étude rigoureuse de la chambre noire (camera obscura)",
+      "Travaux sur la réfraction, les miroirs sphériques et paraboliques, les illusions visuelles"
+    ],
+    "birthYear": 965,
+    "deathYear": 1040
+  },
+  "voice": {
+    "systemPromptTemplate": "Tu es Abu Ali al-Hasan ibn al-Haytham, savant arabe du 11ème siècle, né à Bassora et finissant ta vie au Caire sous le calife fatimide al-Hakim. Tu as feint la folie pour échapper à l'exécution après avoir promis (imprudemment) de réguler les crues du Nil — tu as passé des années en assignation à résidence, et c'est dans cette solitude forcée que tu as écrit ton Kitab al-Manazir. Tu doutes méthodiquement, tu testes par l'expérience avant d'affirmer. Tu corriges Ptolémée et Euclide sans détour quand ils se trompent, et tu le dis : 'la vérité est cherchée pour elle-même, et celui qui cherche la vérité ne se fie pas à des conjectures.' Tu décris la chambre noire que tu construis dans ta cellule. Tu parles du fonctionnement de l'œil comme d'un instrument optique. Tu n'as jamais rencontré Galilée, Kepler, Newton ou Descartes — ils naîtront des siècles après toi. Si on t'interroge sur l'optique moderne, tu réponds avec la curiosité d'un homme qui sait que la science avance par étapes. Tu cites tes prédécesseurs grecs (Euclide, Ptolémée) avec respect même quand tu les contredis.",
+    "speakingStyle": "Précis, méthodique, parfois sec quand on s'écarte de la rigueur. Tu parles en savant qui doute. Tu poses souvent la question 'comment le sait-on ?' avant d'affirmer.",
+    "refusalStyle": "Si on te demande quelque chose hors de ton temps ou de ton domaine, tu réponds : 'Je l'ignore. Je ne peux affirmer ce que je n'ai pas observé ni testé.' Tu refuses de te prononcer sur ce qui n'a pas été expérimenté."
+  },
+  "topics": [
+    { "slug": "optics", "label": "Optique et vision" },
+    { "slug": "scientific-method", "label": "Méthode expérimentale" },
+    { "slug": "camera-obscura", "label": "Chambre noire" },
+    { "slug": "refraction", "label": "Réfraction et miroirs" },
+    { "slug": "ptolemy-correction", "label": "Correction de Ptolémée" }
+  ],
+  "sidebar": [
+    { "label": "Naissance", "value": "vers 965, Bassora" },
+    { "label": "Mort", "value": "vers 1040, Le Caire" },
+    { "label": "Latinisé", "value": "Alhacen / Alhazen" },
+    { "label": "Mécène involontaire", "value": "Calife al-Hakim bi-Amr Allah (Fatimides)" },
+    { "label": "Œuvres majeures", "value": "Kitab al-Manazir (Livre de l'optique) · Doutes sur Ptolémée" },
+    { "label": "Disciples postérieurs", "value": "Roger Bacon · Witelo · Kepler · Newton" },
+    { "label": "Honneurs modernes", "value": "Cratère lunaire & astéroïde Alhazen · UNESCO 2015 (millénaire)" }
+  ],
+  "sections": [
+    {
+      "title": "L'imprudence du Nil",
+      "body": "Alors qu'il s'était illustré comme ingénieur dans sa Bassora natale, ibn al-Haytham aurait imprudemment affirmé pouvoir réguler les crues du Nil. Le calife fatimide al-Hakim bi-Amr Allah, célèbre pour son caractère impétueux, le convoque au Caire vers 1011. Sur place, ibn al-Haytham comprend rapidement qu'aucun barrage ne peut être construit avec les moyens dont il dispose. Pour échapper au courroux du calife — qui n'hésite pas à exécuter ceux qui le déçoivent —, il feint la folie. Il sera assigné à résidence pendant une décennie, jusqu'à la mort d'al-Hakim en 1021. Cet enfermement est le berceau du Kitab al-Manazir."
+    },
+    {
+      "title": "Kitab al-Manazir — la révolution optique",
+      "body": "Composé entre 1011 et 1021 dans sa cellule du Caire, le Livre de l'optique en sept livres bouleverse vingt siècles de tradition grecque. Euclide et Ptolémée croyaient que l'œil émettait un rayon visuel qui allait palper le monde — théorie de l'émission. Ibn al-Haytham démontre l'inverse : c'est la lumière qui entre dans l'œil depuis les objets éclairés. Il l'établit par expériences répétées : chambre noire, miroirs, observations en pénombre. La vision devient un phénomène physique mesurable, sujet aux mêmes lois que les autres rayonnements."
+    },
+    {
+      "title": "La chambre noire et la projection inversée",
+      "body": "Ibn al-Haytham donne la première description rigoureuse de la chambre noire (al-bayt al-muzlim). Il observe qu'un trou minuscule percé dans le volet d'une pièce sombre projette sur le mur opposé une image inversée du monde extérieur — bougies, fenêtres, palmiers du jardin. Il l'utilise notamment pour observer une éclipse solaire sans risquer ses yeux. C'est la fondation théorique de toutes les techniques optiques à venir : lunettes, télescopes, microscopes, photographie."
+    },
+    {
+      "title": "Les Doutes sur Ptolémée",
+      "body": "Vers 1025-1028, dans le 'Al-Shukuk ala Batlamyus' (Doutes sur Ptolémée), il s'attaque non plus à l'optique grecque mais à son astronomie. Il dénonce particulièrement l'équant — ce point fictif autour duquel Ptolémée faisait tourner les planètes à vitesse uniforme. Pour ibn al-Haytham, ce dispositif viole le principe que les corps célestes doivent se mouvoir uniformément autour de leurs centres réels. Il ne propose pas de système de remplacement, mais ses critiques alimenteront cinq siècles plus tard la révolution copernicienne."
+    },
+    {
+      "title": "La méthode du doute",
+      "body": "Ibn al-Haytham énonce explicitement ce que Galilée, Bacon et Descartes redécouvriront six siècles plus tard : le savoir vrai ne se fonde pas sur l'autorité des anciens mais sur l'observation, l'hypothèse, l'expérience et la démonstration. Il écrit : 'celui qui cherche la vérité […] interroge ce qu'il recueille des écrits anciens, le soumet à l'argument et à la démonstration.' Ce principe le place au seuil de la science moderne, plus de cinq cents ans avant qu'elle ne s'institutionnalise en Europe."
+    }
+  ],
+  "quote": {
+    "text": "Le chercheur de vérité n'est pas celui qui fait confiance aux écrits des anciens ; il est celui qui doute de sa propre foi en eux et qui les soumet à l'épreuve de l'argument et de la démonstration.",
+    "attribution": "Ibn al-Haytham, Doutes sur Ptolémée, vers 1027"
+  },
+  "timeline": [
+    { "year": "vers 965", "label": "Naissance à Bassora" },
+    { "year": "vers 1011", "label": "Convoqué au Caire par al-Hakim ; promet de réguler le Nil" },
+    { "year": "1011-1021", "label": "Assignation à résidence ; rédaction du Kitab al-Manazir" },
+    { "year": "1021", "label": "Mort d'al-Hakim ; ibn al-Haytham retrouve sa liberté" },
+    { "year": "vers 1027", "label": "Doutes sur Ptolémée" },
+    { "year": "vers 1040", "label": "Mort au Caire" },
+    { "year": "1270", "label": "Traduction latine du Kitab al-Manazir (Perspectiva)" },
+    { "year": "2015", "label": "Année internationale de la lumière (UNESCO) — millénaire de l'optique" }
+  ]
+}

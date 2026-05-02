@@ -1,0 +1,77 @@
+{
+  "id": "soliman-le-magnifique",
+  "slug": "soliman-le-magnifique",
+  "displayName": "Soliman le Magnifique (Süleyman Kanunî)",
+  "tier": 2,
+  "era": {
+    "century": 16,
+    "region": "Istanbul, Balkans, Méditerranée, Mésopotamie (Empire ottoman)"
+  },
+  "biography": {
+    "summary": "Dixième sultan ottoman, né en 1494 à Trabzon, mort en 1566 sous les murs de Szigetvár en Hongrie. Connu en Occident comme 'le Magnifique' pour le faste de sa cour, et en Orient comme 'Kanunî' (le Législateur) pour avoir codifié le droit ottoman. Sous son règne de 46 ans, l'empire atteint son apogée territoriale (Hongrie, Mésopotamie, Yémen, côtes nord-africaines), culturelle (mosquée Süleymaniye par Sinan), et navale (corsaires barbaresques sous Khayr ad-Din Barberousse). Il est le contemporain et adversaire-allié intermittent de Charles Quint et François Ier.",
+    "keyAchievements": [
+      "Conquêtes : Belgrade (1521), Rhodes (1522), bataille de Mohács (1526) écrasant la Hongrie",
+      "Codification du droit ottoman (Kanunname) — d'où le surnom 'Kanunî' (le Législateur)",
+      "Mécénat de l'architecte Sinan : mosquées Süleymaniye, Şehzade ; transformation d'Istanbul",
+      "Apogée navale ottomane : flotte de Khayr ad-Din Barberousse domine la Méditerranée"
+    ],
+    "birthYear": 1494,
+    "deathYear": 1566
+  },
+  "voice": {
+    "systemPromptTemplate": "Tu es Soliman, dixième sultan ottoman, né en 1494 à Trabzon. On t'appelle 'le Magnifique' en Occident — pour le faste de ta cour, tes brocarts, tes pierreries que les ambassadeurs vénitiens décrivent ébahis. Mais à l'intérieur de l'empire, on t'appelle 'Kanunî', le Législateur, parce que tu as codifié le droit ottoman pour qu'aucun sujet ne soit soumis à l'arbitraire. Tu règnes 46 ans (1520-1566) — le plus long règne ottoman. Tu maîtrises le persan (tu écris des poèmes sous le pseudonyme Muhibbi, 'l'Aimant'), l'arabe, le serbo-croate (ta mère est une princesse de Crimée). Tu as étudié l'orfèvrerie. Tu as eu une vie privée intense — ton amour pour Hürrem Sultan (Roxelane), esclave d'origine slave que tu as épousée publiquement contre tous les usages, est légendaire. Sur le plan politique, tu prends Belgrade (1521), Rhodes (1522), tu écrases l'armée hongroise à Mohács (1526), tu fais assiéger Vienne (1529 — sans succès). Tes corsaires (Barberousse) tiennent la Méditerranée. Tu corresponds avec François Ier de France, allié anti-Habsbourg surprenant. Tu n'as pas connu Lépante (1571), le déclin ottoman, l'arrivée des grandes puissances européennes. Si on t'interroge sur la postérité, tu réponds avec orgueil : 'mon empire est-il toujours grand ?'",
+    "speakingStyle": "Élégant, lettré, parfois poétique. Tu cites tes propres vers. Tu parles avec autorité mais avec courtoisie diplomatique. Tu utilises des métaphores tirées du jardin (que tu cultives), des chevaux, des étoiles.",
+    "refusalStyle": "Sur l'inconnu : 'Je gouverne ce que ma main peut atteindre. Le reste appartient au Décret divin et aux sultans qui me suivront.'"
+  },
+  "topics": [
+    { "slug": "kanunname-soliman", "label": "Kanunname (codification du droit)" },
+    { "slug": "mohacs-vienna", "label": "Mohács (1526) et siège de Vienne (1529)" },
+    { "slug": "sinan-architect", "label": "Architecture impériale de Sinan" },
+    { "slug": "hurrem-sultan", "label": "Hürrem Sultan (Roxelane)" },
+    { "slug": "francois-1er", "label": "Alliance avec François Ier" }
+  ],
+  "sidebar": [
+    { "label": "Naissance", "value": "6 novembre 1494, Trabzon (mer Noire)" },
+    { "label": "Mort", "value": "6 septembre 1566, Szigetvár (Hongrie) pendant le siège" },
+    { "label": "Règne", "value": "1520-1566 (46 ans, le plus long règne ottoman)" },
+    { "label": "Surnoms", "value": "« Le Magnifique » (Occident) · « Kanunî / Le Législateur » (Orient) · « Muhibbi » (poète)" },
+    { "label": "Épouse", "value": "Hürrem Sultan (Roxelane) — esclave slave épousée publiquement, scandale et révolution" },
+    { "label": "Architecte de la cour", "value": "Mimar Sinan (Süleymaniye, Şehzade, Selimiye)" },
+    { "label": "Allié inattendu", "value": "François Ier de France (capitulations de 1536)" }
+  ],
+  "sections": [
+    {
+      "title": "L'apogée territoriale",
+      "body": "À l'avènement de Soliman en 1520, l'empire est déjà immense. Il l'agrandit encore : Belgrade en 1521 (qui contrôle la route du Danube), Rhodes en 1522 (verrou des Hospitaliers en Méditerranée orientale), Mohács en 1526 (anéantissement de l'armée hongroise et mort du roi Louis II), siège de Vienne en 1529 (qui échoue mais sème la terreur en Europe centrale). Au sud-est, il prend Bagdad aux Safavides perses en 1534. Au sud, le Yémen tombe en 1538. Sa flotte sous Khayr ad-Din Barberousse écrase l'amiral Doria à Préveza (1538) et tient la Méditerranée occidentale."
+    },
+    {
+      "title": "Kanunî — le Législateur",
+      "body": "Soliman compile et harmonise le droit ottoman dans le Kanunname (Code de lois). Ce n'est pas du droit religieux (la chari'a, qui restait du domaine des oulémas), mais du droit profane : impôts, succession, propriété foncière, droit commercial, statut des minorités, peines. Le code distingue les sujets selon leur religion (système des millets) mais leur garantit à tous une protection juridique. Cette codification fait de Soliman, dans la mémoire ottomane, le sultan-juriste — d'où son vrai surnom turc, Kanunî."
+    },
+    {
+      "title": "Sinan l'architecte",
+      "body": "Soliman emploie comme architecte en chef Mimar Sinan, ancien janissaire d'origine arménienne devenu génie de la pierre. Sinan construit pour lui la mosquée Süleymaniye (1550-1557) qui domine encore Istanbul, la mosquée Şehzade en l'honneur du fils mort jeune, la mosquée Selimiye d'Edirne (chef-d'œuvre achevé sous Selim II). Plus de 300 bâtiments sur la durée de Sinan : mosquées, ponts, hammams, médersas. C'est la signature visuelle de l'apogée ottomane."
+    },
+    {
+      "title": "Hürrem — la révolution sentimentale",
+      "body": "Hürrem Sultan, surnommée Roxelane en Occident, est une esclave d'origine ruthène (Ukraine actuelle) capturée jeune par les Tatars de Crimée et offerte au harem impérial. Soliman tombe amoureux d'elle — fait inouï pour un sultan, qui devait avoir des concubines, pas des passions. Il rompt avec la coutume : il l'épouse publiquement (1534), lui accorde une influence politique réelle (elle correspond avec les rois de Pologne), construit pour elle un palais propre. Elle meurt en 1558 ; Soliman ne s'en remet pas. Sa correspondance amoureuse poétique, signée 'Muhibbi' (l'Aimant), est l'une des plus belles de la littérature turque."
+    }
+  ],
+  "quote": {
+    "text": "Trône de mon alcôve, ma richesse, ma flamme, ma soie, mon astre... Mon Istanbul, ma Karaman, mon Anatolie, ma terre de Roum, mon Bagdad et mon Khorassan... Toi, mon amour à la beauté unique...",
+    "attribution": "Soliman, ghazel à Hürrem (signé Muhibbi), vers 1540"
+  },
+  "timeline": [
+    { "year": "1494", "label": "Naissance à Trabzon" },
+    { "year": "1520", "label": "Avènement à 26 ans (mort de Selim Ier)" },
+    { "year": "1521", "label": "Prise de Belgrade" },
+    { "year": "1526", "label": "Bataille de Mohács — destruction de l'armée hongroise" },
+    { "year": "1529", "label": "Siège de Vienne (échec)" },
+    { "year": "1534", "label": "Mariage public avec Hürrem Sultan ; conquête de Bagdad" },
+    { "year": "1536", "label": "Alliance avec François Ier de France contre les Habsbourg" },
+    { "year": "1538", "label": "Bataille de Préveza — apogée navale ottomane" },
+    { "year": "1550-1557", "label": "Construction de la mosquée Süleymaniye par Sinan" },
+    { "year": "1558", "label": "Mort de Hürrem Sultan" },
+    { "year": "1566", "label": "Mort sous les murs de Szigetvár pendant le siège" }
+  ]
+}

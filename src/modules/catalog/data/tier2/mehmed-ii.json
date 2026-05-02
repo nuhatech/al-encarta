@@ -1,0 +1,74 @@
+{
+  "id": "mehmed-ii",
+  "slug": "mehmed-ii",
+  "displayName": "Mehmed II le Conquérant (Fatih Sultan Mehmed)",
+  "tier": 2,
+  "era": {
+    "century": 15,
+    "region": "Edirne, Constantinople / Istanbul (Empire ottoman)"
+  },
+  "biography": {
+    "summary": "Septième sultan ottoman, né en 1432 à Edirne. À 21 ans, le 29 mai 1453, il prend Constantinople après un siège de 53 jours, mettant fin à 1100 ans d'Empire byzantin. Il transforme la ville en capitale ottomane (Istanbul), restaure le patriarcat œcuménique grec, accueille les savants byzantins en fuite. Polyglotte (il parle turc, arabe, persan, grec, latin, hébreu et serbe), il commande son portrait au peintre vénitien Gentile Bellini, fait traduire Plutarque, soutient la cartographie. Il étend l'empire en Anatolie, dans les Balkans, en Crimée. Mort subitement en 1481 à 49 ans, peut-être empoisonné, en route vers une nouvelle campagne.",
+    "keyAchievements": [
+      "Prise de Constantinople le 29 mai 1453 — fin de l'Empire byzantin (1100 ans d'existence)",
+      "Construction de la forteresse de Roumeli Hisar et utilisation de canons géants (Basilic du fondeur Orban)",
+      "Codification du droit ottoman (Kanunname) et tolérance institutionnelle envers chrétiens et juifs",
+      "Mécénat de la Renaissance ottomane : portrait par Bellini, traductions, fondation du palais de Topkapi"
+    ],
+    "birthYear": 1432,
+    "deathYear": 1481
+  },
+  "voice": {
+    "systemPromptTemplate": "Tu es Mehmed II, septième sultan ottoman, surnommé Fatih (le Conquérant) après ta prise de Constantinople en 1453. Tu es né en 1432 à Edirne. Tu parles couramment turc, arabe, persan, grec, latin, hébreu et serbe — tu lis Aristote dans le texte, tu apprécies Plutarque (que tu fais traduire). Tu es ambitieux jusqu'à l'obsession : devenir le successeur des empereurs romains et byzantins. À 12 ans, ton père Murad II t'a fait sultan une première fois, puis t'a destitué (les viziers te trouvaient trop jeune). À 21 ans, deux ans après être remonté sur le trône, tu prends Constantinople — exploit que personne n'avait réussi en 1100 ans. Pour cela, tu fais bâtir des canons géants par un fondeur hongrois (Orban), tu fais transporter des navires par voie de terre pour contourner la chaîne du port, tu siéges 53 jours. Le 29 mai 1453 à l'aube, tes janissaires entrent dans la ville. Tu y entres à cheval, descend à Sainte-Sophie, ordonne qu'elle devienne mosquée. Mais tu protèges les chrétiens et les juifs qui restent : tu rétablis le patriarcat orthodoxe, tu invites les rabbins à s'installer, tu finis l'âge des persécutions byzantines. Tu n'as pas connu Soliman le Magnifique (ton arrière-petit-fils), Lépante (1571), la chute ottomane. Si on t'interroge sur la postérité, tu réponds avec curiosité d'empereur : 'mon État est-il plus grand encore ?'",
+    "speakingStyle": "Cultivé, autoritaire, parfois acéré. Tu cites en latin ou en grec. Tu es fier sans modestie. Tu dis 'mon empire' avec naturel.",
+    "refusalStyle": "Sur l'inconnu : 'Le sultan ne s'aventure que sur des terres qu'il a fait reconnaître. Et je n'ai pas envoyé de scouts dans le futur.'"
+  },
+  "topics": [
+    { "slug": "constantinople-1453", "label": "Prise de Constantinople" },
+    { "slug": "ottoman-renaissance", "label": "Renaissance ottomane" },
+    { "slug": "kanunname-law", "label": "Kanunname (codification du droit)" },
+    { "slug": "tolerance-millets", "label": "Tolérance institutionnelle (système des millets)" },
+    { "slug": "topkapi-palace", "label": "Palais de Topkapi" }
+  ],
+  "sidebar": [
+    { "label": "Naissance", "value": "30 mars 1432, Edirne" },
+    { "label": "Mort", "value": "3 mai 1481, Hünkar Çayırı (en route vers une campagne) — possiblement empoisonné" },
+    { "label": "Surnom", "value": "« Fatih » (le Conquérant)" },
+    { "label": "Père", "value": "Murad II, sixième sultan ottoman" },
+    { "label": "Langues", "value": "Turc · Arabe · Persan · Grec · Latin · Hébreu · Serbe" },
+    { "label": "Conquête phare", "value": "Constantinople, 29 mai 1453 — fin de Byzance" },
+    { "label": "Mécénat", "value": "Portrait par Gentile Bellini · traductions de Plutarque · fondation de Topkapi" }
+  ],
+  "sections": [
+    {
+      "title": "L'enfant-sultan deux fois",
+      "body": "À 12 ans, en 1444, Mehmed est mis sur le trône par son père Murad II qui veut se retirer dans la spiritualité soufie. Mais une croisade hongroise menace ; les viziers paniquent et rappellent Murad. À 14 ans, Mehmed perd le pouvoir — humiliation cuisante. Il passe les années suivantes à étudier intensément (langues, histoire, géographie, art militaire) et à observer les jeux politiques. Quand son père meurt en 1451, il remonte sur le trône à 19 ans avec une obsession précise : Constantinople."
+    },
+    {
+      "title": "Le siège du 53e jour",
+      "body": "Mehmed prépare le siège pendant plus d'un an. Il fait bâtir Roumeli Hisar — forteresse sur la rive européenne du Bosphore — pour bloquer les renforts byzantins par mer. Il commande au fondeur hongrois Orban (que Constantinople, faute d'argent, avait refusé d'embaucher) le 'Basilic' : un canon de 8 mètres tirant des boulets de 600 kg. Le 6 avril 1453, le siège commence. Pour contourner la chaîne du port, Mehmed fait transporter sa flotte par voie de terre sur des troncs graissés — 70 navires sur 1,5 km. Le 29 mai à l'aube, après 53 jours, les murs cèdent. À 21 ans, Mehmed entre dans Constantinople à cheval."
+    },
+    {
+      "title": "Istanbul nouvelle capitale",
+      "body": "La ville est dépeuplée par le siège : peut-être 50 000 habitants survivants pour une cité qui en avait compté 500 000. Mehmed la repeuple par décret : il invite Grecs, Arméniens, Juifs (notamment ceux que l'Europe persécute), Italiens, Slaves. Il restaure le patriarcat œcuménique grec — le patriarche Gennadios devient son interlocuteur officiel. Il ordonne la construction de nouveaux quartiers, mosquées, bazars, hammams. Il commence le palais de Topkapi (1459-1465) qui sera le centre de l'empire pendant 400 ans."
+    },
+    {
+      "title": "Un sultan de la Renaissance",
+      "body": "Mehmed est le contemporain de Cosme de Médicis, des Sforza et des Habsbourg. Il commande à Gentile Bellini, peintre vénitien, son portrait (1480) — geste 'européen' inédit pour un sultan musulman. Il fait traduire Plutarque en grec moderne et en turc. Il accueille à sa cour des humanistes byzantins en fuite (Georges de Trébizonde traduit Aristote pour lui). Il finance la cartographie. Sa cour devient l'une des plus brillantes du 15ème siècle, comparable à Florence ou Venise. Cette ouverture rend incompréhensible aux yeux de l'Europe la stupeur du jihad d'autres temps."
+    }
+  ],
+  "quote": {
+    "text": "Plutôt que perdre Constantinople, je perdrais ma vie. Et j'avais 21 ans.",
+    "attribution": "Mehmed II, paroles rapportées par les chroniqueurs ottomans"
+  },
+  "timeline": [
+    { "year": "1432", "label": "Naissance à Edirne" },
+    { "year": "1444", "label": "Premier règne (12 ans) interrompu par le retour de son père" },
+    { "year": "1451", "label": "Second règne, à 19 ans, à la mort de Murad II" },
+    { "year": "1452", "label": "Construction de Roumeli Hisar" },
+    { "year": "29 mai 1453", "label": "Prise de Constantinople" },
+    { "year": "1459-1465", "label": "Construction du palais de Topkapi" },
+    { "year": "1480", "label": "Portrait par Gentile Bellini ; expédition d'Otrante (Italie du sud)" },
+    { "year": "1481", "label": "Mort soudaine en route vers une nouvelle campagne — possiblement empoisonné" }
+  ]
+}

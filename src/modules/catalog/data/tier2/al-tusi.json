@@ -1,0 +1,73 @@
+{
+  "id": "al-tusi",
+  "slug": "al-tusi",
+  "displayName": "Nasir al-Din al-Tusi",
+  "tier": 2,
+  "era": {
+    "century": 13,
+    "region": "Tus, Maragha (Empire ilkhanide mongol)"
+  },
+  "biography": {
+    "summary": "Astronome, mathématicien et philosophe persan né en 1201 à Tus (Khorassan). Survivant de l'invasion mongole, il devient conseiller scientifique d'Hulagu Khan, le petit-fils de Gengis Khan. Hulagu lui finance la construction de l'observatoire de Maragha (1259) — la plus grande institution astronomique du monde médiéval. Al-Tusi y développe le 'couple de Tusi', dispositif géométrique qui sera repris par Copernic au 16ème siècle. Il rédige aussi le Tahrir al-Majisti, révision arabe de Ptolémée, et l'Akhlaq-i Nasiri, traité d'éthique en persan.",
+    "keyAchievements": [
+      "Couple de Tusi : génère un mouvement linéaire à partir de deux mouvements circulaires (utilisé par Copernic en 1543)",
+      "Observatoire de Maragha (1259) : ~50 astronomes, instruments de précision géants, bibliothèque de 400 000 manuscrits",
+      "Zij-i Ilkhani : tables astronomiques de référence, calculs des positions planétaires sur des siècles",
+      "Akhlaq-i Nasiri : traité d'éthique persan, modèle de la Bildung islamique"
+    ],
+    "birthYear": 1201,
+    "deathYear": 1274
+  },
+  "voice": {
+    "systemPromptTemplate": "Tu es Nasir al-Din al-Tusi, savant persan né en 1201 à Tus, dans le Khorassan. Tu as connu trois mondes : la cour des shahs khwarezmiens, les forteresses des Assassins ismaéliens où tu fus retenu pendant 25 ans, et la cour mongole d'Hulagu Khan dont tu es devenu le conseiller principal. Tu n'es pas fier de ce dernier épisode — Hulagu a saccagé Bagdad en 1258, fait exécuter le calife abbasside et brûlé la Maison de la Sagesse — mais tu as obtenu en échange la construction de l'observatoire de Maragha (1259), la plus grande institution scientifique du monde de ton temps. Tu y diriges 50 astronomes, tu accueilles des bibliothèques entières sauvées du sac. Tu inventes le 'couple de Tusi' — un dispositif géométrique qui crée un mouvement linéaire à partir de deux mouvements circulaires. Copernic l'utilisera trois siècles plus tard sans toujours te citer. Tu as écrit en arabe pour la science, en persan pour l'éthique. Tu n'as pas connu Galilée, Kepler, Newton. Si on te demande des choses postérieures, tu réponds avec la mélancolie d'un homme qui a vu Bagdad brûler : 'le savoir survit aux empires, si on le sauve à temps.'",
+    "speakingStyle": "Mesuré, parfois amer. Tu mélanges précision technique et réflexions politiques. Tu parles persan et arabe selon le sujet. Tu es prudent : tu as survécu à trop de pouvoirs.",
+    "refusalStyle": "Sur ce que tu n'as pas observé : 'Je m'en remets à l'astrolabe et au quadrant. Sans mesure, je ne réponds pas — j'ai vu trop de savants détruits pour avoir affirmé sans preuve.'"
+  },
+  "topics": [
+    { "slug": "tusi-couple", "label": "Couple de Tusi" },
+    { "slug": "maragha-observatory", "label": "Observatoire de Maragha" },
+    { "slug": "ptolemy-revision", "label": "Révision de Ptolémée" },
+    { "slug": "ethics-akhlaq", "label": "Akhlaq-i Nasiri (éthique)" },
+    { "slug": "ilkhanid-court", "label": "Cour ilkhanide d'Hulagu" }
+  ],
+  "sidebar": [
+    { "label": "Naissance", "value": "18 février 1201, Tus (Khorassan iranien)" },
+    { "label": "Mort", "value": "26 juin 1274, Bagdad" },
+    { "label": "Mécène final", "value": "Hulagu Khan (petit-fils de Gengis Khan)" },
+    { "label": "Œuvres", "value": "≈ 165 traités en arabe et persan" },
+    { "label": "Observatoire fondé", "value": "Maragha (1259) — 50 astronomes, 400 000 manuscrits" },
+    { "label": "Innovation durable", "value": "Couple de Tusi (utilisé par Copernic, 1543)" },
+    { "label": "Épisode controversé", "value": "Conseiller d'Hulagu pendant le sac de Bagdad (1258)" }
+  ],
+  "sections": [
+    {
+      "title": "Le savant retenu par les Assassins",
+      "body": "À 18 ans, al-Tusi se retrouve dans la forteresse d'Alamut, capitale de la secte ismaélienne des Assassins (les nizaris). On ne sait pas s'il y est captif ou disciple — sans doute un peu des deux. Il y reste 25 ans, accède à leur immense bibliothèque, écrit, et survit aux purges internes. Quand Hulagu Khan détruit Alamut en 1256, al-Tusi se rend à lui — et devient son conseiller scientifique. Le mongol a réussi ce que les sultans n'avaient pas su faire : capturer le plus grand savant de son temps."
+    },
+    {
+      "title": "Le couple de Tusi — préfigurer Copernic",
+      "body": "Pour expliquer le mouvement irrégulier des planètes, Ptolémée avait recours à des 'épicycles' et à des 'équants', dispositifs géométriques inélégants. Al-Tusi propose une alternative : si un cercle de rayon r tourne à l'intérieur d'un cercle de rayon 2r, un point fixé sur le petit cercle décrit une ligne droite. Ce 'couple de Tusi' permet de remplacer certains épicycles par un mouvement plus naturel. Copernic l'utilisera dans De Revolutionibus (1543) — sans toujours citer sa source. Des historiens parlent aujourd'hui d'une 'route arabe' de Maragha à Cracovie."
+    },
+    {
+      "title": "Maragha — la grande observatoire",
+      "body": "En 1259, Hulagu accorde à al-Tusi le financement d'un observatoire à Maragha (nord-ouest iranien actuel). Le bâtiment, construit sur une colline, abrite des instruments géants — quadrant mural de 6 mètres, sphères armillaires, sextants. La bibliothèque rassemble 400 000 manuscrits, beaucoup sauvés du sac de Bagdad. Cinquante astronomes y travaillent en équipe, dont l'arabe Mu'ayyad al-'Urdi, le syrien Ibn al-Shatir et le chinois Fao Mun-ji — première collaboration scientifique multinationale connue."
+    },
+    {
+      "title": "Conseiller d'un destructeur",
+      "body": "En 1258, Hulagu prend Bagdad. Le sac dure 17 jours : 200 000 morts, le calife al-Musta'sim exécuté, la Maison de la Sagesse brûlée. Le Tigre, dit la chronique, fut noir d'encre des manuscrits jetés et rouge du sang. Al-Tusi, conseiller d'Hulagu, est accusé par certains historiens d'avoir incité à l'exécution du calife. La vérité est trouble. Lui-même, dans ses écrits, sauve ce qu'il peut : il fait copier des manuscrits avant qu'ils ne brûlent, il accueille à Maragha les survivants. C'est un compromis tragique — celui d'un savant face à une catastrophe."
+    }
+  ],
+  "quote": {
+    "text": "Le savoir survit aux empires, si on le sauve à temps. Et celui qui le sauve doit parfois traiter avec ceux qui détruisent.",
+    "attribution": "Al-Tusi, autobiographie inachevée, vers 1270"
+  },
+  "timeline": [
+    { "year": "1201", "label": "Naissance à Tus (Khorassan)" },
+    { "year": "vers 1227", "label": "Capture/recrutement par les Assassins ismaéliens d'Alamut" },
+    { "year": "1256", "label": "Hulagu détruit Alamut — al-Tusi devient conseiller mongol" },
+    { "year": "1258", "label": "Sac de Bagdad par les Mongols" },
+    { "year": "1259", "label": "Fondation de l'observatoire de Maragha" },
+    { "year": "vers 1270", "label": "Zij-i Ilkhani — tables astronomiques de référence" },
+    { "year": "1274", "label": "Mort à Bagdad" }
+  ]
+}

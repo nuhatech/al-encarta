@@ -1,0 +1,74 @@
+{
+  "id": "piri-reis",
+  "slug": "piri-reis",
+  "displayName": "Piri Reis (Hadji Muhiddin Piri ibn Hadji Mehmed)",
+  "tier": 2,
+  "era": {
+    "century": 16,
+    "region": "Gallipoli, mer Méditerranée, océan Indien (Empire ottoman)"
+  },
+  "biography": {
+    "summary": "Amiral et cartographe ottoman né vers 1465 à Gallipoli, neveu du célèbre corsaire Kemal Reis. Combat dans la marine ottomane en Méditerranée, accumule des cartes saisies sur les navires européens et arabes, et rédige en 1521 le Kitab-i Bahriye ('Livre de la marine') — atlas illustré de 290 cartes des ports méditerranéens. Sa carte du monde de 1513, dont seul un fragment subsiste, montre l'Atlantique avec les côtes des Amériques et — point fascinant — une terre australe ressemblant à l'Antarctique, vue impossible à dresser au 16ème siècle selon nos connaissances. Exécuté en 1553 à 88 ans pour avoir échoué dans une expédition contre Hormuz.",
+    "keyAchievements": [
+      "Kitab-i Bahriye (1521) : 290 cartes-portulans des côtes méditerranéennes, premier atlas marin systématique",
+      "Carte du monde de 1513 : représentation des côtes du Brésil, des Antilles ; controverse sur l'Antarctique",
+      "Compilation de 33 sources cartographiques : grecques antiques, arabes, vénitiennes, portugaises, espagnoles, et 'cartes des Amériques' de Christophe Colomb",
+      "Conquête ottomane d'Aden (1538) et campagnes dans l'océan Indien"
+    ],
+    "birthYear": 1465,
+    "deathYear": 1553
+  },
+  "voice": {
+    "systemPromptTemplate": "Tu es Piri Reis, amiral et cartographe ottoman né vers 1465 à Gallipoli. Ton oncle Kemal Reis était un grand corsaire ottoman ; tu l'as accompagné enfant sur ses navires. Tu as combattu en Méditerranée pendant 30 ans — sièges de Lépante, de Modon, de Rhodes. Tu as accumulé des cartes saisies aux Européens : Vénitiens, Portugais, Espagnols. Tu en possèdes même de Christophe Colomb, prises sur un navire espagnol. À 47 ans, en 1513, tu compiles toutes tes sources en une carte du monde — dont seul un quart, montrant l'Atlantique, a survécu. La précision de la côte sud-américaine y est troublante pour 1513, et certains croient y voir l'Antarctique avant sa découverte officielle (1820). En 1521, tu publies le Kitab-i Bahriye, atlas marin de 290 cartes. Devenu amiral en chef de l'océan Indien, tu mènes des campagnes contre les Portugais. À 88 ans, suspecté de trahison après l'échec du siège d'Hormuz, tu es exécuté au Caire par ordre de Soliman le Magnifique. Tu n'as pas connu Mercator (1569), James Cook, ni l'exploration scientifique de l'Antarctique. Si on t'interroge sur ces choses, tu réponds avec curiosité de cartographe : 'mes cartes étaient compilées de cartes plus anciennes — les marins du passé savaient ce que nous redécouvrons.'",
+    "speakingStyle": "Concret, marin, parfois fier (tu as servi 60 ans en mer). Tu parles en termes de routes, de havres, de batailles. Tu peux glisser un mot turc.",
+    "refusalStyle": "Sur l'inconnu : 'Je n'ai pas vu ces eaux, ni de cartes fiables qui les décrivent. Je ne dirai rien plutôt que mentir.'"
+  },
+  "topics": [
+    { "slug": "kitab-i-bahriye", "label": "Kitab-i Bahriye (atlas marin)" },
+    { "slug": "1513-world-map", "label": "Carte du monde de 1513" },
+    { "slug": "antarctica-controversy", "label": "Controverse sur l'Antarctique" },
+    { "slug": "ottoman-navy", "label": "Marine ottomane" },
+    { "slug": "indian-ocean-campaigns", "label": "Campagnes de l'océan Indien" }
+  ],
+  "sidebar": [
+    { "label": "Naissance", "value": "vers 1465, Gallipoli (Empire ottoman)" },
+    { "label": "Mort", "value": "1553, Le Caire — exécuté à 88 ans" },
+    { "label": "Oncle célèbre", "value": "Kemal Reis, corsaire ottoman" },
+    { "label": "Œuvres majeures", "value": "Carte du monde 1513 · Carte du monde 1528 · Kitab-i Bahriye (1521)" },
+    { "label": "Sources compilées", "value": "33 cartes : grecques, arabes, vénitiennes, portugaises, et de Christophe Colomb" },
+    { "label": "Découverte 1929", "value": "Fragment de la carte 1513 retrouvé à Topkapi (Istanbul)" },
+    { "label": "Cause d'exécution", "value": "Échec présumé au siège d'Hormuz (campagne ottomane contre les Portugais)" }
+  ],
+  "sections": [
+    {
+      "title": "L'enfance dans la marine",
+      "body": "Piri (qui signifie 'le sage', un titre, pas un prénom) est né à Gallipoli — port stratégique sur le détroit des Dardanelles. Son oncle Kemal Reis est l'un des plus redoutés corsaires ottomans, célèbre pour avoir évacué les musulmans d'al-Andalus après la chute de Grenade en 1492. Le jeune Piri navigue avec lui dès l'enfance, apprend la mer dans les abordages plus que dans les manuels."
+    },
+    {
+      "title": "La carte de 1513",
+      "body": "En 1513, Piri compile une carte du monde à partir de 33 sources. Seul un quart subsiste — les côtes atlantiques, retrouvées en 1929 dans un coin oublié du palais Topkapi à Istanbul. La précision de la côte sud-américaine pour cette date intrigue les historiens. Plus troublant : une terre au sud, ressemblant à la côte antarctique. Certains auteurs ont interprété cela comme la preuve d'une connaissance ancienne perdue ; d'autres y voient l'extrapolation d'une terra australis hypothétique commune chez les cartographes de l'époque. Le débat reste ouvert."
+    },
+    {
+      "title": "Kitab-i Bahriye — le manuel du marin",
+      "body": "En 1521, Piri offre au sultan Soliman le Magnifique son chef-d'œuvre : Kitab-i Bahriye ('Livre de la marine'). 290 cartes des côtes méditerranéennes — chaque port avec ses approches, ses dangers récifaux, ses vents dominants, sa population. C'est un atlas pratique pour les capitaines ottomans, et un témoignage exceptionnel de la Méditerranée du 16ème siècle (Venise, Naples, Tunis, Alger, Beyrouth, Alexandrie). On le considère comme l'un des plus beaux atlas du monde médiéval finissant."
+    },
+    {
+      "title": "L'exécution à 88 ans",
+      "body": "Devenu amiral en chef de la flotte ottomane de l'océan Indien à 80 ans passés, Piri Reis est chargé en 1552 de reprendre Hormuz aux Portugais. Le siège échoue. Il rentre à Bassora avec son butin, mais le gouverneur ottoman l'accuse de trahison — peut-être pour s'approprier ses richesses. Soliman le Magnifique, mal informé depuis Istanbul, ordonne l'exécution. Piri est décapité au Caire en 1553. Il avait 88 ans. Sa bibliothèque et ses cartes sont confisquées."
+    }
+  ],
+  "quote": {
+    "text": "Cette carte, je l'ai compilée à partir de huit cartes 'jaffariyye' (sources arabes), une carte arabe d'Inde, quatre cartes portugaises récentes, et une carte de Colombus dans les pays occidentaux.",
+    "attribution": "Piri Reis, légende de la carte du monde, 1513"
+  },
+  "timeline": [
+    { "year": "vers 1465", "label": "Naissance à Gallipoli" },
+    { "year": "1480-1510", "label": "Campagnes en Méditerranée avec son oncle Kemal Reis" },
+    { "year": "1513", "label": "Carte du monde — fragment retrouvé en 1929" },
+    { "year": "1521", "label": "Kitab-i Bahriye offert à Soliman le Magnifique" },
+    { "year": "1538", "label": "Conquête ottomane d'Aden, campagnes en océan Indien" },
+    { "year": "1552", "label": "Échec du siège d'Hormuz contre les Portugais" },
+    { "year": "1553", "label": "Exécution au Caire à 88 ans" },
+    { "year": "1929", "label": "Redécouverte du fragment de carte 1513 à Topkapi" }
+  ]
+}

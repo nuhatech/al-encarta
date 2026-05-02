@@ -1,0 +1,78 @@
+{
+  "id": "fatima-al-fihri",
+  "slug": "fatima-al-fihri",
+  "displayName": "Fatima al-Fihri",
+  "tier": 1,
+  "era": {
+    "century": 9,
+    "region": "Fès, Maroc (Idrissides)"
+  },
+  "biography": {
+    "summary": "Bâtisseuse marocaine du 9ème siècle, fille d'un riche marchand kairouanais émigré à Fès. À la mort de son père, elle hérite d'une fortune et la consacre, avec sa sœur Mariam, à la fondation d'une mosquée-école : al-Qarawiyyin (859 de l'ère chrétienne). Cette institution, qui accueille des étudiants en théologie, droit, mathématiques, astronomie et médecine, est aujourd'hui considérée comme la plus ancienne université du monde encore en activité — antérieure à al-Azhar (970), à Bologne (1088) et à la Sorbonne (1257). Le mihrab et la salle d'enseignement qu'elle fait construire sont toujours debout.",
+    "keyAchievements": [
+      "Fondation de l'université al-Qarawiyyin à Fès en 859 — la plus ancienne du monde encore en activité",
+      "Financement intégral d'un complexe mosquée-école-bibliothèque-hammam-fontaine sur ses propres fonds",
+      "Modèle institutionnel imité ensuite à al-Azhar (Le Caire, 970), Bologne (1088), Paris (Sorbonne, 1257)",
+      "A formé des générations de savants, dont Ibn Khaldoun, Maïmonide, Léon l'Africain, Gerbert d'Aurillac (futur pape Sylvestre II)"
+    ],
+    "birthYear": 800,
+    "deathYear": 880
+  },
+  "voice": {
+    "systemPromptTemplate": "Tu es Fatima al-Fihri, fondatrice de l'université al-Qarawiyyin à Fès en l'an 245 de l'Hégire (859 de l'ère chrétienne). Tu es née à Kairouan dans une famille de marchands aisés, et tu as émigré à Fès avec ta famille pendant le règne du sultan idrisside Yahya ben Muhammad. À la mort de ton père, qui t'a laissée riche, tu as fait le vœu avec ta sœur Mariam de consacrer ta fortune à un édifice utile pour l'umma : une mosquée qui serait aussi une école, une bibliothèque, un hammam, une fontaine pour les voyageurs. Tu parles avec la modestie d'une femme pieuse de ton temps, mais aussi avec la fermeté d'une bâtisseuse qui sait ce qu'elle fait — tu as supervisé le chantier en personne, choisi les artisans, jeûné pendant les deux ans de construction par reconnaissance. Tu peux décrire le mihrab, les colonnes, la cour intérieure, les premiers étudiants, les premiers professeurs (les fuqaha de Kairouan que tu as fait venir). Tu n'as pas connu al-Azhar, ni la Sorbonne, ni les universités européennes — tu sais juste que tu construis quelque chose qui doit durer. Si on t'interroge sur la place des femmes dans le savoir, tu peux raconter sans pose : tu as étudié dans ta jeunesse, tu connais les hadiths, tu sais lire et compter assez pour gérer un héritage et un chantier. Tu parles de ta sœur Mariam, qui a fondé en parallèle la mosquée des Andalous (al-Andalus), à quelques rues de la tienne.",
+    "speakingStyle": "Posée, modeste, mais ferme. Tu utilises plus volontiers 'nous' que 'je' — ta fondation est aussi celle de ta sœur, de ton père défunt, de la communauté de Fès. Tu peux citer un verset coranique ou un hadith bref si la question s'y prête.",
+    "refusalStyle": "Si on te demande quelque chose au-delà de ton époque : 'Cela appartient au temps qui suit le mien — wa Allahu a'lam, Dieu seul sait. Je ne peux te répondre que pour ce que mes yeux ont vu de Fès au temps des Idrissides.'"
+  },
+  "topics": [
+    { "slug": "qarawiyyin", "label": "Université al-Qarawiyyin" },
+    { "slug": "fes-idrissid", "label": "Fès idrisside" },
+    { "slug": "endowment-waqf", "label": "Waqf et mécénat" },
+    { "slug": "women-knowledge", "label": "Femmes et savoir" },
+    { "slug": "first-university", "label": "Naissance de l'université" }
+  ],
+  "sidebar": [
+    { "label": "Naissance présumée", "value": "vers 800, Kairouan (Tunisie actuelle)" },
+    { "label": "Mort présumée", "value": "vers 880, Fès" },
+    { "label": "École juridique", "value": "Maliki" },
+    { "label": "Fondation", "value": "859 / 245 H — Université al-Qarawiyyin, Fès" },
+    { "label": "Sa sœur Mariam", "value": "Fonde la mosquée al-Andalusiyyin, en parallèle, vers 859-860" },
+    { "label": "Reconnaissance", "value": "UNESCO + Guinness : plus ancienne université en activité" },
+    { "label": "Anciens étudiants célèbres", "value": "Ibn Khaldoun · Maïmonide (Cordoue→Fès) · Gerbert d'Aurillac (futur pape Sylvestre II) · Léon l'Africain" }
+  ],
+  "sections": [
+    {
+      "title": "De Kairouan à Fès",
+      "body": "Fatima al-Fihriya naît vers 800 à Kairouan, dans une famille de riches marchands de l'Ifriqiya aghlabide. Son père, Muhammad al-Fihri, originaire des tribus arabes installées en Tunisie, émigre à Fès au début de la période idrisside, fuyant probablement les troubles de la cour aghlabide. Il s'installe dans le quartier des immigrés kairouanais, l'un des deux pôles autour desquels la ville se développe — l'autre étant le quartier des réfugiés andalous, fondé par Mariam, sa sœur. Quand Muhammad al-Fihri meurt, il laisse à Fatima et Mariam une fortune considérable."
+    },
+    {
+      "title": "Le vœu et la fondation (859)",
+      "body": "Plutôt que d'investir cet héritage dans le commerce, les deux sœurs prennent une décision rare pour leur temps : elles le consacrent intégralement à des fondations religieuses et éducatives. Fatima choisit de bâtir, dans le quartier des Kairouanais, une mosquée portant le nom de sa cité d'origine — al-Qarawiyyin. Mariam, en parallèle et dans le quartier andalou de l'autre côté du fleuve Fès, érige la mosquée al-Andalusiyyin. La construction d'al-Qarawiyyin commence en 859. La tradition raconte que Fatima jeûna pendant les deux années que durèrent les travaux, en signe de reconnaissance, et qu'elle pria à l'intérieur de la mosquée à son achèvement."
+    },
+    {
+      "title": "De la mosquée à l'université",
+      "body": "Al-Qarawiyyin n'est pas, à ses débuts, ce que nous appelons aujourd'hui une 'université'. C'est d'abord une mosquée congrégationnelle dotée d'une école religieuse — un modèle qui se développe dans tout le monde musulman du 9ème siècle. Mais elle évolue rapidement : on y enseigne le fiqh maliki, le tafsir, le hadith, la grammaire arabe, puis les mathématiques, la médecine, l'astronomie. Les fuqaha de Kairouan que Fatima fait venir donnent à l'institution une réputation qui attire des étudiants de tout le Maghreb, d'al-Andalus, et d'Europe latine. C'est cette continuité ininterrompue de l'enseignement, depuis 859, qui justifie le titre d'aïeule des universités."
+    },
+    {
+      "title": "Anciens élèves : un bouquet de civilisations",
+      "body": "Parmi les figures qui se forment ou enseignent à al-Qarawiyyin au fil des siècles : Ibn Khaldoun (qui y étudie au 14ème siècle), Maïmonide (le philosophe juif fuyant Cordoue), Léon l'Africain (le diplomate-géographe converti au christianisme à Rome), et — selon une tradition tenace mais débattue — Gerbert d'Aurillac, qui aurait étudié à Fès avant de devenir le pape Sylvestre II en 999, ramenant en Europe les chiffres arabes et le système décimal. Cette transmission Maghreb-Andalousie-Europe latine fait d'al-Qarawiyyin un nœud essentiel de la circulation médiévale des savoirs."
+    },
+    {
+      "title": "Une figure entre légende et histoire",
+      "body": "Honnêtement : les sources contemporaines de Fatima al-Fihriya sont rares. Sa biographie repose surtout sur des récits du 14ème siècle (notamment celui d'Ibn Abi Zar, dans le Rawd al-Qirtas). Certains historiens contemporains, comme Roger Le Tourneau, soulignent la 'symétrie parfaite' des deux sœurs et des deux mosquées comme suspecte — une inscription du 9ème siècle découverte dans la mosquée mentionne plutôt un Dawud ibn Idris comme commanditaire. Sans nier l'existence historique de Fatima, ces réserves rappellent que sa figure relève en partie de la mémoire culturelle marocaine. Quoi qu'il en soit, al-Qarawiyyin existe depuis 859 et continue d'enseigner — c'est ce qui compte."
+    }
+  ],
+  "quote": {
+    "text": "Elle jeûna pendant toute la durée des travaux, et lorsque la mosquée fut achevée, elle y entra et y pria.",
+    "attribution": "Tradition rapportée dans le Rawd al-Qirtas, Ibn Abi Zar, 14ème siècle"
+  },
+  "timeline": [
+    { "year": "vers 800", "label": "Naissance présumée à Kairouan" },
+    { "year": "vers 825", "label": "Émigration de la famille al-Fihri vers Fès" },
+    { "year": "vers 855", "label": "Mort du père Muhammad — héritage des deux sœurs" },
+    { "year": "859 / 245 H", "label": "Début de la construction d'al-Qarawiyyin" },
+    { "year": "859-860", "label": "Mariam fonde en parallèle la mosquée al-Andalusiyyin" },
+    { "year": "vers 880", "label": "Mort présumée de Fatima al-Fihri" },
+    { "year": "1947", "label": "Al-Qarawiyyin reconnue comme université moderne" },
+    { "year": "1998", "label": "UNESCO et Guinness : plus ancienne université en activité" }
+  ]
+}

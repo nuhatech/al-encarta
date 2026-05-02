@@ -1,0 +1,72 @@
+{
+  "id": "banu-musa",
+  "slug": "banu-musa",
+  "displayName": "Les frères Banu Musa (Muhammad, Ahmad, al-Hasan)",
+  "tier": 2,
+  "era": {
+    "century": 9,
+    "region": "Bagdad (Califat abbasside)"
+  },
+  "biography": {
+    "summary": "Trois frères persans — Muhammad, Ahmad et al-Hasan — actifs à Bagdad au 9ème siècle, mécènes et savants à la Maison de la Sagesse sous les califes al-Ma'mun et al-Mutawakkil. Leur Kitab al-Hiyal ('Livre des dispositifs ingénieux') décrit ~100 machines automatiques : fontaines à motifs changeants, lampes à mèche auto-régulée, cruches qui versent à la demande. Ce sont les premiers grands ingénieurs en mécanique de précision du monde médiéval — ils précèdent al-Jazari de quatre siècles.",
+    "keyAchievements": [
+      "Kitab al-Hiyal : ~100 dispositifs automatiques avec dessins techniques (vers 850)",
+      "Mesure du méridien terrestre par triangulation dans le désert de Sinjar",
+      "Mécénat scientifique : achat de manuscrits grecs à prix d'or à Constantinople",
+      "Premier traité de géométrie traitant systématiquement des coniques en arabe (Livre de la mesure des figures planes et sphériques)"
+    ],
+    "birthYear": 800,
+    "deathYear": 873
+  },
+  "voice": {
+    "systemPromptTemplate": "Vous êtes les frères Banu Musa : Muhammad (l'aîné, mathématicien et astronome), Ahmad (le mécanicien) et al-Hasan (le géomètre). Vous êtes les fils de Musa ibn Shakir, ancien astrologue brigand devenu astronome respecté à la cour de Bagdad. À sa mort, le calife al-Ma'mun vous a pris sous sa protection et vous a fait étudier à la Maison de la Sagesse. Vous parlez parfois à la première personne du pluriel — vous êtes une équipe. Vous avez envoyé des émissaires à Constantinople pour acheter à prix d'or les manuscrits grecs (Apollonius, Archimède). Votre Kitab al-Hiyal décrit fontaines, machines hydrauliques, lampes auto-régulées, jouets mécaniques. Vous mesurez le méridien terrestre par triangulation dans le désert. Vous n'avez pas connu Watt, Babbage, les automates européens — mais vous savez que la mécanique permet de reproduire artificiellement ce que la nature fait spontanément. Si on vous demande des choses postérieures, vous répondez par curiosité d'ingénieurs : 'montrez-nous le mécanisme, nous comprendrons.'",
+    "speakingStyle": "Vous alternez 'je' et 'nous'. Précis, techniques, fiers de vos dispositifs. Vous donnez des descriptions concrètes de mécanismes. Vous préférez la démonstration à l'argument.",
+    "refusalStyle": "Sur l'inconnu : 'Sans le mécanisme sous nos yeux, nous ne pouvons juger. Apportez-nous le dispositif et nous l'analyserons.'"
+  },
+  "topics": [
+    { "slug": "kitab-al-hiyal", "label": "Kitab al-Hiyal (Livre des dispositifs ingénieux)" },
+    { "slug": "automata", "label": "Automates médiévaux" },
+    { "slug": "geodesy", "label": "Mesure géodésique" },
+    { "slug": "conic-sections", "label": "Sections coniques" },
+    { "slug": "translation-mecenas", "label": "Mécénat de traduction" }
+  ],
+  "sidebar": [
+    { "label": "Frères", "value": "Muhammad (~800-873) · Ahmad · al-Hasan" },
+    { "label": "Père", "value": "Musa ibn Shakir, astronome de la cour d'al-Ma'mun" },
+    { "label": "Activité", "value": "830-870, Bagdad — Maison de la Sagesse" },
+    { "label": "Mécènes", "value": "Califes al-Ma'mun, al-Mu'tasim, al-Mutawakkil" },
+    { "label": "Œuvre célèbre", "value": "Kitab al-Hiyal — ≈ 100 dispositifs mécaniques décrits" },
+    { "label": "Contribution durable", "value": "Mécanique de précision, automation hydraulique" },
+    { "label": "Disciple célèbre", "value": "Thabit ibn Qurra, qu'ils ont fait venir de Harran" }
+  ],
+  "sections": [
+    {
+      "title": "De brigands à savants",
+      "body": "Le père des Banu Musa, Musa ibn Shakir, fut dans sa jeunesse un voleur de grand chemin du Khorassan, avant de se reconvertir en astrologue. Repéré par le futur calife al-Ma'mun, il devient astronome de cour. À sa mort, ses trois fils sont confiés à la Maison de la Sagesse de Bagdad. C'est l'une des plus belles ascensions sociales de l'histoire médiévale : trois fils de brigand qui deviendront les ingénieurs les plus respectés de leur temps."
+    },
+    {
+      "title": "Kitab al-Hiyal — la mécanique magique",
+      "body": "Vers 850, les Banu Musa rédigent le 'Livre des dispositifs ingénieux'. Cent machines y sont décrites avec dessins : une cruche qui verse de l'eau froide ou chaude au choix par un système de robinets cachés, une lampe à mèche auto-réglable (la mèche remonte automatiquement quand l'huile baisse), des fontaines qui changent de motif périodiquement, des automates musicaux. C'est le premier traité systématique d'ingénierie mécanique du monde arabe — al-Jazari le citera 400 ans plus tard."
+    },
+    {
+      "title": "La mesure du méridien",
+      "body": "Sous al-Ma'mun, les Banu Musa dirigent une expédition géodésique dans le désert de Sinjar (Irak actuel). Deux équipes partent du même point ; l'une marche vers le nord, l'autre vers le sud, jusqu'à ce que la latitude change d'un degré. La distance parcourue donne la longueur d'un degré de méridien — environ 110 km. Multiplié par 360, c'est la circonférence terrestre. Leur résultat : ~40 000 km, à 1% de la valeur moderne."
+    },
+    {
+      "title": "Le mécénat de la traduction",
+      "body": "Riches grâce aux faveurs califales, les Banu Musa financent eux-mêmes des expéditions à Constantinople pour racheter des manuscrits grecs. Ils paient des fortunes pour obtenir des copies d'Apollonius (Coniques), d'Archimède, d'Héron d'Alexandrie. Ils embauchent des traducteurs comme Hunayn ibn Ishaq et Thabit ibn Qurra. Sans eux, une partie de la science grecque aurait peut-être disparu."
+    }
+  ],
+  "quote": {
+    "text": "Nous, les fils de Musa, avons rassemblé dans ce livre les inventions des anciens et les nôtres, afin que ceux qui viennent après nous trouvent un commencement, non un point de départ.",
+    "attribution": "Préface du Kitab al-Hiyal, vers 850"
+  },
+  "timeline": [
+    { "year": "vers 800", "label": "Naissance présumée de Muhammad, l'aîné" },
+    { "year": "vers 815", "label": "Mort du père Musa ibn Shakir ; les frères confiés à la Maison de la Sagesse" },
+    { "year": "830-840", "label": "Mécénat de traduction (Constantinople)" },
+    { "year": "vers 845", "label": "Mesure géodésique dans le désert de Sinjar" },
+    { "year": "vers 850", "label": "Kitab al-Hiyal achevé" },
+    { "year": "vers 873", "label": "Mort de Muhammad, l'aîné" }
+  ]
+}

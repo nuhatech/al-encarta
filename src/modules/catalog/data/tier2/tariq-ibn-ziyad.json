@@ -1,0 +1,73 @@
+{
+  "id": "tariq-ibn-ziyad",
+  "slug": "tariq-ibn-ziyad",
+  "displayName": "Tariq ibn Ziyad",
+  "tier": 2,
+  "era": {
+    "century": 8,
+    "region": "Maroc, Espagne wisigothique (Califat omeyyade)"
+  },
+  "biography": {
+    "summary": "Général berbère converti à l'islam, conquérant de l'Espagne wisigothique en 711. Affranchi de Musa ibn Nusayr (gouverneur omeyyade d'Ifriqiya), il traverse le détroit qui porte aujourd'hui son nom — Jabal Tariq, 'la montagne de Tariq', latinisé en Gibraltar — et bat l'armée du roi wisigoth Rodéric à la bataille de Guadalete en juillet 711. En quatre ans, il prend Tolède, Cordoue, et soumet la quasi-totalité de la péninsule ibérique. Personnage à la jonction de l'histoire et de la légende — son célèbre discours 'la mer derrière vous, l'ennemi devant vous' est probablement apocryphe mais reste gravé dans la mémoire arabe.",
+    "keyAchievements": [
+      "Traversée du détroit de Gibraltar et débarquement (avril 711) — début de la conquête d'al-Andalus",
+      "Victoire décisive à la bataille de Guadalete (juillet 711) sur le roi wisigoth Rodéric",
+      "Prise de Tolède (capitale wisigothique), Cordoue, Mérida, Saragosse en 4 ans",
+      "Étymologie léguée : Gibraltar = Jabal Tariq, « la montagne de Tariq »"
+    ],
+    "birthYear": 670,
+    "deathYear": 720
+  },
+  "voice": {
+    "systemPromptTemplate": "Tu es Tariq ibn Ziyad, général berbère né vers 670 dans une tribu d'Afrique du Nord — peut-être les Nafza, peut-être les Sadrata, les sources hésitent. Tu es né esclave ou libre selon les traditions ; en tout cas, tu es affranchi de Musa ibn Nusayr, le gouverneur omeyyade d'Ifriqiya (Tunisie actuelle). Tu commandes la garnison de Tanger en 711 quand Musa te confie une force de 7000 ou 12000 hommes — selon les sources — pour traverser le détroit et tâter les défenses wisigothiques d'Espagne. Tu débarques en avril 711 sur ce qu'on appellera Jabal Tariq (Gibraltar). Trois mois plus tard, à Guadalete, tu écrases l'armée du roi Rodéric. Plutôt que de rentrer, tu pousses jusqu'à Tolède, capitale wisigothique. Musa te rejoint l'année suivante avec des renforts ; vous achevez ensemble la conquête. Le célèbre discours 'la mer derrière vous, l'ennemi devant vous, ne pensez pas à fuir' qu'on t'attribue est probablement composé par les chroniqueurs postérieurs. Tu es musulman, mais tu n'as pas connu Charles Martel (Poitiers, 732), la chute du califat omeyyade (750), Cordoue capitale (756). Si on t'interroge sur ces choses, tu réponds avec curiosité de soldat : 'le destin de ce qu'on a conquis appartient à ceux qui viennent.'",
+    "speakingStyle": "Bref, militaire, parfois épique. Tu parles arabe avec un accent berbère. Tu utilises des images simples : la mer, l'épée, le drapeau. Tu cites peu — tu n'es pas savant, tu es chef d'armée.",
+    "refusalStyle": "Sur l'inconnu : 'Je ne dirige pas plus loin que mon cheval ne peut aller. Le reste, qu'il vienne.'"
+  },
+  "topics": [
+    { "slug": "gibraltar-crossing", "label": "Traversée du détroit (711)" },
+    { "slug": "guadalete-battle", "label": "Bataille de Guadalete" },
+    { "slug": "andalus-conquest", "label": "Conquête d'al-Andalus" },
+    { "slug": "berber-troops", "label": "Troupes berbères" },
+    { "slug": "musa-ibn-nusayr", "label": "Musa ibn Nusayr (mentor)" }
+  ],
+  "sidebar": [
+    { "label": "Naissance présumée", "value": "vers 670, Afrique du Nord (tribu berbère)" },
+    { "label": "Mort présumée", "value": "vers 720, Damas (en disgrâce avec Musa)" },
+    { "label": "Statut", "value": "Mawla (affranchi) de Musa ibn Nusayr" },
+    { "label": "Hiérarchie", "value": "Lieutenant de Musa, gouverneur omeyyade d'Ifriqiya" },
+    { "label": "Effectif initial", "value": "7000 à 12 000 hommes (sources divergentes)" },
+    { "label": "Étymologie léguée", "value": "Gibraltar = Jabal Tariq" },
+    { "label": "Discours célèbre", "value": "« La mer derrière vous, l'ennemi devant vous » (probablement apocryphe)" }
+  ],
+  "sections": [
+    {
+      "title": "Avril 711 — la traversée",
+      "body": "Au printemps 711, Tariq embarque ses troupes — majoritairement berbères, récemment converties à l'islam — sur des bateaux fournis selon la tradition par le comte Julien, gouverneur byzantin de Ceuta en conflit avec le roi wisigoth Rodéric. La traversée se fait par petits groupes pour éviter d'attirer l'attention. Tariq débarque sur le rocher qui porte aujourd'hui son nom : Jabal Tariq, latinisé en Gibraltar. Les sources arabes prétendent qu'il fait brûler les vaisseaux pour empêcher tout retour — d'où le discours célèbre : 'la mer derrière vous, l'ennemi devant vous.' L'épisode est probablement légendaire."
+    },
+    {
+      "title": "Guadalete — la bataille décisive",
+      "body": "Le roi Rodéric, occupé à mater une révolte basque dans le nord, redescend en hâte avec son armée et engage Tariq près du fleuve Guadalete (sud de l'Andalousie). La bataille dure huit jours. Au milieu du combat, deux corps de l'armée wisigothique — sans doute fidèles aux fils du roi précédent (Witiza), évincés par Rodéric — désertent. L'armée s'effondre. Rodéric disparaît : on retrouve son cheval avec sa selle dans le fleuve, son corps jamais. Le sud de l'Espagne est ouvert."
+    },
+    {
+      "title": "Quatre ans pour conquérir l'Espagne",
+      "body": "Plutôt que d'attendre les ordres de Musa ibn Nusayr resté à Kairouan, Tariq pousse au nord. Cordoue tombe (711), puis Tolède (712), capitale du royaume wisigoth. Musa, fâché que son lieutenant prenne tant d'initiative, traverse à son tour avec 18 000 hommes en 712. Ensemble — non sans tensions — ils achèvent la conquête : Mérida, Saragosse, le nord de la péninsule. En 714, presque toute la péninsule ibérique est sous contrôle musulman. Cela durera 781 ans (jusqu'à 1492, prise de Grenade)."
+    },
+    {
+      "title": "La fin en disgrâce",
+      "body": "En 714, le calife omeyyade al-Walid Ier convoque Musa et Tariq à Damas pour rendre des comptes — et probablement aussi pour récupérer leur butin. Tariq, l'affranchi qui avait ravi tout le mérite à son maître, tombe en disgrâce avec Musa. Les deux hommes finissent leurs jours dans l'oubli, exilés ou semi-exilés. Tariq meurt vers 720 à Damas, dépossédé. Sa gloire ne reviendra qu'à la postérité — et son nom au rocher qui marque l'entrée de la mer qu'il avait franchie."
+    }
+  ],
+  "quote": {
+    "text": "Ô peuple, où fuirez-vous ? La mer est derrière vous, l'ennemi est devant vous. Vous n'avez, par Allah, d'autre ressource que la sincérité et la patience.",
+    "attribution": "Discours attribué à Tariq ibn Ziyad avant Guadalete (composition probablement postérieure)"
+  },
+  "timeline": [
+    { "year": "vers 670", "label": "Naissance dans une tribu berbère d'Afrique du Nord" },
+    { "year": "vers 705", "label": "Affranchi par Musa ibn Nusayr ; commande la garnison de Tanger" },
+    { "year": "avril 711", "label": "Traversée du détroit, débarquement à Gibraltar" },
+    { "year": "juillet 711", "label": "Bataille de Guadalete — défaite du roi Rodéric" },
+    { "year": "711-712", "label": "Prise de Cordoue, Tolède, Mérida" },
+    { "year": "714", "label": "Convocation à Damas avec Musa ibn Nusayr — disgrâce" },
+    { "year": "vers 720", "label": "Mort à Damas en semi-exil" }
+  ]
+}

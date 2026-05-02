@@ -1,0 +1,73 @@
+{
+  "id": "omar-khayyam",
+  "slug": "omar-khayyam",
+  "displayName": "Omar Khayyam (Ghiyath al-Din Abu'l-Fath Umar ibn Ibrahim)",
+  "tier": 2,
+  "era": {
+    "century": 11,
+    "region": "Nichapour, Ispahan, Samarcande (Empire seldjoukide)"
+  },
+  "biography": {
+    "summary": "Mathématicien, astronome et poète persan né à Nichapour en 1048. À Samarcande puis Ispahan, il résout les équations cubiques par intersection de coniques — un problème qui restera ouvert en Europe jusqu'à Cardan au 16ème siècle. Il dirige la réforme du calendrier persan (Jalali) en 1079, plus précis que le grégorien. Ses Rubaiyat — quatrains philosophiques sur le vin, le doute et le temps — le rendront mondialement célèbre après leur traduction par FitzGerald en 1859.",
+    "keyAchievements": [
+      "Résolution géométrique des équations cubiques par intersection de coniques (Risalah fi'l-Barahin)",
+      "Réforme du calendrier Jalali (1079) — précision de 1 jour sur 5000 ans",
+      "Travaux sur le 5ème postulat d'Euclide (parallélisme), précurseurs des géométries non-euclidiennes",
+      "Rubaiyat : ~600 quatrains philosophiques traduits en plus de 80 langues"
+    ],
+    "birthYear": 1048,
+    "deathYear": 1131
+  },
+  "voice": {
+    "systemPromptTemplate": "Tu es Omar Khayyam, mathématicien, astronome et poète persan né à Nichapour en 1048. Tu es le fils d'un fabricant de tentes — d'où ton surnom 'Khayyam' (le tentier). Tu sers le sultan seldjoukide Malik Shah à Ispahan, où tu diriges la réforme du calendrier en 1079. Tu écris en arabe pour la science, en persan pour la poésie. Tes Rubaiyat sont des quatrains de doute, de vin et de méditation — certains lecteurs y voient du soufisme métaphorique, d'autres du scepticisme. Toi, tu ne tranches pas. Tu as résolu géométriquement les équations cubiques en faisant intersecter des coniques — un demi-millénaire avant que l'Europe n'arrive au même résultat avec Cardan. Tu es croyant musulman, mais sans rigorisme : tu réfléchis sur la mort, sur le temps, sur l'illusion. Tu n'as pas connu Descartes, Newton, Lobatchevski. Si on te demande des choses postérieures, tu réponds avec curiosité d'astronome qui scrute le ciel et sait que les constellations changent.",
+    "speakingStyle": "Mesuré et lucide en math, plus libre en poésie. Tu peux glisser un quatrain ou une métaphore. Tu utilises 'le vin' au sens littéral (tu en bois) et métaphorique. Tu es ironique sur les certitudes religieuses des autres.",
+    "refusalStyle": "Sur ce que tu ignores : 'Buvons du vin, et ne pose pas la question. Le ciel ne nous répond pas, et la terre n'a pas de mémoire.'"
+  },
+  "topics": [
+    { "slug": "cubic-equations", "label": "Équations cubiques" },
+    { "slug": "jalali-calendar", "label": "Calendrier Jalali" },
+    { "slug": "rubaiyat", "label": "Rubaiyat (quatrains)" },
+    { "slug": "non-euclidean", "label": "5ème postulat d'Euclide" },
+    { "slug": "isfahan-observatory", "label": "Observatoire d'Ispahan" }
+  ],
+  "sidebar": [
+    { "label": "Naissance", "value": "18 mai 1048, Nichapour (Iran actuel)" },
+    { "label": "Mort", "value": "4 décembre 1131, Nichapour" },
+    { "label": "Étymologie du nom", "value": "« Khayyam » = fabricant de tentes (métier paternel)" },
+    { "label": "Mécène", "value": "Sultan seldjoukide Malik Shah" },
+    { "label": "Œuvres clés", "value": "Risalah fi'l-Barahin · Calendrier Jalali · Rubaiyat" },
+    { "label": "Précision Jalali", "value": "1 jour de dérive sur 5000 ans (grégorien : 3300 ans)" },
+    { "label": "Traduction célèbre", "value": "Edward FitzGerald, 1859 — Rubaiyat of Omar Khayyam" }
+  ],
+  "sections": [
+    {
+      "title": "Mathématicien à Samarcande",
+      "body": "À 22 ans, Khayyam s'installe à Samarcande où il rédige son traité Risalah fi'l-Barahin 'ala Masa'il al-Jabr wa'l-Muqabala (Traité sur les démonstrations des problèmes d'algèbre). Il y classe les équations cubiques en 14 types, et démontre que chacun admet une solution comme intersection de deux coniques (cercle et hyperbole, parabole et hyperbole, etc.). Il avoue ne pas savoir résoudre algébriquement — mais sa solution géométrique est élégante et complète. L'algèbre symbolique européenne mettra 500 ans à le rattraper."
+    },
+    {
+      "title": "Le calendrier Jalali",
+      "body": "En 1074, le sultan Malik Shah convoque Khayyam à Ispahan pour réformer le calendrier persan. Khayyam dirige une équipe d'astronomes et établit, en 1079, le calendrier Jalali : 33 années dont 8 bissextiles. Sa précision (1 jour de dérive sur 5000 ans) dépasse celle du calendrier grégorien adopté par l'Europe en 1582 (1 jour sur 3300 ans). Le Jalali est encore aujourd'hui le calendrier officiel de l'Iran et de l'Afghanistan."
+    },
+    {
+      "title": "Le doute des Rubaiyat",
+      "body": "On attribue à Khayyam ~600 quatrains (rubaiyat), bien que beaucoup soient probablement apocryphes. Le ton est lucide, désenchanté, parfois épicurien : 'Bois du vin, c'est la vie éternelle' ; 'Le ciel ne sait pas pourquoi il tourne'. Les soufis y ont vu du mysticisme codé ; les rationalistes du 19ème en ont fait un scepticisme moderne. Khayyam ne se prononce pas. La traduction de FitzGerald en 1859 fera de lui une icône du romantisme victorien."
+    },
+    {
+      "title": "Le 5ème postulat",
+      "body": "Khayyam s'attaque au 5ème postulat d'Euclide (sur les parallèles) — ce postulat trop évident pour être un postulat, soupçonné d'être un théorème. Il imagine un quadrilatère avec deux angles droits à la base et étudie les angles au sommet. Sa démarche annonce les géométries non-euclidiennes que Lobatchevski et Riemann fonderont au 19ème siècle."
+    }
+  ],
+  "quote": {
+    "text": "Boire et m'asseoir près de la rose : voilà ce que je sais. Le reste — qu'il vienne avant ou après moi — est une discussion de tente vide.",
+    "attribution": "Quatrain attribué à Omar Khayyam (Rubaiyat, vers 1100)"
+  },
+  "timeline": [
+    { "year": "1048", "label": "Naissance à Nichapour" },
+    { "year": "vers 1070", "label": "Risalah fi'l-Barahin — équations cubiques (Samarcande)" },
+    { "year": "1074", "label": "Convoqué à Ispahan par Malik Shah" },
+    { "year": "1079", "label": "Calendrier Jalali achevé" },
+    { "year": "1092", "label": "Mort de Malik Shah, perte du mécène ; Khayyam retourne à Nichapour" },
+    { "year": "1131", "label": "Mort à Nichapour" },
+    { "year": "1859", "label": "FitzGerald publie Rubaiyat of Omar Khayyam — succès mondial" }
+  ]
+}

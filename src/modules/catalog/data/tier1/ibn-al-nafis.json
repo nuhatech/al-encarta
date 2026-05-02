@@ -1,0 +1,77 @@
+{
+  "id": "ibn-al-nafis",
+  "slug": "ibn-al-nafis",
+  "displayName": "Ala-al-din abu al-Hasan Ibn al-Nafis",
+  "tier": 1,
+  "era": {
+    "century": 13,
+    "region": "Damas, Le Caire (Sultanat mamelouk)"
+  },
+  "biography": {
+    "summary": "Médecin et juriste arabe du 13ème siècle, né près de Damas et formé à l'hôpital al-Nuri, il dirigea ensuite l'hôpital al-Mansuri du Caire. Dans son commentaire sur le Canon d'Ibn Sina, il décrit pour la première fois la circulation pulmonaire du sang : le sang passe du ventricule droit aux poumons, s'y mêle à l'air, puis revient au ventricule gauche — soit près de 300 ans avant Michel Servet et William Harvey en Europe. Il fut aussi un théologien shafi'ite reconnu.",
+    "keyAchievements": [
+      "Première description correcte de la circulation pulmonaire du sang (vers 1242, dans Sharh Tashrih al-Qanun)",
+      "Réfutation de la théorie galénique des 'pores' du septum cardiaque",
+      "Direction de l'hôpital al-Mansuri du Caire, l'un des plus grands de son temps",
+      "Œuvres en jurisprudence shafi'ite et en logique ; rédaction d'un manuel d'ophtalmologie"
+    ],
+    "birthYear": 1213,
+    "deathYear": 1288
+  },
+  "voice": {
+    "systemPromptTemplate": "Tu es Ibn al-Nafis, médecin syrien du 13ème siècle, formé à Damas et exerçant au Caire à l'hôpital al-Mansuri. Tu es à la fois médecin praticien, anatomiste, et juriste shafi'ite. Tu parles de la médecine comme d'une discipline rationnelle qui se nourrit de l'observation directe — tu n'as pas peur de contredire les anciens (Galien, et même Ibn Sina, dont tu commentes le Canon) quand l'anatomie te révèle qu'ils ont tort. Tu es particulièrement fier d'avoir compris que le sang ne passe pas par des 'pores invisibles' du septum cardiaque comme Galien le pensait, mais qu'il fait un long voyage par les poumons : du ventricule droit, à travers l'artère pulmonaire, dans le tissu poreux des poumons où il se mêle à l'air, puis retourne au ventricule gauche par la veine pulmonaire. Tu n'as jamais entendu parler de Harvey, Servet, ou de la circulation systémique au sens moderne. Si on te questionne sur la médecine européenne ou contemporaine, tu réponds en savant qui ignore mais qui a confiance que la connaissance s'accumule. Tu peux parler du calife mamelouk, des hôpitaux que tu diriges, des étudiants que tu formes.",
+    "speakingStyle": "Mesuré, professoral, parfois ferme quand tu corriges une erreur. Tu illustres avec des cas cliniques concrets. Tu parles le français contemporain avec un fond d'érudition arabe (un mot ou deux d'arabe occasionnel, expliqué).",
+    "refusalStyle": "Si on te demande quelque chose hors de ton époque ou de ton domaine, tu refuses doucement : 'Cela appartient à un savoir que je n'ai pas reçu. Le médecin qui prétend savoir ce qu'il ignore tue son patient.'"
+  },
+  "topics": [
+    { "slug": "pulmonary-circulation", "label": "Circulation pulmonaire" },
+    { "slug": "anatomy", "label": "Anatomie comparée" },
+    { "slug": "galen-correction", "label": "Réfutation de Galien" },
+    { "slug": "hospital-mansuri", "label": "Hôpital al-Mansuri" },
+    { "slug": "ophthalmology", "label": "Ophtalmologie" }
+  ],
+  "sidebar": [
+    { "label": "Naissance", "value": "vers 1213, près de Damas" },
+    { "label": "Mort", "value": "1288, Le Caire" },
+    { "label": "Formation", "value": "Bimaristan al-Nuri, Damas" },
+    { "label": "Direction", "value": "Hôpital al-Mansuri, Le Caire (à 74 ans)" },
+    { "label": "Œuvres majeures", "value": "Sharh Tashrih al-Qanun · Al-Shamil fi al-Tibb (80 vol.) · Theologus Autodidactus" },
+    { "label": "Domaines", "value": "Médecine · Droit shafi'ite · Logique · Théologie" },
+    { "label": "Surnom postérieur", "value": "« Le second Avicenne »" }
+  ],
+  "sections": [
+    {
+      "title": "Une double formation : médecin et juriste",
+      "body": "Né dans la région de Damas vers 1213, Ibn al-Nafis étudie d'abord la théologie et le droit shafi'ite avant de se tourner vers la médecine, qu'il commence à apprendre à seize ans au Bimaristan al-Nuri — l'un des grands hôpitaux-écoles fondés par Nur ad-Din à Damas. Il y reste plus d'une décennie. En 1236, il est appelé en Égypte par un sultan ayyoubide et devient médecin-chef de l'hôpital al-Naseri, où il enseigne aussi bien la médecine que la jurisprudence islamique."
+    },
+    {
+      "title": "La découverte de la circulation pulmonaire",
+      "body": "Galien, suivi pendant onze siècles, enseignait que le sang traversait le septum cardiaque par des pores invisibles. Vers 1242, dans son 'Sharh Tashrih al-Qanun' (Commentaire sur l'anatomie du Canon d'Avicenne), Ibn al-Nafis ose contredire ce dogme. 'Le septum épais du cœur n'est pas perforé', écrit-il. Le sang doit donc voyager autrement : il passe du ventricule droit dans l'artère pulmonaire, irrigue le tissu poreux des poumons où il se mêle à l'air, puis revient au ventricule gauche par la veine pulmonaire. Cette description précède de plus de trois siècles les travaux de Michel Servet (1553) et de William Harvey (1628)."
+    },
+    {
+      "title": "Al-Shamil fi al-Tibb — l'encyclopédie inachevée",
+      "body": "Ibn al-Nafis se lance dans une œuvre titanesque : 'Al-Shamil fi al-Tibb' (Le Livre exhaustif sur la médecine), encyclopédie projetée en trois cents volumes. Il en achèvera quatre-vingts avant sa mort. Le manuscrit, redécouvert au 20ème siècle, contient des descriptions cliniques d'une précision rare pour l'époque, des protocoles thérapeutiques, et des chapitres sur la pharmacopée."
+    },
+    {
+      "title": "Direction d'al-Mansuri et ophtalmologie",
+      "body": "À 74 ans, Ibn al-Nafis prend la direction du nouvel hôpital al-Mansuri du Caire, fondé par le sultan mamelouk Qalawun. Cet hôpital, l'un des plus avancés de son temps, accueille hommes et femmes dans des salles séparées, propose des consultations gratuites pour les pauvres, et inclut une école de médecine. Ibn al-Nafis y rédige aussi un manuel d'ophtalmologie qui restera une référence."
+    },
+    {
+      "title": "Theologus Autodidactus — la première fiction philosophique ?",
+      "body": "Œuvre méconnue, le 'Theologus Autodidactus' raconte l'histoire d'un homme né adulte sur une île déserte qui, par la seule raison, redécouvre les principes de la science et de la religion. Certains historiens y voient un précurseur de la science-fiction philosophique, voire un modèle pour le 'Hayy ibn Yaqdhan' d'Ibn Tufayl (12ème siècle) et plus tard pour 'Robinson Crusoé'."
+    }
+  ],
+  "quote": {
+    "text": "Le septum épais du cœur n'est pas perforé. Il n'a aucun passage visible, comme on le croyait, ni invisible qui puisse permettre le passage du sang. La substance du cœur y est là particulièrement épaisse.",
+    "attribution": "Ibn al-Nafis, Sharh Tashrih al-Qanun, vers 1242"
+  },
+  "timeline": [
+    { "year": "vers 1213", "label": "Naissance près de Damas" },
+    { "year": "vers 1229", "label": "Entrée à l'hôpital al-Nuri pour la formation médicale" },
+    { "year": "1236", "label": "Départ pour le Caire ; médecin-chef à al-Naseri" },
+    { "year": "vers 1242", "label": "Description de la circulation pulmonaire" },
+    { "year": "1284", "label": "Direction de l'hôpital al-Mansuri (à 74 ans)" },
+    { "year": "1288", "label": "Mort au Caire ; Al-Shamil reste inachevé à 80 volumes" },
+    { "year": "1924", "label": "Redécouverte du manuscrit par Muhyo Al-Din Al-Tatawi à Berlin" }
+  ]
+}

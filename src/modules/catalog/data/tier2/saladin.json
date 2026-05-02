@@ -1,0 +1,75 @@
+{
+  "id": "saladin",
+  "slug": "saladin",
+  "displayName": "Salah ad-Din Yusuf ibn Ayyub (Saladin)",
+  "tier": 2,
+  "era": {
+    "century": 12,
+    "region": "Égypte, Syrie, Mésopotamie (Sultanat ayyoubide)"
+  },
+  "biography": {
+    "summary": "Sultan kurde fondateur de la dynastie ayyoubide, né en 1138 à Tikrit (Irak actuel). Vizir d'Égypte sous le calife fatimide chiite, il met fin au califat fatimide en 1171 et restaure le sunnisme. En 1187, il bat les croisés à Hattin et reprend Jérusalem — événement qui déclenche la 3ème croisade et son célèbre face-à-face avec Richard Cœur de Lion. Sa réputation de chevalerie, de générosité et de respect des adversaires marquera durablement la mémoire chrétienne européenne (chez Dante, il est le seul musulman placé dans les Limbes parmi les sages).",
+    "keyAchievements": [
+      "Reprise de Jérusalem (octobre 1187), 88 ans après la prise par les croisés en 1099",
+      "Victoire écrasante à la bataille de Hattin (4 juillet 1187) — destruction de l'armée croisée",
+      "Fondation de la dynastie ayyoubide ; unification de l'Égypte, de la Syrie et de la Mésopotamie",
+      "Construction de la citadelle du Caire et fortification massive de Jérusalem"
+    ],
+    "birthYear": 1138,
+    "deathYear": 1193
+  },
+  "voice": {
+    "systemPromptTemplate": "Tu es Salah ad-Din Yusuf ibn Ayyub, sultan ayyoubide né en 1138 à Tikrit dans une famille kurde. Tu es musulman sunnite — pieux, observant, mais sans rigorisme. Tu as fait ta carrière en Égypte sous Nur al-Din de Damas, ton mentor. À sa mort en 1174, tu as unifié l'Égypte et la Syrie, puis tu as voué les vingt années suivantes à la guerre sainte (jihad) contre les royaumes croisés. À Hattin, en juillet 1187, tu as anéanti l'armée du roi Guy de Lusignan ; trois mois plus tard, Jérusalem t'ouvre ses portes. Contrairement aux croisés en 1099 qui avaient massacré la population, tu épargnes les habitants, négocies des rançons modestes, et autorises ta sœur à libérer 1000 prisonniers de ses propres deniers. La 3ème croisade — Richard Cœur de Lion, Philippe Auguste, Frédéric Barberousse — s'organise contre toi. Tu négocies avec Richard sans jamais le rencontrer en personne, mais avec une correspondance courtoise. Tu meurs en 1193, ruiné par tes générosités. Tu n'as pas connu la chute des derniers États croisés (1291), Saint-Louis, l'avenir de Jérusalem. Si on t'interroge sur la postérité, tu réponds avec mesure : 'Je laisse à Dieu de juger.'",
+    "speakingStyle": "Mesuré, courtois, parfois tranchant sur le devoir. Tu parles arabe et turc. Tu cites le Coran et la poésie arabe avec naturel. Tu es ferme mais sans cruauté.",
+    "refusalStyle": "Sur l'inconnu : 'L'avenir appartient à Dieu. Je peux te dire ce que j'ai fait, pas ce qui se fera après moi.'"
+  },
+  "topics": [
+    { "slug": "jerusalem-1187", "label": "Reprise de Jérusalem (1187)" },
+    { "slug": "hattin-battle", "label": "Bataille de Hattin" },
+    { "slug": "ayyubid-dynasty", "label": "Dynastie ayyoubide" },
+    { "slug": "third-crusade", "label": "3ème croisade — Richard Cœur de Lion" },
+    { "slug": "kurdish-origin", "label": "Origines kurdes" }
+  ],
+  "sidebar": [
+    { "label": "Naissance", "value": "1138, Tikrit (Irak actuel)" },
+    { "label": "Mort", "value": "4 mars 1193, Damas — à 56 ans, fortune dilapidée" },
+    { "label": "Origine", "value": "Famille kurde au service des sultans seldjoukides puis zengides" },
+    { "label": "Mentor", "value": "Nur al-Din Mahmud, sultan zengide de Damas" },
+    { "label": "Dynastie fondée", "value": "Ayyoubides (1171-1260, jusqu'à la conquête mamelouke)" },
+    { "label": "Adversaire célèbre", "value": "Richard Cœur de Lion (jamais rencontré en personne)" },
+    { "label": "Réputation européenne", "value": "Modèle de chevalerie ; Dante le place dans les Limbes parmi les sages" }
+  ],
+  "sections": [
+    {
+      "title": "Du vizir fatimide au sultan sunnite",
+      "body": "Saladin entre en Égypte en 1163 dans l'armée de son oncle Shirkuh, envoyé par Nur al-Din pour soutenir le califat fatimide chiite affaibli. À la mort de Shirkuh en 1169, Saladin lui succède comme vizir. Pendant deux ans, il sert formellement le calife fatimide al-'Adid — tout en consolidant son pouvoir. En 1171, à la mort d'al-'Adid, Saladin abolit le califat fatimide chiite et fait prêcher le nom du calife abbasside sunnite à Bagdad. Coup d'État théologique majeur : trois siècles de chiisme officiel en Égypte prennent fin sans bataille."
+    },
+    {
+      "title": "Hattin — le 4 juillet 1187",
+      "body": "Le roi Guy de Lusignan, mal conseillé, fait marcher son armée croisée de Sephoria à travers un plateau aride en plein juillet vers les Cornes de Hattin, près du lac de Tibériade. Les troupes manquent d'eau ; Saladin coupe les sources, met le feu aux herbes sèches. Le 4 juillet 1187, l'armée croisée — peut-être 20 000 hommes — est encerclée. À la fin du jour, elle est anéantie. Le roi Guy est capturé, le maître des Templiers exécuté, la Vraie Croix saisie. Plus aucune armée chrétienne ne barre la route de Jérusalem."
+    },
+    {
+      "title": "Jérusalem reprise avec mesure",
+      "body": "Le 2 octobre 1187, après un siège de quelques jours, Jérusalem capitule. Saladin avait juré de venger les massacres chrétiens de 1099 — quand les croisés avaient massacré 30 000 habitants juifs et musulmans. Mais il choisit la clémence. Il fixe une rançon modique (10 dinars par homme, 5 par femme, 1 par enfant), libère personnellement les vieillards qui ne peuvent payer, et tolère que sa propre sœur achète la liberté de 1000 prisonniers chrétiens. La nouvelle se propage en Europe. Cette générosité, comparée à la sauvagerie de 1099, marquera durablement la mémoire chrétienne."
+    },
+    {
+      "title": "Le face-à-face avec Richard",
+      "body": "Pendant la 3ème croisade (1189-1192), Saladin combat Richard Cœur de Lion sans jamais le rencontrer face à face — les deux chefs s'écrivent par messagers, échangent des cadeaux, négocient. Quand Richard tombe malade, Saladin lui envoie son médecin personnel et des fruits glacés sur la neige du mont Hermon. Ces gestes, racontés en Europe, fascineront. Le traité de Ramlah (1192) accorde aux pèlerins chrétiens un accès libre à Jérusalem, restée musulmane. Saladin meurt l'année suivante, ruiné par ses générosités — sa fortune ne couvre pas ses funérailles."
+    }
+  ],
+  "quote": {
+    "text": "Comment pourrais-je sourire quand Jérusalem est aux mains des Francs ? Comment pourrais-je goûter quoi que ce soit, quand les enfants de l'islam pleurent ?",
+    "attribution": "Salah ad-Din, lettre à son fils, vers 1186"
+  },
+  "timeline": [
+    { "year": "1138", "label": "Naissance à Tikrit" },
+    { "year": "1163-1169", "label": "Service militaire en Égypte sous son oncle Shirkuh" },
+    { "year": "1169", "label": "Vizir d'Égypte à 31 ans" },
+    { "year": "1171", "label": "Abolition du califat fatimide chiite" },
+    { "year": "1174", "label": "Mort de Nur al-Din ; Saladin unifie l'Égypte et la Syrie" },
+    { "year": "4 juillet 1187", "label": "Bataille de Hattin — destruction de l'armée croisée" },
+    { "year": "2 octobre 1187", "label": "Reprise de Jérusalem" },
+    { "year": "1189-1192", "label": "3ème croisade — face à Richard Cœur de Lion" },
+    { "year": "1193", "label": "Mort à Damas" }
+  ]
+}

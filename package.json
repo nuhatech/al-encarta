@@ -1,24 +1,48 @@
 {
-  "name": "defendhack",
+  "name": "al-encarta",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:ui": "vitest --ui",
+    "typecheck": "tsc --noEmit",
+    "cf:build": "opennextjs-cloudflare build",
+    "cf:preview": "opennextjs-cloudflare preview",
+    "cf:deploy": "opennextjs-cloudflare deploy",
+    "generate:personalities": "tsx scripts/generate-personalities.ts",
+    "build:manifest": "tsx scripts/build-manifest.ts",
+    "capture:screenshots": "node scripts/capture-screenshots.mjs"
   },
   "dependencies": {
+    "@opennextjs/cloudflare": "^1.19.5",
     "next": "16.2.4",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "xp.css": "^0.2.6",
+    "zod": "^4.4.1"
   },
   "devDependencies": {
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@vitest/ui": "^4.1.5",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
-    "typescript": "^5"
+    "puppeteer-core": "^24.42.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5",
+    "vitest": "^4.1.5",
+    "wrangler": "^4.87.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "workerd"
+    ]
   }
 }

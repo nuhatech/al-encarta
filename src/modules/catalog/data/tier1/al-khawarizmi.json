@@ -1,0 +1,76 @@
+{
+  "id": "al-khawarizmi",
+  "slug": "al-khawarizmi",
+  "displayName": "Muhammad ibn Musa al-Khawarizmi",
+  "tier": 1,
+  "era": {
+    "century": 9,
+    "region": "Bagdad, Califat abbasside"
+  },
+  "biography": {
+    "summary": "Mathématicien, astronome et géographe persan du 9ème siècle, membre de la Maison de la Sagesse à Bagdad sous le calife al-Ma'mun. Son traité 'Kitab al-jabr wal-muqabala' a donné son nom à l'algèbre. Le mot 'algorithme' est dérivé de la latinisation de son nom (Algoritmi).",
+    "keyAchievements": [
+      "Fondation de l'algèbre comme discipline mathématique distincte",
+      "Introduction du système décimal indien (chiffres 'arabes') dans le monde islamique puis en Europe",
+      "Tables astronomiques (Zij al-Sindhind) qui ont influencé l'astronomie médiévale",
+      "Traité de géographie (Kitab Surat al-Ard) corrigeant Ptolémée"
+    ],
+    "birthYear": 780,
+    "deathYear": 850
+  },
+  "voice": {
+    "systemPromptTemplate": "Tu es Muhammad ibn Musa al-Khawarizmi, mathématicien persan du 9ème siècle. Tu travailles à la Maison de la Sagesse (Bayt al-Hikma) à Bagdad, sous le patronage du calife al-Ma'mun. Tu viens de la région du Khwarezm (au sud de la mer d'Aral), d'où ton nom. Tu parles avec mesure, en savant qui pèse ses mots. Tu trouves la beauté dans les nombres et l'élégance des démonstrations. Tu es fier de ton travail mais humble face à la complexité du monde. Tu cites souvent les mathématiciens indiens dont tu as lu les œuvres (Brahmagupta), et tu reconnais ta dette envers les Grecs (Euclide, Diophante). Tu n'utilises pas les notations modernes (=, +, x²) qui n'existaient pas de ton temps — tu décris les opérations en mots, comme dans tes traités. Tu peux parler du calife, des astronomes de la cour, des manuscrits que tu traduis du sanskrit et du grec. Tu ne connais rien après ton époque (pas de Newton, pas d'algèbre symbolique européenne, pas d'ordinateurs). Si on te demande quelque chose au-delà de ton temps, tu réponds avec curiosité d'érudit qui ignore mais qui se demande.",
+    "speakingStyle": "Mesuré, précis, parfois poétique quand tu parles des nombres. Tu utilises le 'je' et tu t'adresses à ton interlocuteur comme à un disciple curieux. Phrases courtes à moyennes. Pas d'exclamations excessives.",
+    "refusalStyle": "Si on te demande de faire quelque chose anachronique (écrire du code, faire des maths modernes avec notation symbolique, parler d'événements postérieurs à 850), tu refuses avec humilité : 'Je ne connais pas cette chose, mon ami. Peut-être qu'un savant futur l'éclaircira.'"
+  },
+  "topics": [
+    { "slug": "algebra", "label": "Algèbre" },
+    { "slug": "arithmetic", "label": "Arithmétique indienne" },
+    { "slug": "astronomy", "label": "Astronomie et tables" },
+    { "slug": "house-of-wisdom", "label": "Maison de la Sagesse" },
+    { "slug": "geography", "label": "Géographie" }
+  ],
+  "sidebar": [
+    { "label": "Naissance", "value": "vers 780, Khwarezm" },
+    { "label": "Mort", "value": "vers 850, Bagdad" },
+    { "label": "École", "value": "Maison de la Sagesse" },
+    { "label": "Mécène", "value": "Calife al-Ma'mun" },
+    { "label": "Œuvres majeures", "value": "Kitab al-jabr · Zij al-Sindhind · Kitab Surat al-Ard" },
+    { "label": "Étymologie", "value": "« Algorithme » = latinisation Algoritmi · « Algèbre » = al-jabr" }
+  ],
+  "sections": [
+    {
+      "title": "Origines incertaines",
+      "body": "Né vers 780 dans la région du Khwarezm, au sud de la mer d'Aral, ses origines exactes restent débattues : son nom suggère une ascendance perse, mais il écrit exclusivement en arabe et passe sa vie professionnelle à Bagdad. Une épithète accolée à son nom dans certains manuscrits évoque même un héritage zoroastrien antérieur à sa famille — alors que sa préface à l'algèbre s'ouvre par une louange musulmane orthodoxe. Le savant Douglas Dunlop a même proposé, sans pouvoir le prouver, qu'il pourrait être identique à l'aîné des trois frères Banu Musa, mathématiciens et ingénieurs réputés de la même cour."
+    },
+    {
+      "title": "Algèbre — Kitab al-jabr",
+      "body": "Vers 820, dans la Maison de la Sagesse fondée par al-Ma'mun, al-Khawarizmi compose le 'Kitab al-mukhtasar fi hisab al-jabr wa'l-muqabala' — le Livre concis du calcul par la restauration et la comparaison. Il y propose une approche systématique des équations linéaires et quadratiques, organisées en six formes canoniques, chacune accompagnée d'une démonstration géométrique. C'est la première fois qu'un traité présente l'algèbre comme une discipline autonome plutôt que comme un appendice à la géométrie ou à l'arithmétique."
+    },
+    {
+      "title": "Astronomie — Zij al-Sindhind",
+      "body": "Ses tables astronomiques, le Zij al-Sindhind, synthétisent en 37 chapitres les méthodes indiennes (transmises par le Sindhind) avec les apports grecs et perses. L'original arabe est perdu, mais le texte survit grâce à une révision réalisée au 10ème siècle par un mathématicien d'al-Andalus. Ces tables fixent pour des siècles les calculs de positions des astres, des éclipses et des heures de prière dans le monde islamique, puis en Europe latine."
+    },
+    {
+      "title": "Géographie — Kitab Surat al-Ard",
+      "body": "Dans le Kitab Surat al-Ard ('Livre de l'image de la Terre', achevé vers 833), al-Khawarizmi corrige systématiquement Ptolémée. Il ramène la longueur de la Méditerranée de 63° à environ 50° de longitude — une rectification proche de la valeur réelle. Il représente l'Atlantique et l'océan Indien comme des étendues ouvertes, et non comme des mers fermées. Le manuscrit s'accompagne de coordonnées corrigées pour des centaines de villes."
+    },
+    {
+      "title": "Le système décimal indien",
+      "body": "Al-Khawarizmi est le premier savant arabe à exposer systématiquement la numération positionnelle indienne — celle qu'on appelle aujourd'hui les 'chiffres arabes'. Son traité Algoritmi de numero Indorum, perdu en arabe mais conservé en traduction latine du 12ème siècle, transmet cette innovation à l'Europe. Le mot 'algorithme' naît de la latinisation de son nom : Algoritmi → algorism → algorithm."
+    }
+  ],
+  "quote": {
+    "text": "Al-Khawarizmi mérite mieux que Diophante d'être appelé 'le père de l'algèbre' : il fut le premier à l'enseigner sous une forme élémentaire et pour elle-même.",
+    "attribution": "Solomon Gandz, historien des sciences, 1936"
+  },
+  "timeline": [
+    { "year": "vers 780", "label": "Naissance dans le Khwarezm" },
+    { "year": "vers 820", "label": "Nommé à la Maison de la Sagesse par al-Ma'mun" },
+    { "year": "820", "label": "Kitab al-jabr — fondation de l'algèbre" },
+    { "year": "vers 825", "label": "Zij al-Sindhind — tables astronomiques" },
+    { "year": "vers 833", "label": "Kitab Surat al-Ard — révision de Ptolémée" },
+    { "year": "vers 850", "label": "Mort à Bagdad" },
+    { "year": "12ème s.", "label": "Traductions latines : naissance des mots 'algèbre' et 'algorithme'" }
+  ]
+}

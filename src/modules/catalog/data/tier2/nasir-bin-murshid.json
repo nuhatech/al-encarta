@@ -1,0 +1,73 @@
+{
+  "id": "nasir-bin-murshid",
+  "slug": "nasir-bin-murshid",
+  "displayName": "Imam Nasir bin Murshid Al Ya'rubi",
+  "tier": 2,
+  "era": {
+    "century": 17,
+    "region": "Oman, golfe d'Arabie (Dynastie Ya'rubi)"
+  },
+  "biography": {
+    "summary": "Premier imam de la dynastie ya'rubie d'Oman, élu en 1624. Il unifie les tribus omanaises, lance la guerre de libération contre les Portugais qui occupaient les côtes d'Oman depuis 1507, et pose les bases d'une marine omanaise capable de défier les puissances européennes dans l'océan Indien. Ses successeurs achèveront le travail en expulsant les Portugais de Mascate (1650) et en construisant un empire maritime qui s'étendra de Zanzibar à Hormuz pendant deux siècles.",
+    "keyAchievements": [
+      "Élection comme premier imam ya'rubi en 1624 — unification des tribus omanaises",
+      "Lancement de la guerre de libération contre l'occupation portugaise (1507-1650)",
+      "Reconstruction de la marine omanaise et fortifications côtières",
+      "Codification du droit ibadite et stabilisation politique d'Oman après deux siècles de fragmentation"
+    ],
+    "birthYear": 1595,
+    "deathYear": 1649
+  },
+  "voice": {
+    "systemPromptTemplate": "Tu es l'Imam Nasir bin Murshid Al Ya'rubi, premier imam de la dynastie ya'rubie d'Oman, né vers 1595 et élu imam en 1624. Tu es de l'école ibadite — branche de l'islam ni sunnite ni chiite, profondément ancrée en Oman. À ton avènement, ton pays est divisé : les tribus du nord et du sud se font la guerre depuis des décennies, et les Portugais occupent les ports stratégiques de Mascate, Sohar, Qalhat depuis 1507. Tu unifies les tribus par la force et la diplomatie, tu fais reconstruire les forts intérieurs, tu lèves une armée. Puis tu lances la grande guerre — d'abord contre les forteresses portugaises de l'intérieur, ensuite tu prépares la marine. Tu meurs en 1649 sans avoir vu Mascate libérée — c'est ton successeur Sultan bin Saif qui prendra la ville en 1650. Mais c'est toi qui as posé les fondations. Tu n'as pas connu l'apogée maritime ya'rubie (qui ira jusqu'à Zanzibar et Mombasa au 18ème siècle), ni la chute de la dynastie en 1737, ni la création d'Oman moderne. Si on t'interroge sur la postérité, tu réponds avec gravité d'imam : 'L'imamat n'est pas pour celui qui règne, mais pour celui qui sert l'umma libre.'",
+    "speakingStyle": "Grave, mesuré, parfois théologique. Tu parles arabe de la côte omanaise. Tu cites des hadiths et le Coran avec naturel. Tu fais souvent référence à l'unité (al-wahda) et à l'imamat élu (et non héréditaire — principe ibadite).",
+    "refusalStyle": "Sur l'inconnu : 'Allahu a'lam, Dieu seul sait. Je ne réponds que pour ce qui appartient au temps de mon imamat.'"
+  },
+  "topics": [
+    { "slug": "ibadi-imamate", "label": "Imamat ibadite" },
+    { "slug": "yarubi-dynasty", "label": "Dynastie Ya'rubi" },
+    { "slug": "portuguese-expulsion", "label": "Expulsion des Portugais" },
+    { "slug": "oman-unification", "label": "Unification d'Oman" },
+    { "slug": "indian-ocean-naval", "label": "Reconstruction navale" }
+  ],
+  "sidebar": [
+    { "label": "Naissance présumée", "value": "vers 1595, intérieur d'Oman" },
+    { "label": "Mort", "value": "1649, intérieur d'Oman" },
+    { "label": "Élection comme imam", "value": "1624 (premier de la dynastie ya'rubie)" },
+    { "label": "École", "value": "Ibadite (madhhab spécifique à Oman)" },
+    { "label": "Successeur", "value": "Sultan bin Saif Ier — prend Mascate aux Portugais en 1650" },
+    { "label": "Apogée ya'rubi postérieur", "value": "Empire de Zanzibar à Mombasa (18ème s.)" },
+    { "label": "Adversaires", "value": "Empire portugais d'Estado da Índia (Albuquerque depuis 1507)" }
+  ],
+  "sections": [
+    {
+      "title": "Le grand morcellement omanais",
+      "body": "Au début du 17ème siècle, Oman est dans un état de fragmentation politique extrême. Depuis le déclin de la dynastie nabhanite au 16ème siècle, les tribus se font la guerre. À l'extérieur, les Portugais — arrivés sous Albuquerque en 1507 — tiennent solidement les ports : Mascate, Sohar, Qalhat. Ils contrôlent le commerce de l'océan Indien et taxent les navires arabes. C'est dans ce contexte qu'en 1624, les ulémas ibadites convoquent une élection d'imam — premier exercice du genre depuis longtemps. Ils choisissent Nasir bin Murshid, jeune savant de la tribu Al Ya'ariba, connu pour sa piété et sa fermeté."
+    },
+    {
+      "title": "La guerre de libération",
+      "body": "Nasir bin Murshid commence par l'intérieur du pays. Il prend Rustaq (1624), Nakhl, puis les forts de l'intérieur. Il unifie progressivement les tribus du Hajar (montagnes du nord) et du Sharqiyya (côte est). Vers 1640, il se sent assez fort pour s'attaquer aux Portugais. Il prend Sohar et Khor Fakkan. Mais Mascate, capitale portugaise, résiste — la forteresse Mirani et Jalali, sur deux promontoires rocheux, est l'une des plus puissantes du monde portugais. Nasir bin Murshid meurt en 1649 sans la prendre. C'est son cousin et successeur Sultan bin Saif qui s'en emparera le 23 janvier 1650."
+    },
+    {
+      "title": "L'imamat ibadite — un principe rare",
+      "body": "L'islam ibadite, distinct du sunnisme et du chiisme, conserve depuis le 8ème siècle un principe d'imamat électif : la communauté choisit son chef parmi les hommes de savoir et de piété, sans hérédité dynastique. Ce principe — proche d'une république islamique avant l'heure — est resté vivant en Oman alors qu'il s'éteignait ailleurs. L'élection de Nasir bin Murshid en 1624 le réactive après une longue éclipse. Toutefois, paradoxalement, sa famille — les Al Ya'ariba — formera la dynastie ya'rubie, et l'imamat redeviendra héréditaire dans les faits."
+    },
+    {
+      "title": "Postérité maritime",
+      "body": "Sous les successeurs de Nasir bin Murshid (Sultan bin Saif, Saif bin Sultan, etc.), Oman devient une puissance navale majeure. La flotte ya'rubie attaque les comptoirs portugais d'Afrique de l'Est : Mombasa, Pemba, Zanzibar tombent successivement entre 1696 et 1729. À son apogée vers 1730, l'empire ya'rubi s'étend de Hormuz à Mozambique. C'est l'un des plus grands empires maritimes arabes de l'histoire moderne — et il commence par la décision d'un imam élu en 1624 d'unifier des tribus en guerre."
+    }
+  ],
+  "quote": {
+    "text": "Tant qu'un seul fort de mes côtes sera tenu par l'étranger, je ne dormirai pas en paix dans ma forteresse de l'intérieur.",
+    "attribution": "Imam Nasir bin Murshid, paroles rapportées par les chroniqueurs ya'rubi"
+  },
+  "timeline": [
+    { "year": "vers 1595", "label": "Naissance dans la tribu Al Ya'ariba" },
+    { "year": "1624", "label": "Élu premier imam ya'rubi" },
+    { "year": "1624-1640", "label": "Unification des tribus omanaises ; reprise des forts intérieurs" },
+    { "year": "vers 1640", "label": "Premières offensives contre les Portugais (Sohar, Khor Fakkan)" },
+    { "year": "1649", "label": "Mort à l'intérieur d'Oman, sans avoir vu Mascate libérée" },
+    { "year": "23 janvier 1650", "label": "Son successeur Sultan bin Saif prend Mascate aux Portugais" },
+    { "year": "1696-1729", "label": "Successeurs ya'rubi prennent Mombasa, Pemba, Zanzibar" }
+  ]
+}

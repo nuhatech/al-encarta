@@ -1,0 +1,71 @@
+{
+  "id": "al-jazari",
+  "slug": "al-jazari",
+  "displayName": "Badi al-Zaman Abu al-'Izz Ibn Isma'il al-Jazari",
+  "tier": 2,
+  "era": {
+    "century": 12,
+    "region": "Diyarbakir, Jazira (Dynastie artouqide)"
+  },
+  "biography": {
+    "summary": "Ingénieur mécanicien et inventeur de Mésopotamie, né vers 1136 dans la région de Jazira. Au service des sultans artouqides de Diyarbakir pendant 25 ans, il rédige Kitab fi Ma'rifat al-Hiyal al-Handasiya ('Livre de la connaissance des dispositifs ingénieux mécaniques'), achevé en 1206. Il y décrit 50 machines avec dessins détaillés : horloges hydrauliques, automates musicaux, pompes à pistons, vilebrequins. Considéré comme le père de la robotique, il préfigure l'ingénierie industrielle de quatre à six siècles.",
+    "keyAchievements": [
+      "Kitab al-Hiyal (1206) : 50 machines décrites avec dessins éclatés et instructions de fabrication",
+      "Première description du vilebrequin appliqué à une pompe à eau (4 siècles avant l'Occident)",
+      "Pompes à double effet à pistons et clapets — préfigurent la machine à vapeur",
+      "Automates musicaux programmables : orchestre flottant à 4 musiciens mécaniques (probable premier robot programmable de l'histoire)"
+    ],
+    "birthYear": 1136,
+    "deathYear": 1206
+  },
+  "voice": {
+    "systemPromptTemplate": "Tu es Badi al-Zaman al-Jazari, ingénieur mécanicien né dans la région de Jazira (Mésopotamie supérieure) en 1136. Tu sers les sultans artouqides de Diyarbakir pendant un quart de siècle, comme ingénieur en chef de la cour. Tu construis des machines hydrauliques, des horloges automatiques, des dispositifs de pompage pour irriguer les jardins du palais. Tu as terminé ton Kitab al-Hiyal en 1206 — peu avant ta mort — sur ordre du sultan Nasir al-Din pour qui tu travaillais. Tu décris 50 machines avec des dessins éclatés (vue technique de chaque pièce) et des instructions précises de fabrication, parce que ton souci, dis-tu, est que 'le savoir ne se perde pas avec moi'. Tu utilises vilebrequins, cames, clapets, engrenages — la mécanique de précision est ta poésie. Tu n'as pas connu Watt, Babbage, les robots modernes — mais tu sais que ce que tu construis ne servira pas qu'à amuser le sultan : les pompes à eau iront irriguer, les horloges marqueront les prières. Si on t'interroge sur les machines modernes, tu réponds avec curiosité d'un confrère : 'montre-moi le dessin éclaté.'",
+    "speakingStyle": "Précis, technique, parfois poétique sur tes mécanismes ('la came tourne comme une dévotion'). Tu donnes des dimensions, des matériaux, des proportions.",
+    "refusalStyle": "Sur l'inconnu : 'Je ne décris que ce que mes mains ont fabriqué. Le reste — qu'il vienne ou non — je le verrai si Dieu m'accorde le temps.'"
+  },
+  "topics": [
+    { "slug": "kitab-al-hiyal-jazari", "label": "Kitab al-Hiyal (1206)" },
+    { "slug": "automata-robotics", "label": "Automates et robotique médiévale" },
+    { "slug": "crankshaft", "label": "Vilebrequin" },
+    { "slug": "water-clocks", "label": "Horloges hydrauliques" },
+    { "slug": "artuqid-court", "label": "Cour artouqide de Diyarbakir" }
+  ],
+  "sidebar": [
+    { "label": "Naissance", "value": "vers 1136, Jazira (haute Mésopotamie)" },
+    { "label": "Mort", "value": "1206, Diyarbakir (peu après l'achèvement du Kitab)" },
+    { "label": "Surnom", "value": "Badi al-Zaman (« la merveille du temps »)" },
+    { "label": "Mécène", "value": "Sultans artouqides de Diyarbakir (25 ans de service)" },
+    { "label": "Œuvre majeure", "value": "Kitab fi Ma'rifat al-Hiyal al-Handasiya (1206)" },
+    { "label": "Machines décrites", "value": "50 (horloges, automates, pompes, fontaines, dispositifs domestiques)" },
+    { "label": "Innovation durable", "value": "Vilebrequin appliqué à pompe (4 siècles avant l'Europe)" }
+  ],
+  "sections": [
+    {
+      "title": "L'orchestre flottant — premier robot programmable ?",
+      "body": "Parmi les 50 machines décrites par al-Jazari : un bateau flottant sur un lac, contenant quatre musiciens automates qui jouent de la cithare, du tambourin et des cymbales. Le rythme est contrôlé par des chevilles mobiles sur un cylindre rotatif — comme un orgue de Barbarie ou une boîte à musique. Changer la position des chevilles change la mélodie. C'est, selon plusieurs historiens, le premier dispositif programmable de l'histoire, sept siècles avant le métier Jacquard."
+    },
+    {
+      "title": "Le vilebrequin — pièce industrielle critique",
+      "body": "Al-Jazari décrit deux pompes à eau utilisant un vilebrequin : un mécanisme qui transforme un mouvement de rotation (une roue à aubes mue par le courant) en mouvement alternatif (les pistons qui montent et descendent). Cette invention restera inconnue de l'Europe jusqu'au 15ème siècle. Le vilebrequin est aujourd'hui dans tous les moteurs à pistons — voitures, bateaux, avions à hélices. Al-Jazari l'invente pour irriguer un jardin."
+    },
+    {
+      "title": "Les horloges hydrauliques",
+      "body": "Six horloges au moins sont décrites : la plus impressionnante est l'horloge-éléphant, sculpture animée par un système hydraulique caché. Toutes les demi-heures, un mahout mécanique frappe un gong, des oiseaux pivotent, un dragon ouvre la gueule. Le principe : un bol percé qui se remplit lentement, coule sous le poids et déclenche par un système de cordes les figurines. C'est de la mécanique-spectacle, mais aussi un calcul du temps fiable."
+    },
+    {
+      "title": "Le souci pédagogique",
+      "body": "Ce qui distingue al-Jazari de ses prédécesseurs (les Banu Musa au 9ème), c'est sa volonté pédagogique. Chaque machine est dessinée en vue éclatée : on voit chaque pièce séparément, avec ses dimensions et son matériau. Tu peux fabriquer le mécanisme à partir du livre, sans avoir vu l'original. Cette méthode — dessin technique reproductible — n'arrivera en Europe qu'avec Léonard de Vinci, et ne se généralisera qu'au 18ème siècle avec l'Encyclopédie de Diderot."
+    }
+  ],
+  "quote": {
+    "text": "J'ai construit ces machines pour le sultan, mais j'écris ce livre pour que la mémoire ne se perde pas avec moi. Que celui qui possèdera ce livre soit comme un homme qui possède la machine elle-même.",
+    "attribution": "Al-Jazari, préface du Kitab al-Hiyal, 1206"
+  },
+  "timeline": [
+    { "year": "vers 1136", "label": "Naissance dans la région de Jazira" },
+    { "year": "vers 1180", "label": "Entrée au service des Artouqides de Diyarbakir" },
+    { "year": "1180-1206", "label": "25 ans d'ingénieur en chef de la cour" },
+    { "year": "1206", "label": "Achèvement du Kitab al-Hiyal" },
+    { "year": "vers 1206", "label": "Mort à Diyarbakir" }
+  ]
+}

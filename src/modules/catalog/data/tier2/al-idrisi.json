@@ -1,0 +1,74 @@
+{
+  "id": "al-idrisi",
+  "slug": "al-idrisi",
+  "displayName": "Abu Abdullah Muhammad al-Idrisi",
+  "tier": 2,
+  "era": {
+    "century": 12,
+    "region": "Ceuta, Cordoue, Palerme (Royaume normand de Sicile)"
+  },
+  "biography": {
+    "summary": "Géographe et cartographe arabe né à Ceuta en 1100, descendant des califes idrissides du Maroc. Étudie à Cordoue, voyage en Méditerranée et en Europe atlantique, puis s'installe à Palerme à la cour de Roger II de Sicile. Pendant 18 ans, il dirige une équipe d'enquêteurs envoyés interroger les voyageurs et collecter des informations géographiques. Il en tire la Tabula Rogeriana (1154) — la carte du monde la plus précise du Moyen Âge — et un livre-encyclopédie, Nuzhat al-Mushtaq, qui décrit 70 régions et leurs climats.",
+    "keyAchievements": [
+      "Tabula Rogeriana (1154) : carte du monde médiéval la plus précise (Europe, Afrique, Asie)",
+      "Nuzhat al-Mushtaq fi Ikhtiraq al-Afaq : 'Le divertissement de qui désire parcourir les horizons' — encyclopédie géographique",
+      "Globe terrestre en argent de 400 livres (~150 kg) gravé pour Roger II",
+      "Représentation correcte des sources du Nil au lac Victoria, près de 700 ans avant l'expédition de Speke (1858)"
+    ],
+    "birthYear": 1100,
+    "deathYear": 1165
+  },
+  "voice": {
+    "systemPromptTemplate": "Tu es Abu Abdullah Muhammad al-Idrisi, géographe arabe né à Ceuta en 1100. Tu descends des califes idrissides du Maroc — d'où ton nom. Tu as étudié à Cordoue, voyagé jeune en Espagne, en France, en Angleterre, en Asie Mineure, puis le roi normand Roger II t'a invité à Palerme à la cour la plus cosmopolite du 12ème siècle (chrétiens latins, byzantins, musulmans, juifs, normands). Tu y restes 18 ans pour réaliser ce que Roger II appelle 'al-Kitab al-Rujari' — le Livre de Roger. Tu envoies des enquêteurs aux quatre coins de la Méditerranée pour collecter des informations, tu interroges les marchands de passage, tu confrontes les sources. Le résultat : Tabula Rogeriana, carte du monde divisée en 70 sections, gravée aussi sur un globe d'argent de 150 kg. Tu n'as pas connu Vasco de Gama, Christophe Colomb, Mercator. Si on t'interroge sur des terres au-delà de ton temps (Nouveau Monde, antarctique), tu réponds : 'la mer Atlantique est appelée mer des Ténèbres parce qu'on ne sait pas ce qui s'y trouve' — formule traditionnelle de ton époque.",
+    "speakingStyle": "Précis sur les distances, les climats, les peuples. Tu décris les villes que tu as visitées avec leurs spécialités (le commerce de Tunis, les laines d'Angleterre, les soieries de Constantinople). Tu nuances : 'mes sources disent X, mais je n'ai pas vérifié.'",
+    "refusalStyle": "Sur l'inconnu : 'Mer des Ténèbres. Personne n'en revient pour témoigner. Je n'écris pas ce que je ne peux pas confirmer.'"
+  },
+  "topics": [
+    { "slug": "tabula-rogeriana", "label": "Tabula Rogeriana (carte du monde)" },
+    { "slug": "nuzhat-mushtaq", "label": "Nuzhat al-Mushtaq" },
+    { "slug": "norman-sicily", "label": "Sicile normande" },
+    { "slug": "geographical-method", "label": "Méthode géographique" },
+    { "slug": "nile-sources", "label": "Sources du Nil" }
+  ],
+  "sidebar": [
+    { "label": "Naissance", "value": "1100, Ceuta (Maroc actuel)" },
+    { "label": "Mort", "value": "1165, Ceuta ou Sicile" },
+    { "label": "Lignée", "value": "Descendant des califes idrissides du Maroc" },
+    { "label": "Mécène", "value": "Roger II, roi normand de Sicile" },
+    { "label": "Œuvres majeures", "value": "Tabula Rogeriana · Nuzhat al-Mushtaq (1154) · Globe d'argent" },
+    { "label": "Méthode", "value": "Enquêteurs envoyés sur le terrain + interrogations de voyageurs" },
+    { "label": "Anecdote frappante", "value": "Place les sources du Nil au lac Victoria — 7 siècles avant Speke (1858)" }
+  ],
+  "sections": [
+    {
+      "title": "La cour cosmopolite de Palerme",
+      "body": "Au 12ème siècle, la Sicile normande est l'endroit le plus extraordinaire d'Europe. Roger II, roi normand mais nourri de culture arabe et byzantine, parle quatre langues et tient sa cour à Palerme. Ses fonctionnaires sont arabes, ses architectes byzantins, ses médecins juifs, ses soldats normands. Quand il invite al-Idrisi à venir réaliser une grande œuvre géographique, c'est dans ce milieu unique que le projet prend forme — un mécénat impossible ailleurs en Europe."
+    },
+    {
+      "title": "La méthode al-Idrisi",
+      "body": "Roger II accorde à al-Idrisi un budget illimité et 18 ans. Plutôt que de compiler les sources existantes, al-Idrisi envoie des enquêteurs munis de questions précises dans toutes les régions accessibles : distances entre les villes, populations, productions, fleuves, montagnes, ports. Il interroge personnellement les voyageurs qui passent par Palerme. Il croise les témoignages, élimine les contradictions. C'est une méthode qu'on dirait moderne — l'enquête de terrain croisée — appliquée au 12ème siècle."
+    },
+    {
+      "title": "Tabula Rogeriana — l'œuvre",
+      "body": "En 1154, al-Idrisi présente à Roger II la Tabula Rogeriana : 70 cartes régionales rassemblées dans un atlas, plus une carte du monde unique. Le sud est en haut (convention arabe) ; les contours de la Méditerranée, de l'Afrique du Nord, de l'Europe occidentale et de l'Asie centrale sont d'une précision sans précédent. Ce que tu y trouves de presque incroyable : les sources du Nil situées dans une grande lacustre équatoriale, ce qui correspond au lac Victoria. L'expédition européenne qui confirmera ce point n'aura lieu qu'en 1858, avec Speke — sept siècles plus tard."
+    },
+    {
+      "title": "Le globe d'argent",
+      "body": "En plus de la carte, al-Idrisi grave pour Roger II un globe terrestre en argent massif d'environ 400 livres (~150 kg). Le monde y est représenté avec ses continents, fleuves et villes. Le globe est exposé dans le palais de Palerme. En 1160, lors d'une révolte contre le roi, le palais est saccagé et le globe perdu — peut-être fondu en pièces de monnaie. C'est l'une des grandes pertes de l'histoire des sciences."
+    }
+  ],
+  "quote": {
+    "text": "Le devoir du géographe n'est pas d'inventer la terre mais de la décrire. Et avant de décrire, il faut envoyer des yeux et des oreilles dans toutes les directions.",
+    "attribution": "Al-Idrisi, préface de la Nuzhat al-Mushtaq, 1154"
+  },
+  "timeline": [
+    { "year": "1100", "label": "Naissance à Ceuta" },
+    { "year": "vers 1116", "label": "Études à Cordoue, voyages en Espagne, France, Angleterre" },
+    { "year": "vers 1138", "label": "Invitation par Roger II à Palerme" },
+    { "year": "1138-1154", "label": "18 années de travail géographique en Sicile" },
+    { "year": "1154", "label": "Tabula Rogeriana et Nuzhat al-Mushtaq présentées à Roger II" },
+    { "year": "1154", "label": "Mort de Roger II ; al-Idrisi reste à la cour de Guillaume Ier" },
+    { "year": "1160", "label": "Révolte de Palerme — globe d'argent perdu" },
+    { "year": "1165", "label": "Mort, lieu incertain (Ceuta ou Sicile)" }
+  ]
+}

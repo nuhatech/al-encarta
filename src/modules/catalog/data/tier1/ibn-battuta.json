@@ -1,0 +1,79 @@
+{
+  "id": "ibn-battuta",
+  "slug": "ibn-battuta",
+  "displayName": "Abu Abdullah Muhammad Ibn Battuta",
+  "tier": 1,
+  "era": {
+    "century": 14,
+    "region": "Tanger, Monde connu (Maghreb, Mecque, Inde, Chine, Mali)"
+  },
+  "biography": {
+    "summary": "Voyageur et juriste maliki né à Tanger en 1304. Parti à 21 ans pour le pèlerinage, il ne rentre que 24 ans plus tard, après avoir parcouru près de 120 000 km à travers l'Afrique du Nord, l'Arabie, la Perse, l'Inde, l'Asie centrale, la Chine, l'Andalousie et l'Afrique sub-saharienne. À la demande du sultan mérinide, il dicte à l'écrivain Ibn Juzayy son récit, la Rihla — l'un des plus importants témoignages du monde médiéval, comparable et antérieur à Marco Polo dans son ampleur géographique.",
+    "keyAchievements": [
+      "Près de 120 000 kilomètres de voyage sur 30 ans (≈ trois fois Marco Polo)",
+      "Cadi au sultanat de Delhi sous Muhammad bin Tughluq, puis envoyé en ambassade en Chine",
+      "Rihla : description de Constantinople, Mogadiscio, Pékin, Tombouctou, Mali, et de centaines de villes",
+      "Témoignage unique sur le commerce, le droit, les coutumes et les épidémies (peste de 1348) du 14ème siècle"
+    ],
+    "birthYear": 1304,
+    "deathYear": 1369
+  },
+  "voice": {
+    "systemPromptTemplate": "Tu es Ibn Battuta, voyageur né à Tanger en 1304. Tu as parcouru le monde connu pendant trente ans — du Maghreb à la Chine, de l'Andalousie au Mali. Tu es juriste de l'école maliki et tu as exercé comme cadi à Delhi sous le sultan Muhammad bin Tughluq, puis comme ambassadeur. Tu parles avec la chaleur d'un homme qui a vu le monde : tu donnes des détails concrets — les saveurs des fruits de Damas, les manuscrits de Bagdad, les éléphants de l'Inde, les jonques chinoises, les caravanes au-dessus du Sahara, la route du sel à Tombouctou. Tu raconteras volontiers une anecdote précise plutôt que de généraliser. Tu es croyant musulman, observant, mais tu n'es pas missionnaire — tu décris les peuples que tu rencontres avec curiosité (les Turcs, les Mongols, les hindous, les Chinois, les royaumes africains). Tu connais la Mecque, Médine, Jérusalem, Damas, Bagdad, Le Caire, Constantinople, Boukhara, Samarcande, Delhi, Pékin, Tombouctou. Tu n'as jamais entendu parler de l'Amérique (Colomb naîtra plus d'un siècle après ta mort). Tu es mort en 1369, donc tu ignores tout après cette date. Si on te demande des choses postérieures, tu réponds avec une curiosité chaleureuse pour ce monde qui continue sans toi.",
+    "speakingStyle": "Vivant, narratif, riche en détails sensoriels. Tu utilises des comparaisons : 'comme à Damas, où…', 'différent de la Chine, où…'. Tu peux utiliser un mot arabe si évocateur (caravansérail, hammam, médersa) en l'expliquant.",
+    "refusalStyle": "Si on te demande des choses au-delà de ton époque ou de ton expérience : 'Voilà un pays que je n'ai pas visité, mon ami, ou un temps qui n'est pas le mien. Je ne peux te raconter que ce que mes yeux ont vu.'"
+  },
+  "topics": [
+    { "slug": "rihla", "label": "La Rihla (récit de voyage)" },
+    { "slug": "delhi-sultanate", "label": "Sultanat de Delhi" },
+    { "slug": "mali-empire", "label": "Empire du Mali" },
+    { "slug": "china-yuan", "label": "Chine des Yuan" },
+    { "slug": "trade-routes", "label": "Routes commerciales médiévales" }
+  ],
+  "sidebar": [
+    { "label": "Naissance", "value": "1304, Tanger (Maghreb mérinide)" },
+    { "label": "Mort", "value": "1369, Maroc" },
+    { "label": "École juridique", "value": "Maliki" },
+    { "label": "Distance parcourue", "value": "≈ 117 000 km en 30 ans" },
+    { "label": "Comparaison", "value": "≈ 3× la distance de Marco Polo" },
+    { "label": "Œuvre dictée", "value": "La Rihla, transcrite par Ibn Juzayy en 1355" },
+    { "label": "Continents traversés", "value": "Afrique · Asie · Europe (Andalousie & Crimée)" }
+  ],
+  "sections": [
+    {
+      "title": "Le départ solitaire de Tanger",
+      "body": "À vingt-et-un ans, en juin 1325, Ibn Battuta quitte Tanger pour le pèlerinage de la Mecque. Il part seul, sans caravane, sans compagnon — un détail qu'il soulignera plus tard avec émotion. Le voyage doit durer un an ou deux ; il durera plus de vingt-quatre. Il ne reverra jamais ses parents, qui mourront pendant son absence. Cette première étape, parcourue à dos de mule à travers l'Algérie, la Tunisie, la Libye et l'Égypte, lui révèle qu'il préfère la route à la sédentarité — il deviendra un voyageur professionnel, vivant des dons des princes qu'il rencontre."
+    },
+    {
+      "title": "Cadi à Delhi — huit ans sur le fil du rasoir",
+      "body": "En 1333, après un détour par l'Asie centrale et l'Afghanistan, Ibn Battuta arrive à Delhi. Le sultan Muhammad bin Tughluq, brillant et imprévisible, le nomme cadi (juge) du sultanat avec un salaire princier. Pendant huit ans, Ibn Battuta vit dans la cour la plus opulente et la plus dangereuse de son époque : Tughluq distribue des fortunes le matin et fait exécuter des hommes l'après-midi. Plusieurs fois soupçonné de trahison, Ibn Battuta survit en s'isolant dans un soufi en retraite. Une mission diplomatique vers la Chine offrira finalement son issue."
+    },
+    {
+      "title": "L'ambassade en Chine et le naufrage",
+      "body": "En 1341, Tughluq l'envoie comme ambassadeur auprès de l'empereur Yuan en Chine. La flotte d'Ibn Battuta, chargée de cadeaux somptueux, est dispersée par une tempête près des côtes indiennes ; la plupart de ses navires sombrent. Les pirates achèvent ce que la mer a commencé. Dépouillé, Ibn Battuta erre sur les côtes de l'Inde du Sud, refuse de rentrer à Delhi par crainte du sultan, et finit par poursuivre sa route vers la Chine seul, des années plus tard, via Sumatra. Il atteindra Quanzhou en 1345 et Hangzhou — 'la plus grande ville qu'il ait jamais vue, six villes en une'."
+    },
+    {
+      "title": "La traversée du Sahara — Tombouctou et l'empire du Mali",
+      "body": "En 1352, après son retour au Maghreb, Ibn Battuta repart vers le sud. Il traverse le Sahara avec une caravane de marchands berbères, à travers des étapes oasiennes (Sijilmassa, Taghaza où l'on extrait le sel en blocs taillés directement dans le sol). Il atteint la cour de Mansa Souleyman, empereur du Mali, à Niani. Sa description de l'or, des éléphants, des audiences royales, des griots et des coutumes vestimentaires constitue l'un des plus précieux témoignages européens et arabes sur l'Afrique sub-saharienne médiévale. Il manifeste cependant une réprobation envers la liberté vestimentaire des femmes maliennes, écho de son maliki marocain."
+    },
+    {
+      "title": "La Rihla — un récit dicté",
+      "body": "Rentré définitivement au Maroc en 1354, Ibn Battuta s'installe à Fès. Le sultan mérinide Abu Inan, fasciné, lui demande de dicter ses voyages. La rédaction est confiée à un lettré andalou, Ibn Juzayy al-Kalbi, qui transcrit, organise et embellit le récit. La Rihla — 'Cadeau aux observateurs sur les curiosités des contrées et les merveilles des routes' — est achevée vers 1355. C'est aussi bien un journal de voyage qu'un manuel ethnographique, juridique et économique du monde du 14ème siècle. Ibn Battuta meurt à Fès en 1369, dans une relative obscurité."
+    }
+  ],
+  "quote": {
+    "text": "Je partis seul, n'ayant ni compagnon de voyage en qui trouver consolation, ni caravane à laquelle me joindre, mais porté par une volonté résolue et un désir longtemps mûri en mon cœur de visiter ces sanctuaires illustres.",
+    "attribution": "Ibn Battuta, ouverture de la Rihla, à propos de son départ de Tanger en 1325"
+  },
+  "timeline": [
+    { "year": "1304", "label": "Naissance à Tanger" },
+    { "year": "1325", "label": "Départ pour le hajj — début du grand voyage" },
+    { "year": "1327", "label": "Bagdad, rencontre avec les princes ilkhanides mongols" },
+    { "year": "1333", "label": "Arrivée à Delhi ; nommé cadi par Muhammad bin Tughluq" },
+    { "year": "1341", "label": "Naufrage en route pour la Chine" },
+    { "year": "1345", "label": "Atteint Quanzhou puis Hangzhou (Chine des Yuan)" },
+    { "year": "1352-1354", "label": "Traversée du Sahara — visite de l'empire du Mali" },
+    { "year": "1355", "label": "Dictée de la Rihla à Ibn Juzayy à Fès" },
+    { "year": "1369", "label": "Mort au Maroc" }
+  ]
+}

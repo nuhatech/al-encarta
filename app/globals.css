@@ -1,49 +1,68 @@
+/* xp.css loaded via <link> in layout.tsx (bypasses Lightning CSS strictness) */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html {
-  height: 100%;
+  /* Windows XP "Bliss" approximation, used for the desktop background */
+  --y2k-desktop: #4a90d9;
+  --y2k-window: #ece9d8;
+  --xp-blue: #245edb;
+  --xp-blue-dark: #0c3aaa;
+  --xp-green: #399b3a;
+  --xp-green-dark: #207320;
 }
 
 html,
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Tahoma, "Segoe UI", "MS Sans Serif", sans-serif;
+  color: #000;
+  overflow: hidden;
+  user-select: none;
 }
 
 body {
-  min-height: 100%;
-  display: flex;
-  flex-direction: column;
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  /* Real Bliss wallpaper for the demo. */
+  background-image: url("/windows-xp-bg.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #4a90d9; /* fallback while the image loads */
 }
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+button {
+  cursor: pointer;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+/* xp.css title bar runs a bit too tight by default — give the controls some
+   vertical breathing room so the min/max/close buttons don't kiss the edges. */
+.title-bar {
+  padding: 4px 4px 4px 6px !important;
+  min-height: 30px;
+}
+.title-bar-controls {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Mobile gate: show MobileSplash below 768px, hide the desktop Shell. */
+.mobile-only {
+  display: none;
+}
+.desktop-only {
+  display: block;
+}
+@media (max-width: 767px) {
+  .mobile-only {
+    display: block;
+  }
+  .desktop-only {
+    display: none !important;
   }
 }

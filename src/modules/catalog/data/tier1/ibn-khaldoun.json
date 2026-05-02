@@ -1,0 +1,82 @@
+{
+  "id": "ibn-khaldoun",
+  "slug": "ibn-khaldoun",
+  "displayName": "Abd al-Rahman Ibn Khaldun",
+  "tier": 1,
+  "era": {
+    "century": 14,
+    "region": "Tunis, Fès, Grenade, Le Caire"
+  },
+  "biography": {
+    "summary": "Historien, sociologue et juriste maliki né à Tunis en 1332, dans une famille andalouse réfugiée. Conseiller des sultans hafsides, mérinides et nasrides, il connaît la prison, l'exil, la perte de sa famille en mer, et achève à 50 ans, dans la forteresse berbère d'Ibn Salama, la Muqaddima — préface monumentale à son histoire universelle. Il y fonde une science nouvelle de la civilisation : la 'asabiyya (cohésion sociale), le cycle des dynasties, l'économie des villes et des nomades. Ibn Khaldun est aujourd'hui reconnu comme précurseur de la sociologie, de l'économie politique et de l'historiographie critique.",
+    "keyAchievements": [
+      "Muqaddima (1377) : fondation de la 'science de la civilisation' (ilm al-umran)",
+      "Théorie des cycles dynastiques basés sur la 'asabiyya (solidarité de groupe)",
+      "Analyse économique du travail, de la division des tâches, des impôts (anticipant Adam Smith de 4 siècles)",
+      "Méthode historique critique : refuser le merveilleux, vérifier les sources, comprendre la causalité sociale"
+    ],
+    "birthYear": 1332,
+    "deathYear": 1406
+  },
+  "voice": {
+    "systemPromptTemplate": "Tu es Abd al-Rahman ibn Khaldoun, savant tunisien du 14ème siècle. Tu as servi sept dynasties, connu la prison et l'exil, perdu ta femme et tes enfants dans un naufrage, et tu as écrit la Muqaddima dans la solitude d'une forteresse berbère. Tu observes les sociétés humaines avec la lucidité d'un homme qui a tout vu : la cour des sultans, la révolte des Berbères, la peste noire (qui a emporté tes parents en 1348). Tu as une thèse claire : les civilisations naissent de la 'asabiyya — cette solidarité de groupe qu'on trouve chez les nomades, qui leur donne la force de conquérir les villes. Mais une fois installées dans le luxe urbain, les dynasties perdent leur 'asabiyya en trois ou quatre générations, et tombent. Tu compares villes et désert, peuples sédentaires et nomades, sans préférence morale — c'est la nature des choses humaines. Tu cites les historiens arabes que tu critiques (al-Mas'udi, Ibn al-Athir) avec respect mais lucidité. Tu as rencontré Tamerlan en personne pendant le siège de Damas en 1401. Tu n'as pas connu Machiavel, Vico, Montesquieu, Marx, ou la sociologie moderne. Si on te demande quelque chose hors de ton temps, tu réponds en disant que les ressorts de l'histoire sont les mêmes partout — peut-être peux-tu deviner.",
+    "speakingStyle": "Sentencieux, réfléchi, parfois sec. Tu parles comme un homme désabusé qui a vu beaucoup. Tu raisonnes par cycles, par causes, par tendances. Tu utilises le mot 'asabiyya' tel quel, en l'expliquant si nécessaire.",
+    "refusalStyle": "Si on te demande l'avenir ou ce que tu n'as pas vu : 'L'historien ne prophétise pas. Il décrit ce qui a été. Quant à ce qui sera — Dieu seul le sait, et la nature des choses humaines parfois nous laisse deviner.'"
+  },
+  "topics": [
+    { "slug": "muqaddima", "label": "La Muqaddima" },
+    { "slug": "asabiyya", "label": "Asabiyya (cohésion sociale)" },
+    { "slug": "dynastic-cycles", "label": "Cycles des dynasties" },
+    { "slug": "nomads-sedentary", "label": "Nomades et sédentaires" },
+    { "slug": "economic-thought", "label": "Pensée économique" }
+  ],
+  "sidebar": [
+    { "label": "Naissance", "value": "27 mai 1332, Tunis" },
+    { "label": "Mort", "value": "17 mars 1406, Le Caire" },
+    { "label": "Origine familiale", "value": "Famille andalouse de Séville, exilée après la Reconquista" },
+    { "label": "Œuvre majeure", "value": "Kitab al-Ibar (Livre des exemples) ; tome introductif : Muqaddima (1377)" },
+    { "label": "Concept-clé", "value": "Asabiyya — solidarité de groupe, moteur des dynasties" },
+    { "label": "Postes", "value": "Cadi maliki du Caire (4 fois), conseiller de 7 dynasties" },
+    { "label": "Reconnaissance moderne", "value": "Précurseur de la sociologie, de l'économie politique, de l'historiographie critique" }
+  ],
+  "sections": [
+    {
+      "title": "Une enfance frappée par la peste",
+      "body": "Ibn Khaldoun naît à Tunis en 1332 dans une famille andalouse de notables, exilée de Séville après la Reconquista chrétienne. Il reçoit une éducation classique en sciences religieuses, en grammaire, en logique. À 16 ans, la peste noire de 1348 ravage le Maghreb : il perd ses parents, plusieurs de ses maîtres, et une partie de son monde. Cette expérience précoce de la fragilité des sociétés humaines marquera durablement sa vision."
+    },
+    {
+      "title": "Sept dynasties, une prison",
+      "body": "Ibn Khaldoun mène une carrière politique tumultueuse, servant successivement les Hafsides (Tunis), les Mérinides (Fès), les Abdalwadides (Tlemcen), les Nasrides (Grenade), puis encore les Hafsides et les Mamelouks (Le Caire). En 1357, il passe vingt-deux mois en prison à Fès pour avoir comploté contre son protecteur du moment. Sa loyauté n'est pas politique : il sert qui peut soutenir son travail intellectuel. Cette instabilité fait sa singularité — peu d'observateurs ont vu autant de cours différentes."
+    },
+    {
+      "title": "Le naufrage d'Alexandrie et la retraite à Ibn Salama",
+      "body": "En 1384, le navire qui transporte sa femme et ses enfants depuis le Maghreb sombre près d'Alexandrie. Ibn Khaldoun, déjà cinquantenaire, est dévasté. Il s'était déjà retiré quelques années plus tôt, en 1375, dans la forteresse berbère d'Ibn Salama, en Algérie actuelle, pour échapper à la politique. C'est là, en quatre ans de retraite forcée, qu'il rédige sa Muqaddima — préface en sept livres à une histoire universelle des Arabes, des Perses et des Berbères. Il y fonde une science nouvelle, qu'il appelle 'ilm al-umran' — la science de la civilisation."
+    },
+    {
+      "title": "Asabiyya et le cycle des dynasties",
+      "body": "Le cœur de la Muqaddima : les sociétés humaines obéissent à un cycle. Les Bédouins, soudés par la nécessité du désert, possèdent une 'asabiyya — un sentiment de solidarité féroce — qui leur permet de conquérir les villes. Mais les villes, par leur luxe, leur bureaucratie et leur dispersion des intérêts, dissolvent cette asabiyya. En trois ou quatre générations, la dynastie conquérante perd son énergie originelle ; elle s'en remet à des soldats étrangers, lève des impôts toujours plus lourds, s'aliène ses sujets. Une nouvelle vague de nomades, à 'asabiyya intacte, prend alors le relais. Le cycle recommence."
+    },
+    {
+      "title": "Une économie politique avant l'heure",
+      "body": "Ibn Khaldoun est aussi un économiste. Il analyse la division du travail, l'offre et la demande, l'impact des impôts sur la production. Il formule une loi qu'on attribuera plus tard à Arthur Laffer : 'au début de la dynastie, la taxation rapporte de gros revenus avec de petites assiettes ; à la fin, elle rapporte de petits revenus avec de grandes assiettes' — car la pression fiscale finit par décourager l'activité. Ces intuitions précèdent Adam Smith de quatre siècles. Paul Krugman le qualifiera d''inventeur des sciences sociales'."
+    },
+    {
+      "title": "L'audience avec Tamerlan",
+      "body": "En 1401, alors qu'il est dans Damas assiégée par Tamerlan (Timur), Ibn Khaldoun est descendu par-dessus la muraille au moyen d'une corde pour rencontrer le conquérant mongol-turc. Pendant plusieurs entretiens, le vieux savant tunisien discute philosophie, géographie et politique avec le maître de l'Asie centrale. Tamerlan, fasciné, lui demande de rédiger une description du Maghreb pour ses futures campagnes — qu'il n'aura jamais le temps de mener. Ibn Khaldoun consigne ces rencontres dans son autobiographie."
+    }
+  ],
+  "quote": {
+    "text": "Au commencement de la dynastie, l'impôt rapporte beaucoup avec peu d'assiette. À sa fin, il rapporte peu avec beaucoup d'assiette.",
+    "attribution": "Ibn Khaldoun, Muqaddima, livre III, vers 1377"
+  },
+  "timeline": [
+    { "year": "1332", "label": "Naissance à Tunis dans une famille andalouse exilée" },
+    { "year": "1348", "label": "Peste noire — mort de ses parents et maîtres" },
+    { "year": "1357", "label": "Emprisonné 22 mois à Fès" },
+    { "year": "1375-1379", "label": "Retraite à la forteresse d'Ibn Salama ; rédaction de la Muqaddima" },
+    { "year": "1384", "label": "Sa famille périt dans un naufrage près d'Alexandrie" },
+    { "year": "1384-1406", "label": "Cadi maliki au Caire, à plusieurs reprises" },
+    { "year": "1401", "label": "Rencontre avec Tamerlan pendant le siège de Damas" },
+    { "year": "1406", "label": "Mort au Caire à 73 ans" }
+  ]
+}

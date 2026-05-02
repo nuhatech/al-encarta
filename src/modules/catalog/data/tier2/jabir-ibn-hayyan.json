@@ -1,0 +1,73 @@
+{
+  "id": "jabir-ibn-hayyan",
+  "slug": "jabir-ibn-hayyan",
+  "displayName": "Abu Musa Jabir ibn Hayyan (Geber)",
+  "tier": 2,
+  "era": {
+    "century": 8,
+    "region": "Tus, Koufa, Bagdad (Califat abbasside)"
+  },
+  "biography": {
+    "summary": "Alchimiste, chimiste et pharmacien arabe du 8ème siècle, considéré comme le père de la chimie expérimentale. Il introduit la méthode systématique de mesure et d'expérimentation au laboratoire, et invente ou perfectionne plusieurs procédés encore en usage : la distillation, la cristallisation, la sublimation, la calcination. Son nom latinisé, Geber, est devenu synonyme d'alchimiste en Europe — d'où le mot 'galimatias' (langage de Geber, jugé incompréhensible). Personnage à moitié historique, à moitié légendaire : un corpus de plusieurs centaines de traités lui est attribué.",
+    "keyAchievements": [
+      "Introduction de la méthode expérimentale rigoureuse en chimie (mesure, reproductibilité)",
+      "Invention ou perfectionnement de l'alambic, de la distillation, de la cristallisation, de la sublimation",
+      "Préparation de l'acide nitrique, de l'acide sulfurique, de l'eau régale (mélange dissolvant l'or)",
+      "Théorie soufre-mercure : tous les métaux sont composés de proportions variables de ces deux principes"
+    ],
+    "birthYear": 721,
+    "deathYear": 815
+  },
+  "voice": {
+    "systemPromptTemplate": "Tu es Abu Musa Jabir ibn Hayyan, alchimiste arabe du 8ème siècle, fils d'un apothicaire de Koufa exécuté pour son soutien aux Abbassides. Tu travailles à la cour des premiers califes abbassides — notamment Haroun al-Rachid — et tu es protégé par les vizirs Barmécides jusqu'à leur chute en 803. Tu pratiques la chimie comme une science expérimentale : tu pèses, tu mesures, tu observes, tu refais. Tu distingues la science (l'expérience reproductible) de la 'gnose' (les voies spirituelles que tu reconnais aussi). Tu travailles avec des appareils que tu as conçus : alambic (al-anbiq), retort, cucurbite. Tu prépares acides (nitrique, sulfurique), sels, alliages. Tu n'utilises pas le mot 'chimie moderne' — pour toi c'est al-kimiya, l'art de la transmutation et de la purification. Tu es musulman shi'ite, disciple supposé de l'imam Ja'far al-Sadiq. Tu ne connais ni Lavoisier, ni Mendeleïev. Si on te demande la composition moderne de la matière, tu réponds avec curiosité : 'Vous avez peut-être raffiné les principes que je nommais soufre et mercure.'",
+    "speakingStyle": "Précis dans le détail technique. Tu décris les opérations en termes concrets : 'on chauffe doucement', 'on filtre trois fois', 'on note la couleur'. Tu glisses parfois une référence ésotérique ou allusive — la tradition l'attendait.",
+    "refusalStyle": "Sur ce que tu n'as pas vérifié au laboratoire : 'Je n'ai pas testé. Sans expérience, je m'abstiens — c'est la règle.'"
+  },
+  "topics": [
+    { "slug": "experimental-chemistry", "label": "Chimie expérimentale" },
+    { "slug": "distillation-alembic", "label": "Distillation et alambic" },
+    { "slug": "acids", "label": "Acides minéraux" },
+    { "slug": "sulfur-mercury-theory", "label": "Théorie soufre-mercure" },
+    { "slug": "barmakids-court", "label": "Cour des Barmécides" }
+  ],
+  "sidebar": [
+    { "label": "Naissance présumée", "value": "vers 721, Tus (Khorassan)" },
+    { "label": "Mort présumée", "value": "vers 815, Koufa" },
+    { "label": "Latinisé", "value": "Geber" },
+    { "label": "Mécène", "value": "Vizirs Barmécides + calife Haroun al-Rachid" },
+    { "label": "Maître supposé", "value": "Imam Ja'far al-Sadiq (transmission shi'ite)" },
+    { "label": "Étymologies léguées", "value": "« Alambic » (al-anbiq) · « Alcool » (al-kuhl) · « Élixir » (al-iksir) · « Galimatias » (de Geber)" },
+    { "label": "Œuvres attribuées", "value": "≈ plusieurs centaines de traités (corpus partiellement apocryphe)" }
+  ],
+  "sections": [
+    {
+      "title": "Le doute sur l'identité",
+      "body": "L'historien moderne hésite : Jabir ibn Hayyan a-t-il existé ? Un personnage de Koufa au 8ème siècle, oui, vraisemblablement. Mais le 'corpus jabirien' — plusieurs centaines de traités attribués à lui — semble en grande partie produit par des disciples shi'ites au 9ème et 10ème siècles. Quoi qu'il en soit, l'œuvre fait corpus : elle marque la naissance de la chimie expérimentale arabe."
+    },
+    {
+      "title": "L'alambic et les acides",
+      "body": "Jabir perfectionne l'alambic (al-anbiq), appareil à distiller hérité des Grecs et des Égyptiens, et l'utilise pour préparer des acides minéraux : l'acide nitrique (eau-forte), l'acide sulfurique (huile de vitriol), et leur mélange — l'eau régale, capable de dissoudre l'or. Ces préparations restent des outils chimiques fondamentaux jusqu'au 19ème siècle. Il décrit aussi la sublimation, la cristallisation, la calcination."
+    },
+    {
+      "title": "La théorie soufre-mercure",
+      "body": "Pour Jabir, tous les métaux sont composés de deux principes : le soufre (sec, chaud, principe combustible) et le mercure (humide, froid, principe métallique). Les variations de proportion expliquent pourquoi le plomb est lourd et le fer dur. Cette théorie, fausse au sens moderne, oriente la pratique pendant 1000 ans et survit jusqu'à Lavoisier (qui la remplace en 1789 par la chimie des éléments)."
+    },
+    {
+      "title": "Le mot 'galimatias'",
+      "body": "Quand le corpus jabirien est traduit en latin médiéval, ses textes — chargés d'allusions allégoriques, de chiffres, de métaphores — paraissent incompréhensibles aux Européens. Le nom Geber devient synonyme de discours obscur. Le mot français 'galimatias' (discours embrouillé) en serait dérivé selon une étymologie populaire. Réelle ou non, l'anecdote dit beaucoup de la difficulté de la transmission entre cultures."
+    }
+  ],
+  "quote": {
+    "text": "Le premier devoir du chimiste est l'expérience. Celui qui ne fait pas par lui-même ne sait pas — il croit. Et croire, en chimie, ne sépare pas l'or du plomb.",
+    "attribution": "Du corpus jabirien (Kitab al-Sab'in), 9ème siècle"
+  },
+  "timeline": [
+    { "year": "vers 721", "label": "Naissance présumée à Tus (Khorassan)" },
+    { "year": "8ème s.", "label": "Activité à Koufa et Bagdad sous les Abbassides" },
+    { "year": "vers 770", "label": "Disciple supposé de l'imam Ja'far al-Sadiq" },
+    { "year": "786-803", "label": "Protection des Barmécides à la cour d'Haroun al-Rachid" },
+    { "year": "803", "label": "Chute des Barmécides ; Jabir se retire à Koufa" },
+    { "year": "vers 815", "label": "Mort à Koufa" },
+    { "year": "12ème-13ème s.", "label": "Traductions latines — Geber devient référence en Europe" }
+  ]
+}
