@@ -3,6 +3,7 @@
 interface EncartaHomePanelProps {
   onPickArticle: () => void;
   onPickChat: () => void;
+  onPickTimeline: () => void;
 }
 
 /**
@@ -12,7 +13,7 @@ interface EncartaHomePanelProps {
  * left with the big "Reference Library 2002" title, "What's Inside" subnav
  * in the middle, and "Encarta News" feed on the right.
  */
-export function EncartaHomePanel({ onPickArticle, onPickChat }: EncartaHomePanelProps) {
+export function EncartaHomePanel({ onPickArticle, onPickChat, onPickTimeline }: EncartaHomePanelProps) {
   const today = new Date().toLocaleDateString("fr-FR", { day: "2-digit", month: "long" });
 
   return (
@@ -38,7 +39,11 @@ export function EncartaHomePanel({ onPickArticle, onPickChat }: EncartaHomePanel
           gap: 0,
         }}
       >
-        <LeftHero onPickArticle={onPickArticle} onPickChat={onPickChat} />
+        <LeftHero
+          onPickArticle={onPickArticle}
+          onPickChat={onPickChat}
+          onPickTimeline={onPickTimeline}
+        />
         <RightNews date={today} />
       </div>
     </div>
@@ -77,9 +82,11 @@ function DecorativeShine() {
 function LeftHero({
   onPickArticle,
   onPickChat,
+  onPickTimeline,
 }: {
   onPickArticle: () => void;
   onPickChat: () => void;
+  onPickTimeline: () => void;
 }) {
   return (
     <div
@@ -140,7 +147,11 @@ function LeftHero({
         avec assistance vocale Voxtral™.
       </div>
 
-      <WhatsInside onPickArticle={onPickArticle} onPickChat={onPickChat} />
+      <WhatsInside
+        onPickArticle={onPickArticle}
+        onPickChat={onPickChat}
+        onPickTimeline={onPickTimeline}
+      />
 
       <div style={{ flex: 1 }} />
 
@@ -154,9 +165,11 @@ function LeftHero({
 function WhatsInside({
   onPickArticle,
   onPickChat,
+  onPickTimeline,
 }: {
   onPickArticle: () => void;
   onPickChat: () => void;
+  onPickTimeline: () => void;
 }) {
   const items: Array<{ label: string; onClick?: () => void; muted?: boolean }> = [
     { label: "Articles", onClick: onPickArticle },
@@ -166,7 +179,7 @@ function WhatsInside({
     { label: "En ligne", muted: true },
     { label: "Recherche", muted: true },
     { label: "Statistiques", muted: true },
-    { label: "Chronologie", onClick: onPickArticle },
+    { label: "Chronologie", onClick: onPickTimeline },
     { label: "Visites guidées", muted: true },
   ];
 

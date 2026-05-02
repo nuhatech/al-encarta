@@ -3,12 +3,13 @@ import { useEffect, useState } from "react";
 import { PersonalityList } from "@/src/modules/catalog/ui/PersonalityList";
 import { ArticleView } from "@/src/modules/catalog/ui/ArticleView";
 import { EncartaHomePanel } from "@/src/modules/catalog/ui/EncartaHomePanel";
+import { TimelineView } from "@/src/modules/catalog/ui/TimelineView";
 import { ChatTab } from "@/src/modules/conversation/ui/ChatTab";
 import { personalityIndex } from "@/src/modules/catalog/infrastructure/personality-index";
 import { isMuted, play, setMuted } from "@/src/shared/infra/audio/sounds";
 import { PrintDialog } from "@/src/modules/shell/ui/easter-eggs/PrintDialog";
 
-type Mode = "home" | "article" | "chat";
+type Mode = "home" | "article" | "chat" | "timeline";
 
 /**
  * Encarta 2002 application content.
@@ -72,6 +73,10 @@ export function EncartaApp() {
                 play("click");
                 setMode("chat");
               }}
+              onPickTimeline={() => {
+                play("click");
+                setMode("timeline");
+              }}
             />
           )}
           {mode === "article" && (
@@ -87,6 +92,15 @@ export function EncartaApp() {
             <ChatTab
               personalityId={selectedSlug}
               personalityName={personality.displayName}
+            />
+          )}
+          {mode === "timeline" && (
+            <TimelineView
+              onPickArticle={(slug) => {
+                play("click");
+                setSelectedSlug(slug);
+                setMode("article");
+              }}
             />
           )}
         </div>
@@ -224,6 +238,9 @@ function Toolbar({
     </button>
   );
 
+  // Render timeline button only when relevant (not when viewing the home).
+  // Keeps the toolbar tight for the common Article/Conversation flow.
+
   const submit = () => {
     setSearchResult(searchEncarta(query));
   };
@@ -256,6 +273,7 @@ function Toolbar({
       <Btn id="home" glyph="🏠" label="Accueil" />
       <Btn id="article" glyph="📖" label="Article" />
       <Btn id="chat" glyph="🎙" label="Conversation" />
+      <Btn id="timeline" glyph="📅" label="Frise" />
       {mode === "chat" && (
         <button
           onClick={onPrint}
@@ -373,7 +391,9 @@ function StatusBar({ mode, personalityName }: { mode: Mode; personalityName: str
       ? "Prêt — choisissez un article dans la liste"
       : mode === "article"
         ? `Article : ${personalityName}`
-        : `Conversation interactive avec ${personalityName}`;
+        : mode === "timeline"
+          ? "Frise chronologique — 8e–15e siècle"
+          : `Conversation interactive avec ${personalityName}`;
 
   return (
     <div
