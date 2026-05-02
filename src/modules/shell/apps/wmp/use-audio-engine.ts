@@ -53,14 +53,12 @@ export function useAudioEngine(): AudioEngineApi {
     eqGains: new Array(EQ_FREQUENCIES.length).fill(0),
   });
 
-  // Ensure we have a (single) audio element.
+  // Subscribe to events on the <audio> element rendered by the parent
+  // component (audioRef is populated by React after mount).
   useEffect(() => {
-    if (audioRef.current) return;
-    const el = new Audio();
-    el.crossOrigin = "anonymous";
-    el.preload = "metadata";
+    const el = audioRef.current;
+    if (!el) return;
     el.volume = 0.8;
-    audioRef.current = el;
 
     const onTime = () => setState((s) => ({ ...s, currentTime: el.currentTime }));
     const onMeta = () => setState((s) => ({ ...s, duration: el.duration || 0, isLoading: false }));
@@ -84,7 +82,6 @@ export function useAudioEngine(): AudioEngineApi {
     el.addEventListener("loadstart", onLoading);
     el.addEventListener("ended", onEnded);
     return () => {
-      el.pause();
       el.removeEventListener("timeupdate", onTime);
       el.removeEventListener("loadedmetadata", onMeta);
       el.removeEventListener("play", onPlay);

@@ -109,6 +109,13 @@ export function WmpApp() {
         fontFamily: "Tahoma, sans-serif",
       }}
     >
+      <audio
+        ref={audio.audioRef}
+        preload="metadata"
+        crossOrigin="anonymous"
+        style={{ display: "none" }}
+      />
+
       <MenuBar skin={skin} />
 
       <div
