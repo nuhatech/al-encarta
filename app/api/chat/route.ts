@@ -15,14 +15,23 @@ import type { LlmGateway, StreamChunk } from "@/src/modules/conversation/applica
 // - Cloudflare Workers (prod): via getCloudflareContext().env (canonical)
 // - Node dev server: via process.env
 async function readSecret(name: string): Promise<string | undefined> {
-  if (process.env[name]) return process.env[name];
+  if (process.env[name]) {
+    console.log(`[secret] ${name} found in process.env`);
+    return process.env[name];
+  }
   try {
     const mod = await import("@opennextjs/cloudflare");
-    const env = mod.getCloudflareContext()?.env as
-      | Record<string, string | undefined>
-      | undefined;
+    const ctx = mod.getCloudflareContext();
+    const env = ctx?.env as Record<string, string | undefined> | undefined;
+    const visibleKeys = env ? Object.keys(env) : [];
+    console.log(
+      `[secret] ${name} via cf-context: ${env?.[name] ? "found" : "missing"}, visible keys: ${JSON.stringify(visibleKeys)}`,
+    );
     return env?.[name];
-  } catch {
+  } catch (e) {
+    console.log(
+      `[secret] ${name} cf-context threw: ${e instanceof Error ? e.message : String(e)}`,
+    );
     return undefined;
   }
 }

@@ -9,8 +9,15 @@
     "directory": ".open-next/assets"
   },
   "observability": {
-    "enabled": true
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true
+    },
+    "traces": {
+      "enabled": false
+    }
   }
   // Secrets to set with: wrangler secret put ANTHROPIC_API_KEY
+  //                     wrangler secret put OPENAI_API_KEY
   //                     wrangler secret put MISTRAL_API_KEY
 }
