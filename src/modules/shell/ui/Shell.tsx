@@ -4,6 +4,7 @@ import { useBootSequence } from "./use-boot-sequence";
 import { BootScreen } from "./BootScreen";
 import { XpSplash } from "./XpSplash";
 import { InstallerWizard } from "./InstallerWizard";
+import { UserSelectScreen } from "./UserSelectScreen";
 import { Desktop } from "./Desktop";
 import {
   WindowManagerProvider,
@@ -23,7 +24,7 @@ import { useKonami } from "./easter-eggs/use-konami";
 import { installAudioUnlock, play } from "@/src/shared/infra/audio/sounds";
 
 export function Shell() {
-  const { phase, biosDone, xpSplashDone, installDone, skipToDesktop } =
+  const { phase, biosDone, xpSplashDone, installDone, userSelected, skipToDesktop } =
     useBootSequence("bios");
 
   // Audio unlock once on mount.
@@ -60,7 +61,7 @@ export function Shell() {
     return () => window.removeEventListener("keydown", onKey);
   }, [phase]);
 
-  // ?skip=desktop or ?skip=encarta dev shortcut.
+  // ?skip=desktop|encarta|user dev shortcut.
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const skip = params.get("skip");
@@ -69,6 +70,11 @@ export function Shell() {
       if (skip === "encarta") {
         setTimeout(() => wmApi.open("encarta"), 0);
       }
+    } else if (skip === "user" || skip === "user-select") {
+      // Walk the state machine through to user-select.
+      biosDone();
+      xpSplashDone();
+      installDone();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -83,6 +89,7 @@ export function Shell() {
       {phase === "bios" && <BootScreen onDone={onBiosDone} />}
       {phase === "xp-splash" && <XpSplash onDone={xpSplashDone} />}
       {phase === "installer" && <InstallerWizard onDone={installDone} />}
+      {phase === "user-select" && <UserSelectScreen onUserSelected={userSelected} />}
       {phase === "desktop" && (
         <>
           <Desktop

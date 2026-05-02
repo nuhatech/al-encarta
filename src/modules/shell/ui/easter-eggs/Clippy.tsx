@@ -218,7 +218,18 @@ export function Clippy({ onAbout }: ClippyProps) {
           transformOrigin: "50% 100%",
         }}
       >
-        <PaperclipSvg />
+        <img
+          src="/clippy.webp"
+          alt="Clippit"
+          width={86}
+          height={108}
+          draggable={false}
+          style={{
+            display: "block",
+            filter: "drop-shadow(2px 2px 3px rgba(0,0,0,0.45))",
+            pointerEvents: "none",
+          }}
+        />
       </button>
     </div>
   );
@@ -231,89 +242,6 @@ const smallBtnStyle: React.CSSProperties = {
   cursor: "pointer",
   minWidth: 36,
 };
-
-function PaperclipSvg() {
-  return (
-    <svg
-      width="76"
-      height="96"
-      viewBox="0 0 76 96"
-      aria-label="Clippit"
-      style={{ filter: "drop-shadow(2px 2px 2px rgba(0,0,0,0.4))" }}
-    >
-      {/* Body — two paperclip loops in metallic grey gradient */}
-      <defs>
-        <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#f5f5f5" />
-          <stop offset="40%" stopColor="#cfcfcf" />
-          <stop offset="60%" stopColor="#9b9b9b" />
-          <stop offset="100%" stopColor="#5b5b5b" />
-        </linearGradient>
-      </defs>
-      <path
-        d="M 28 8
-           C 14 8 8 18 8 32
-           L 8 76
-           C 8 84 14 88 22 88
-           C 30 88 36 84 36 76
-           L 36 28
-           C 36 22 40 20 44 20
-           C 48 20 52 22 52 28
-           L 52 70
-           C 52 74 50 76 46 76
-           C 42 76 40 74 40 70
-           L 40 36"
-        stroke="url(#metal)"
-        strokeWidth="7"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        fill="none"
-      />
-      {/* Inner highlight to read shiny */}
-      <path
-        d="M 28 11
-           C 16 11 11 19 11 32
-           L 11 76"
-        stroke="rgba(255,255,255,0.7)"
-        strokeWidth="1.6"
-        strokeLinecap="round"
-        fill="none"
-      />
-
-      {/* Eyes — round whites with black pupils, with blink animation */}
-      <g style={{ transformBox: "fill-box", transformOrigin: "center" }}>
-        <ellipse cx="22" cy="38" rx="6" ry="7" fill="#fff" stroke="#000" strokeWidth="1.4">
-          <animate
-            attributeName="ry"
-            values="7;7;0.4;7;7;7"
-            keyTimes="0;0.45;0.5;0.55;1;1"
-            dur="3.7s"
-            repeatCount="indefinite"
-          />
-        </ellipse>
-        <ellipse cx="40" cy="36" rx="6" ry="7" fill="#fff" stroke="#000" strokeWidth="1.4">
-          <animate
-            attributeName="ry"
-            values="7;7;0.4;7;7;7"
-            keyTimes="0;0.45;0.5;0.55;1;1"
-            dur="3.7s"
-            repeatCount="indefinite"
-          />
-        </ellipse>
-        {/* Pupils */}
-        <circle cx="23" cy="40" r="2.2" fill="#000" />
-        <circle cx="41" cy="38" r="2.2" fill="#000" />
-        {/* Eye highlights */}
-        <circle cx="20.6" cy="36" r="0.9" fill="#fff" />
-        <circle cx="38.6" cy="34" r="0.9" fill="#fff" />
-      </g>
-
-      {/* Subtle eyebrow strokes */}
-      <path d="M 16 28 Q 22 24 28 28" stroke="#222" strokeWidth="1.6" fill="none" strokeLinecap="round" />
-      <path d="M 33 26 Q 40 22 46 26" stroke="#222" strokeWidth="1.6" fill="none" strokeLinecap="round" />
-    </svg>
-  );
-}
 
 const KEYFRAMES = `
 @keyframes clippy-sway {
