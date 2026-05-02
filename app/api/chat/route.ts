@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { idOf } from "@/src/shared/kernel/id";
 import { StaticPersonalityRepository } from "@/src/modules/catalog/infrastructure/static-personality-repo";
 import { VoiceComposer } from "@/src/modules/catalog/application/services/voice-composer";
@@ -12,35 +13,25 @@ import {
 import type { LlmGateway, StreamChunk } from "@/src/modules/conversation/application/ports/llm-port";
 
 // Read a secret across both runtimes:
-// - Cloudflare Workers (prod): via getCloudflareContext().env (canonical)
+// - Cloudflare Workers (prod): via getCloudflareContext().env (secrets bound by `wrangler secret put`)
 // - Node dev server: via process.env
-async function readSecret(name: string): Promise<string | undefined> {
-  if (process.env[name]) {
-    console.log(`[secret] ${name} found in process.env`);
-    return process.env[name];
-  }
+function readSecret(name: string): string | undefined {
+  if (process.env[name]) return process.env[name];
   try {
-    const mod = await import("@opennextjs/cloudflare");
-    const ctx = mod.getCloudflareContext();
-    const env = ctx?.env as Record<string, string | undefined> | undefined;
-    const visibleKeys = env ? Object.keys(env) : [];
-    console.log(
-      `[secret] ${name} via cf-context: ${env?.[name] ? "found" : "missing"}, visible keys: ${JSON.stringify(visibleKeys)}`,
-    );
+    const env = getCloudflareContext()?.env as
+      | Record<string, string | undefined>
+      | undefined;
     return env?.[name];
-  } catch (e) {
-    console.log(
-      `[secret] ${name} cf-context threw: ${e instanceof Error ? e.message : String(e)}`,
-    );
+  } catch {
     return undefined;
   }
 }
 
 // Composition root for the chat endpoint.
 // Provider preference: Anthropic > OpenAI > Fake. Models are pinned per provider.
-async function buildHandler() {
-  const anthropicKey = await readSecret("ANTHROPIC_API_KEY");
-  const openaiKey = await readSecret("OPENAI_API_KEY");
+function buildHandler() {
+  const anthropicKey = readSecret("ANTHROPIC_API_KEY");
+  const openaiKey = readSecret("OPENAI_API_KEY");
 
   let llm: LlmGateway;
   let models: ModelMapping;
@@ -87,7 +78,7 @@ export async function POST(req: Request): Promise<Response> {
     return NextResponse.json({ error: "userText_required" }, { status: 400 });
   }
 
-  const handler = await buildHandler();
+  const handler = buildHandler();
   let chunkStream: ReadableStream<StreamChunk>;
   try {
     chunkStream = await handler({
