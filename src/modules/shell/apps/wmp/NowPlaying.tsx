@@ -1,11 +1,10 @@
 "use client";
 import { Visualizer, VISUALIZATION_MODES } from "./Visualizer";
 import { Equalizer } from "./Equalizer";
-import type { Skin, Track, VisualizationMode } from "./types";
+import type { Skin, VisualizationMode } from "./types";
 
 interface NowPlayingProps {
   skin: Skin;
-  track: Track | null;
   isPlaying: boolean;
   visualization: VisualizationMode["id"];
   onChangeVisualization: (id: VisualizationMode["id"]) => void;

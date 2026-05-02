@@ -14,7 +14,7 @@
 
 ## Pitch
 
-Un Encarta 2002 fidèle reconstitué dans le navigateur : boot BIOS → installer kitsch → bureau Windows XP → fenêtre Encarta avec **27 figures arabo-musulmanes** (Al-Khawarizmi, Ibn al-Haytham, Ibn Battuta, Ibn Khaldoun, Fatima al-Fihri…). Chaque article s'accompagne d'une **conversation interactive** où Claude Sonnet 4.6 incarne le personnage, avec voix robotique Y2K générée par le navigateur et reconnaissance vocale française via Voxtral.
+Un faux Windows XP boot dans le navigateur : BIOS → splash XP → écran de login Welcome → installer Encarta → bureau avec **5 apps** (Encarta 2002, Kutub.io, Hilal Globe, Démineur — Ormuz, Windows Media Player 8). Encarta liste **27 figures arabo-musulmanes** (Al-Khawarizmi, Ibn al-Haytham, Ibn Battuta, Ibn Khaldoun, Fatima al-Fihri…) ; chaque article s'accompagne d'une **conversation interactive streamée** par Claude, voix Y2K browser + reconnaissance vocale Voxtral. WMP joue les poèmes arabes avec la **vraie vidéo de visualisation 2002 modulée par la bass**, EQ 10 bandes et 5 skins. Le bureau a icônes draggables, Corbeille avec drag-drop, Clippy contextuel, easter eggs (BSOD, Konami, Run dialog, astrolabe).
 
 L'objet est aussi une démo technique : prompt caching Anthropic byte-stable, vertical slice architecture, Cloudflare edge deploy, zéro framework UI à l'exception de [xp.css](https://botoxparty.github.io/XP.css/).
 
@@ -149,16 +149,42 @@ Le handler ignore Anthropic, Next, et le navigateur. La route handler `app/api/c
 
 - **Find dans Encarta** — 5 mots-clés débloquent des fiches culturelles cachées.
 
+## Bureau XP & shell
+
+- **Page de login Welcome** authentique (Administrator · NuhaTech · Encarta · Invité) avec ribbon orange, divider blanc, bouton power rouge.
+- **Icônes draggables** sur le bureau — chaque position persistée en `localStorage` (`encarta-2001:desktop-icons`).
+- **Corbeille** drag-drop : glisser n'importe quelle autre icône dessus → suppression. Double-click ouvre un dialog avec liste + bouton « Restaurer ».
+- **Clippy** (Office Assistant) flottant en bas-droite, **contextuel** : change ses tips selon la fenêtre focus (Encarta, Kutub, Démineur, WMP…). Bouton « Masquer » → dismiss persistant.
+- **Start menu XP authentique** (User bar + 2 colonnes + bottom bar) qui lance les 5 apps + ouvre About / Run / Shutdown.
+
+## Windows Media Player 8
+
+Lecteur multimedia conçu pour les **poèmes arabes** (instrumentaux haram exclus). Architecture clean DDD/VSA dans `src/modules/shell/apps/wmp/`.
+
+- **Layout authentique** WMP8 : menu bar (File/View/Play/Tools/Help) · nav rail verticale 8 entrées · main view · Info Center à droite avec tracklist · transport bar · branding strip
+- **Visualizer Battery** = vraie vidéo WebM des visualisations originales 2002 (`saw.floydcraft.co.uk/1080p.webm`), avec `playbackRate` modulé par l'envelope bass via AnalyserNode (technique du clone [rmellis](https://github.com/rmellis/Windows-Media-Player-8-WebApp-Clone-Public), GPL-2.0). Plus 2 visus canvas (Bars FFT, Scope oscilloscope).
+- **Égaliseur 10 bandes** (31 Hz → 16 kHz) via `BiquadFilterNode`, presets : Plat / Voix / Acoustique / Salle / Maqām (sombre)
+- **5 skins swappables** (Atomic XP / Iconic silver / Aura green / Toothy sunset / NuhaTech gold-teal), persistance localStorage
+- **Auto-discovery des tracks** : drop des MP3 dans `public/audio/`, le script `pnpm build:tracks` scan le dossier et génère un index typé en parsant les filenames YouTube (`Title｜Author`, `Author：Title`, `X by Y`)
+
+```bash
+# Ajouter un poème
+cp ~/Downloads/qasida-burda.mp3 public/audio/
+pnpm build:tracks   # ou bien automatique au prochain pnpm build
+```
+
 ## Scripts
 
 ```bash
 pnpm dev                       # dev server
-pnpm build                     # next build
+pnpm build                     # next build (auto-runs prebuild scripts)
 pnpm test                      # vitest run
 pnpm test:watch                # vitest watch mode
 pnpm typecheck                 # tsc --noEmit
 pnpm lint                      # eslint
-pnpm capture:screenshots       # régénère public/screenshots/ (requiert dev server up)
+pnpm bundle:personality-data   # regen src/modules/catalog/data/_bundled.ts from JSON files
+pnpm build:tracks              # regen WMP track index from public/audio/*.mp3
+pnpm capture:screenshots       # regen public/screenshots/ via Puppeteer (requires dev server)
 pnpm cf:build                  # build edge bundle
 pnpm cf:preview                # worker preview local
 pnpm cf:deploy                 # deploy Cloudflare Workers

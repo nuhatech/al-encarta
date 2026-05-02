@@ -144,7 +144,6 @@ export function WmpApp() {
           {view === "now-playing" && (
             <NowPlaying
               skin={skin}
-              track={track}
               isPlaying={audio.state.isPlaying}
               visualization={visualization}
               onChangeVisualization={setVisualization}
