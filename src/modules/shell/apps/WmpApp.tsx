@@ -45,7 +45,7 @@ export function WmpApp() {
   const audio = useAudioEngine();
   const [view, setView] = useState<WmpView>("now-playing");
   const [skinId, setSkinId] = useState<string>(DEFAULT_SKIN_ID);
-  const [visualization, setVisualization] = useState<VisualizationMode["id"]>("bars");
+  const [visualization, setVisualization] = useState<VisualizationMode["id"]>("battery");
   const [currentTrackId, setCurrentTrackId] = useState<string>(
     TRACKS[0]?.id ?? "",
   );
