@@ -180,4 +180,4 @@ Le worker est nommé `al-encarta` ([wrangler.jsonc](wrangler.jsonc)).
 
 Made with ❤ by **[NuhaTech](https://github.com/NuhaTech)** pour le hackathon **DefendHack 2026** (thème : *Site année 2000*).
 
-Produits sœurs : [kutub.io](https://kutub.io) · [muqabia.com](https://muqabia.com)
+Produits sœurs : [kutub.io](https://kutub.io) · [hilalglobe.com](https://hilalglobe.com)
