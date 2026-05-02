@@ -172,17 +172,26 @@ function Footer() {
           style={{
             width: 40,
             height: 40,
+            minWidth: 40,
+            minHeight: 40,
+            maxWidth: 40,
+            maxHeight: 40,
+            flexShrink: 0,
+            flexGrow: 0,
+            padding: 0,
+            boxSizing: "border-box",
             background: COLOR_POWER_RED,
             border: "1px solid #fff",
             borderRadius: 4,
             outline: "none",
             cursor: "pointer",
             boxShadow: `inset 4px 2px 8px rgba(255,255,255,0.6), inset -2px -3px 5px ${COLOR_POWER_RED_DARK}`,
-            display: "flex",
+            display: "inline-flex",
             alignItems: "center",
             justifyContent: "center",
             color: "#fff",
             fontSize: 20,
+            lineHeight: 1,
           }}
         >
           ⏻
