@@ -18,6 +18,7 @@ import { Bsod } from "./easter-eggs/Bsod";
 import { AboutDialog } from "./easter-eggs/AboutDialog";
 import { RunDialog } from "./easter-eggs/RunDialog";
 import { Astrolabe } from "./easter-eggs/Astrolabe";
+import { Clippy } from "./easter-eggs/Clippy";
 import { useKonami } from "./easter-eggs/use-konami";
 import { installAudioUnlock, play } from "@/src/shared/infra/audio/sounds";
 
@@ -98,6 +99,7 @@ export function Shell() {
               minesweeper: <MinesweeperApp />,
             }}
           />
+          <Clippy onAbout={() => setAboutOpen(true)} />
           {astrolabeOpen && <Astrolabe onClose={() => setAstrolabeOpen(false)} />}
           {aboutOpen && <AboutDialog onClose={() => setAboutOpen(false)} />}
           {runOpen && (
